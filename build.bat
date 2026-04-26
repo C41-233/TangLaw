@@ -1,1 +1,1 @@
-bin\Generator.exe src docs
+bin\Generator.exe src docs/contents
