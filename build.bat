@@ -1,0 +1,1 @@
+bin\Generator.exe src docs
