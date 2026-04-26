@@ -51,6 +51,10 @@ body {
     margin: 0.3rem 0;
 }
 
+.sidebar li ul {
+    padding-left: 1rem;
+}
+
 .sidebar a {
     color: #bdc3c7;
     text-decoration: none;
@@ -59,6 +63,7 @@ body {
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
     transition: all 0.2s;
+    cursor: pointer;
 }
 
 .sidebar a:hover {
@@ -92,17 +97,35 @@ body {
     margin: 1.5rem 0 0.8rem;
 }
 
-.src-text, .law-text {
+.content h4 {
+    font-size: 1.05rem;
+    color: #2c3e50;
+    margin: 1.2rem 0 0.5rem;
+}
+
+.content p {
+    margin-bottom: 0.8rem;
+    text-indent: 2em;
+}
+
+.src-text, .law-text, .body-text {
     background: #fff;
     padding: 1.5rem;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     margin-bottom: 1.5rem;
-    text-indent: 2em;
 }
 
 .law-text {
     border-left: 3px solid #e67e22;
+}
+
+.body-text {
+    border-left: 3px solid #3498db;
+}
+
+.src-text {
+    border-left: 3px solid #95a5a6;
 }
 
 @media (max-width: 768px) {
