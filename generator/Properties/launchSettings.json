@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Generator": {
+      "commandName": "Project",
+      "commandLineArgs": "src docs/contents",
+      "workingDirectory": "D:\\Workspace\\TangLvShuYi"
+    }
+  }
+}
