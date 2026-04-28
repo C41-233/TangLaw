@@ -27,6 +27,7 @@ namespace Generator
         {
             TransformLaw();
             TransformSrc();
+            TransformContainer();
         }
 
         private void TransformLaw()
@@ -45,6 +46,18 @@ namespace Generator
                 var div = doc.CreateElement("div");
                 Replace(node, div);
             }
+        }
+
+        private void TransformContainer()
+        {
+            var div = doc.CreateElement("div");
+            div.SetAttribute("class", "container");
+            foreach (XmlNode node in doc.DocumentElement.ChildNodes)
+            {
+                div.AppendChild(node.CloneNode(true));
+            }
+            doc.DocumentElement.RemoveAll();
+            doc.DocumentElement.AppendChild(div);
         }
 
         private static void Replace(XmlElement from, XmlElement to)

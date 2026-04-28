@@ -13,10 +13,13 @@ internal class Writer
     public Writer(string path)
     {
         this.path = path;
-        sb.AppendLine($"<html>");
-        sb.AppendLine($"<head>");
-        sb.AppendLine($"</head>");
-        sb.AppendLine($"<body>");
+        sb.AppendLine("<html>");
+        sb.AppendLine("<head>");
+        sb.AppendLine("<meta charset=\"UTF-8\">");
+        sb.AppendLine("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
+        sb.AppendLine("<link rel=\"stylesheet\" href=\"../styles/main.css\">");
+        sb.AppendLine("</head>");
+        sb.AppendLine("<body>");
     }
 
     public void Flush()
