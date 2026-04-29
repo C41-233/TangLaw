@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Generator.Utils;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
@@ -50,10 +51,42 @@ internal class Main
     {
         var output = Path.Combine(DestDir, "index.html");
         var writer = new Writer(output);
-        writer.WriteLine("<h1>《唐律疏议》的理解与适用</h1>");
-        writer.WriteLine("<ul>");
-        writer.WriteLine($"<li>{HTML.Href(Preamble.Title, Preamble.Output)}</li>");
-        writer.WriteLine("</ul>");
+        writer.BeginDiv("container");
+        {
+            writer.WriteLine("<header>");
+            {
+                writer.WriteLine("<h1>《唐律》的理解与适用</h1>");
+            }
+            writer.WriteLine("</header>");
+
+            writer.WriteLine("<section>");
+            {
+                writer.H2("目录");
+                writer.WriteLine("<nav>");
+                {
+                    writer.WriteLine("<ul>");
+                    writer.WriteLine($"<li>{HTML.Href(Preamble.Title, Preamble.Output)}</li>");
+                    writer.WriteLine("</ul>");
+                }
+                writer.WriteLine("</nav>");
+            }
+            writer.WriteLine("</section>");
+
+            writer.WriteLine("<section class=\"index-section-text\">");
+            {
+                writer.H2("律文");
+                writer.BeginDiv("index-text");
+                {
+                    writer.BeginDiv("index-text-entry");
+                    writer.Div("index-title-preamble", Preamble.Title);
+                    writer.PP(Preamble.Law);
+                    writer.EndDiv();
+                }
+                writer.EndDiv();
+            }
+            writer.WriteLine("</section>");
+        }
+        writer.EndDiv();
         writer.Flush();
     }
 

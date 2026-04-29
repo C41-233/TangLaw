@@ -11,6 +11,8 @@ namespace Generator
 
         private readonly XmlDocument doc;
 
+        private string title;
+
         public Transformer(XmlDocument doc)
         {
             this.doc = doc;
@@ -18,32 +20,47 @@ namespace Generator
 
         public void AddTitle(string value)
         {
-            var title = doc.CreateElement("h1");
-            title.InnerText = value;
-            doc.DocumentElement.PrependChild(title);
+            title = value;
         }
 
         public void Run()
         {
+            TransformText(doc.DocumentElement);
+            TransformHeader();
             TransformLaw();
             TransformSrc();
             TransformContainer();
+        }
+
+        private void TransformHeader()
+        {
+            var header = doc.CreateElement("header");
+
+            var h1 = doc.CreateElement("h1");
+            h1.InnerText = title;
+
+            header.AppendChild(h1);
+            doc.DocumentElement.PrependChild(header);
         }
 
         private void TransformLaw()
         {
             foreach (XmlElement node in doc.SelectNodes("//law"))
             {
+                TransformText(node);
                 var div = doc.CreateElement("div");
+                div.SetAttribute("class", "law");
                 Replace(node, div);
             }
         }
-
+        
         private void TransformSrc()
         {
             foreach (XmlElement node in doc.SelectNodes("//src"))
             {
+                TransformText(node);
                 var div = doc.CreateElement("div");
+                div.SetAttribute("class", "src");
                 Replace(node, div);
             }
         }
@@ -58,6 +75,34 @@ namespace Generator
             }
             doc.DocumentElement.RemoveAll();
             doc.DocumentElement.AppendChild(div);
+        }
+
+        private void TransformText(XmlElement node)
+        {
+            var toRemove = new List<XmlNode>();
+            foreach (var child in node.ChildNodes)
+            {
+                if (child is XmlText textNode)
+                {
+                    var sections = textNode.InnerText.Trim().Split("\r\n\r\n");
+                    foreach (var section in sections)
+                    {
+                        var p = doc.CreateElement("p");
+                        p.InnerText = section.Trim();
+                        textNode.ParentNode.InsertBefore(p, textNode);
+                    }
+                    toRemove.Add(textNode);
+                }
+            }
+            foreach (var remove in toRemove)
+            {
+                Remove(remove);
+            }
+        }
+
+        private void Remove(XmlNode node)
+        {
+            node.ParentNode.RemoveChild(node);
         }
 
         private static void Replace(XmlElement from, XmlElement to)

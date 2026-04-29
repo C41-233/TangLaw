@@ -1,3 +1,15 @@
+/* --- Reset & Base --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
 body {
     font-family: "Noto Serif SC", "Source Han Serif SC", "SimSun", "STSong", Georgia, "Times New Roman", serif;
     color: #2c2c2c;
@@ -5,6 +17,7 @@ body {
     padding: 2rem 1rem;
 }
 
+/* --- Layout --- */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -12,4 +25,86 @@ body {
     padding: 2.5rem 2.5rem 3rem;
     border-radius: 4px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* --- Header --- */
+header {
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid #8b4513;
+    padding-bottom: 1rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3e1f0a;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+/* --- Sections --- */
+section {
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #3e1f0a;
+    border-left: 4px solid #8b4513;
+    padding-left: 0.8rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+}
+
+/* --- Nav --- */
+nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul ul {
+    padding-left: 1.5rem;
+    margin-top: 0.3rem;
+}
+
+nav li {
+    margin: 0.4rem 0;
+    line-height: 1.8;
+}
+
+nav a {
+    color: #3e1f0a;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.15s;
+}
+
+nav a:hover {
+    color: #8b4513;
+    text-decoration: underline;
+}
+
+/* --- 首页 --- */
+.index-title-preamble{
+	text-align: center;
+	font-weight: bold;
+}
+
+/* --- Laws (律文) --- */
+.law,
+.src{
+    border-top: 1px solid #e0d8cc;
+	background: #f5f0e8;
+    border-left: 4px solid #8b4513;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0 4px 4px 0;
+}
+
+p{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+	white-space: pre-line;
 }

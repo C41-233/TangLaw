@@ -21,7 +21,7 @@ internal class Document
         this.doc = new XmlDocument();
         doc.LoadXml($"<doc>{content}</doc>");
 
-        Law = doc.SelectSingleNode("/doc/law")?.InnerText;
+        Law = doc.SelectSingleNode("/doc/law")?.InnerText.Trim();
     }
 
     public string GetBody()

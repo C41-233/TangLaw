@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Generator;
+namespace Generator.Utils;
 
 internal class Writer
 {
