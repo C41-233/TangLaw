@@ -16,8 +16,14 @@ internal partial class Main
 
         public static EntryTitle Parse(string name)
         {
-            var tokens = name.Split('.', 2);
-
+            var tokens = name.Split('-', 2);
+            if (tokens.Length < 2)
+            {
+                return new EntryTitle
+                {
+                    Title = tokens[0],
+                };
+            }
             return new EntryTitle
             {
                 Number = int.Parse(tokens[0]),
@@ -45,6 +51,7 @@ internal partial class Main
         {
             CollectSection1(filename);
         }
+        Section1List.Sort((e1, e2) => Comparer<int>.Default.Compare(e1.EntryTitle.Number, e2.EntryTitle.Number));
     }
 
     private void CollectSection1(string path)
