@@ -31,8 +31,9 @@ internal partial class Main
         CollectDocuments();
         CollectLaws();
 
-        ProcessIndex();
-        ProcessPreamble();
+        OutputIndex();
+        OutputPreamble();
+        OutputLaws();
     }
 
     private void CollectDocuments()
@@ -48,12 +49,26 @@ internal partial class Main
     }
 
     // 序言
-    private void ProcessPreamble()
+    private void OutputPreamble()
     {
         var output = Path.Combine(DestDir, Preamble.Output);
         var writer = new Writer(output);
         writer.WriteLine(Preamble.GetBody());
         writer.Flush();
+    }
+
+    private void OutputLaws()
+    {
+        foreach (var section1 in Section1List)
+        {
+            if (section1.Content != null)
+            {
+                var output = Path.Combine(DestDir, section1.Content.Output);
+                var writer = new Writer(output);
+                writer.WriteLine(section1.Content.GetBody());
+                writer.Flush();
+            }
+        }
     }
 
 }

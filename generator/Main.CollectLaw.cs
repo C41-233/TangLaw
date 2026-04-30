@@ -37,8 +37,18 @@ internal partial class Main
     {
         public EntryTitle EntryTitle;
         public Document Content;
+        public List<LawSection2> Children = new();
 
         public string FullTitle => $"第{Chinese.Parse(EntryTitle.Number)}章 {EntryTitle.Title}";
+    }
+
+    // 节
+    private class LawSection2
+    {
+        public EntryTitle EntryTitle;
+        public Document Content;
+
+        public string FullTitle => $"第{Chinese.Parse(EntryTitle.Number)}节 {EntryTitle.Title}";
     }
 
     private readonly List<LawSection1> Section1List = new();
@@ -49,12 +59,12 @@ internal partial class Main
         var root = Path.Combine(SrcDir, "正文");
         foreach (var filename in Directory.GetDirectories(root))
         {
-            CollectSection1(filename);
+            Section1List.Add(CollectSection1(filename));
         }
         Section1List.Sort((e1, e2) => Comparer<int>.Default.Compare(e1.EntryTitle.Number, e2.EntryTitle.Number));
     }
 
-    private void CollectSection1(string path)
+    private static LawSection1 CollectSection1(string path)
     {
         var filename = Path.GetFileName(path);
         var entryTitle = EntryTitle.Parse(filename);
@@ -62,16 +72,42 @@ internal partial class Main
         {
             EntryTitle = entryTitle,
         };
-        Section1List.Add(section1);
         var content = Path.Combine(path, "-.xml");
         if (File.Exists(content))
         {
             section1.Content = new Document(content)
             {
                 Title = section1.FullTitle,
-                Output = $"{entryTitle.Number}.html",
+                Output = $"{filename}.html",
             };
         }
+
+        foreach (var sub in Directory.GetDirectories(path))
+        {
+            section1.Children.Add(CollectSection2(sub));
+        }
+
+        return section1;
+    }
+
+    private static LawSection2 CollectSection2(string path)
+    {
+        var filename = Path.GetFileName(path);
+        var entryTitle = EntryTitle.Parse(filename);
+        var section2 = new LawSection2
+        {
+            EntryTitle = entryTitle,
+        };
+        var content = Path.Combine(path, "-.xml");
+        if (File.Exists(content))
+        {
+            section2.Content = new Document(content)
+            {
+                Title = section2.FullTitle,
+                Output = $"{filename}.html",
+            };
+        }
+        return section2;
     }
 
 }
