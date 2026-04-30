@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Generator;
 
@@ -61,14 +62,33 @@ internal partial class Main
     {
         foreach (var section1 in Section1List)
         {
-            if (section1.Content != null)
-            {
-                var output = Path.Combine(DestDir, section1.Content.Output);
-                var writer = new Writer(output);
-                writer.WriteLine(section1.Content.GetBody());
-                writer.Flush();
-            }
+            OutputSection1(section1);
         }
     }
 
+    private void OutputSection1(LawSection1 section1)
+    {
+        if (section1.Content != null)
+        {
+            var output = Path.Combine(DestDir, section1.Content.Output);
+            var writer = new Writer(output);
+            writer.WriteLine(section1.Content.GetBody());
+            writer.Flush();
+        }
+        foreach (var section2 in section1.Children)
+        {
+            OutputSection2(section2);
+        }
+    }
+
+    private void OutputSection2(LawSection2 section2)
+    {
+        if (section2.Content != null)
+        {
+            var output = Path.Combine(DestDir, section2.Content.Output);
+            var writer = new Writer(output);
+            writer.WriteLine(section2.Content.GetBody());
+            writer.Flush();
+        }
+    }
 }
