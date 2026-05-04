@@ -90,5 +90,17 @@ internal partial class Main
             writer.WriteLine(section2.Content.GetBody());
             writer.Flush();
         }
+        foreach (var article in section2.Children)
+        {
+            OutputArticle(article);
+        }
+    }
+
+    private void OutputArticle(LawArticle article)
+    {
+        var output = Path.Combine(DestDir, article.Content.Output);
+        var writer = new Writer(output);
+        writer.WriteLine(article.Content.GetBody());
+        writer.Flush();
     }
 }

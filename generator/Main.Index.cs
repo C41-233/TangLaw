@@ -86,5 +86,19 @@ internal partial class Main
         {
             writer.WriteLine($"<li>{HTML.Href(section2.FullTitle, section2.Content.Output)}</a></li>");
         }
+        if (section2.Children.Count > 0)
+        {
+            writer.WriteLine($"<ul>");
+            foreach (var sub in section2.Children)
+            {
+                OutputIndexArticle(writer, sub);
+            }
+            writer.WriteLine($"</ul>");
+        }
+    }
+
+    private void OutputIndexArticle(Writer writer, LawArticle article)
+    {
+        writer.WriteLine($"<li>{HTML.Href(article.FullTitle, article.Content.Output)}</a></li>");
     }
 }

@@ -56,12 +56,16 @@ namespace Generator
         
         private void TransformSrc()
         {
+            // src要挪到最后
             foreach (XmlElement node in doc.SelectNodes("//src"))
             {
+                var parent = node.ParentNode;
                 TransformText(node);
                 var div = doc.CreateElement("div");
                 div.SetAttribute("class", "src");
-                Replace(node, div);
+                div.InnerXml = node.InnerXml;
+                Remove(node);
+                parent.AppendChild(div);
             }
         }
 

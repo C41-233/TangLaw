@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Reflection.Metadata;
 using System.Text;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Generator;
 
@@ -12,6 +14,7 @@ internal partial class Main
     private struct EntryTitle
     {
         public int Number;
+        public int Number2;
         public string Title;
 
         public static EntryTitle Parse(string name)
@@ -47,8 +50,17 @@ internal partial class Main
     {
         public EntryTitle EntryTitle;
         public Document Content;
+        public List<LawArticle> Children = new();
 
         public string FullTitle => $"第{Chinese.Parse(EntryTitle.Number)}节 {EntryTitle.Title}";
+    }
+
+    // 条
+    private class LawArticle
+    {
+        public EntryTitle EntryTitle;
+        public Document Content;
+        public string FullTitle => $"第{Chinese.Parse(EntryTitle.Number)}条 {EntryTitle.Title}";
     }
 
     private readonly List<LawSection1> Section1List = new();
@@ -66,7 +78,7 @@ internal partial class Main
 
     private static LawSection1 CollectSection1(string path)
     {
-        var filename = Path.GetFileName(path);
+        var filename = Path.GetFileNameWithoutExtension(path);
         var entryTitle = EntryTitle.Parse(filename);
         var section1 = new LawSection1
         {
@@ -92,7 +104,7 @@ internal partial class Main
 
     private static LawSection2 CollectSection2(string path)
     {
-        var filename = Path.GetFileName(path);
+        var filename = Path.GetFileNameWithoutExtension(path);
         var entryTitle = EntryTitle.Parse(filename);
         var section2 = new LawSection2
         {
@@ -107,7 +119,32 @@ internal partial class Main
                 Output = $"{filename}.html",
             };
         }
+
+        foreach (var sub in Directory.GetFiles(path))
+        {
+            if (Path.GetFileNameWithoutExtension(sub) == "-")
+            {
+                continue;
+            }
+            section2.Children.Add(CollectArticle(sub));
+        }
+
         return section2;
     }
 
+    private static LawArticle CollectArticle(string path)
+    {
+        var filename = Path.GetFileNameWithoutExtension(path);
+        var entryTitle = EntryTitle.Parse(filename);
+        var article = new LawArticle
+        {
+            EntryTitle = entryTitle,
+        };
+        article.Content = new Document(path)
+        {
+            Title = article.FullTitle,
+            Output = $"{filename}.html",
+        };
+        return article;
+    }
 }
