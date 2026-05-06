@@ -71,7 +71,7 @@ nav ul ul {
 
 nav li {
     margin: 0.4rem 0;
-    line-height: 1.8;
+    line-height: 1.2;
 }
 
 nav a {
@@ -89,6 +89,17 @@ nav a:hover {
 /* --- 首页 --- */
 .index-title-preamble{
 	text-align: center;
+	font-weight: bold;
+}
+.index-title-section1{
+	text-align: center;
+	font-weight: bold;
+}
+.index-title-section2{
+	text-align: center;
+	font-weight: bold;
+}
+.index-title-article{
 	font-weight: bold;
 }
 
@@ -109,4 +120,9 @@ p{
     margin-bottom: 0.5rem;
 	white-space: pre-line;
 	text-indent: 2em;
+}
+
+/* --- 法条链接 --- */
+.link-article{
+    color: #2c2c2c;
 }

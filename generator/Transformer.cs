@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Generator.Utils;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
@@ -25,11 +26,37 @@ namespace Generator
 
         public void Run()
         {
+            TransformArticleLink();
             TransformText(doc.DocumentElement);
             TransformHeader();
             TransformLaw();
             TransformSrc();
             TransformContainer();
+        }
+
+        private void TransformArticleLink()
+        {
+            foreach (XmlElement node in doc.SelectNodes(".//article"))
+            {
+                var text = node.InnerText.Trim();
+                var a = doc.CreateElement("a");
+                a.SetAttribute("href", $"{text}.html");
+                a.SetAttribute("class", "link-article");
+                Replace(node, a);
+
+                if (text.Contains("."))
+                {
+                    var tokens = text.Split(".");
+                    var number = int.Parse(tokens[0]);
+                    var number2 = int.Parse(tokens[1]);
+                    a.InnerText = $"第{Chinese.Parse(number)}条之{Chinese.Parse(number2)}";
+                }
+                else
+                {
+                    var number = int.Parse(text);
+                    a.InnerText = $"第{Chinese.Parse(number)}条";
+                }
+            }
         }
 
         private void TransformHeader()
@@ -45,7 +72,7 @@ namespace Generator
 
         private void TransformLaw()
         {
-            foreach (XmlElement node in doc.SelectNodes("//law"))
+            foreach (XmlElement node in doc.SelectNodes(".//law"))
             {
                 TransformText(node);
                 var div = doc.CreateElement("div");
@@ -57,7 +84,7 @@ namespace Generator
         private void TransformSrc()
         {
             // src要挪到最后
-            foreach (XmlElement node in doc.SelectNodes("//src"))
+            foreach (XmlElement node in doc.SelectNodes(".//src"))
             {
                 var parent = node.ParentNode;
                 TransformText(node);
@@ -102,6 +129,22 @@ namespace Generator
             {
                 Remove(remove);
             }
+            toRemove.Clear();
+
+            // 相邻的a需要合并
+            foreach (XmlElement a in node.SelectNodes(".//a"))
+            {
+                var prev = a.PreviousSibling as XmlElement;
+                var next = a.NextSibling as XmlElement;
+                prev.InnerXml += a.OuterXml + next.InnerXml;
+                toRemove.Add(a);
+                toRemove.Add(next);
+            }
+            foreach (var remove in toRemove)
+            {
+                Remove(remove);
+            }
+            toRemove.Clear();
         }
 
         private void Remove(XmlNode node)

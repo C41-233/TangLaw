@@ -11,11 +11,13 @@ namespace Generator;
 internal partial class Main
 {
 
-    private struct EntryTitle
+    private struct EntryTitle : IComparable<EntryTitle>
     {
         public int Number;
         public int Number2;
         public string Title;
+
+        public string SeqNumber => Number2 == 0 ? $"{Number}" : $"{Number}.{Number2}";
 
         public static EntryTitle Parse(string name)
         {
@@ -27,11 +29,33 @@ internal partial class Main
                     Title = tokens[0],
                 };
             }
+
+            if (tokens[0].Contains('.'))
+            {
+                var numbers = tokens[0].Split(".", 2);
+                return new EntryTitle
+                {
+                    Number = int.Parse(numbers[0]),
+                    Number2 = int.Parse(numbers[1]),
+                    Title = tokens[1]
+                };
+            }
+            
             return new EntryTitle
             {
                 Number = int.Parse(tokens[0]),
                 Title = tokens[1]
             };
+        }
+
+        public int CompareTo(EntryTitle other)
+        {
+            var r1 = Comparer<int>.Default.Compare(this.Number, other.Number);
+            if (r1 != 0)
+            {
+                return r1;
+            }
+            return Comparer<int>.Default.Compare(this.Number2, other.Number2);
         }
     }
 
@@ -60,7 +84,17 @@ internal partial class Main
     {
         public EntryTitle EntryTitle;
         public Document Content;
-        public string FullTitle => $"第{Chinese.Parse(EntryTitle.Number)}条 {EntryTitle.Title}";
+        public string FullTitle
+        {
+            get
+            {
+                if (EntryTitle.Number2 != 0)
+                {
+                    return $"第{Chinese.Parse(EntryTitle.Number)}条之{Chinese.Parse(EntryTitle.Number2)} {EntryTitle.Title}";
+                }
+                return $"第{Chinese.Parse(EntryTitle.Number)}条 {EntryTitle.Title}";
+            }
+        }
     }
 
     private readonly List<LawSection1> Section1List = new();
@@ -73,7 +107,7 @@ internal partial class Main
         {
             Section1List.Add(CollectSection1(filename));
         }
-        Section1List.Sort((e1, e2) => Comparer<int>.Default.Compare(e1.EntryTitle.Number, e2.EntryTitle.Number));
+        Section1List.Sort((e1, e2) => Comparer<EntryTitle>.Default.Compare(e1.EntryTitle, e2.EntryTitle));
     }
 
     private static LawSection1 CollectSection1(string path)
@@ -98,6 +132,8 @@ internal partial class Main
         {
             section1.Children.Add(CollectSection2(sub));
         }
+
+        section1.Children.Sort((e1, e2) => Comparer<EntryTitle>.Default.Compare(e1.EntryTitle, e2.EntryTitle));
 
         return section1;
     }
@@ -129,6 +165,8 @@ internal partial class Main
             section2.Children.Add(CollectArticle(sub));
         }
 
+        section2.Children.Sort((e1, e2) => Comparer<EntryTitle>.Default.Compare(e1.EntryTitle, e2.EntryTitle));
+
         return section2;
     }
 
@@ -143,7 +181,7 @@ internal partial class Main
         article.Content = new Document(path)
         {
             Title = article.FullTitle,
-            Output = $"{filename}.html",
+            Output = $"{entryTitle.SeqNumber}.html",
         };
         return article;
     }

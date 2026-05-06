@@ -34,6 +34,10 @@ namespace Generator.Utils
 
         public static void PP(this Writer writer, string content)
         {
+            if (content == null)
+            {
+                return;
+            }
             var tokens = content.Trim().Split("\r\n\r\n");
             foreach (var token in tokens)
             {

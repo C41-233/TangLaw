@@ -20,6 +20,7 @@ internal partial class Main
             }
             writer.WriteLine("</header>");
 
+            // 目录部分
             writer.WriteLine("<section>");
             {
                 writer.H2("目录");
@@ -37,15 +38,33 @@ internal partial class Main
             }
             writer.WriteLine("</section>");
 
+            // 律文部分
             writer.WriteLine("<section class=\"index-section-text\">");
             {
                 writer.H2("律文");
                 writer.BeginDiv("index-text");
                 {
-                    writer.BeginDiv("index-text-entry");
-                    writer.Div("index-title-preamble", Preamble.Title);
-                    writer.PP(Preamble.Law);
-                    writer.EndDiv();
+                    // 序言
+                    {
+                        writer.Div("index-title-preamble", Preamble.Title);
+                        writer.PP(Preamble.Law);
+                    }
+
+                    // 章
+                    foreach (var section1 in Section1List)
+                    {
+                        writer.Div("index-title-section1", section1.FullTitle);
+                        // 节
+                        foreach (var section2 in section1.Children)
+                        {
+                            writer.Div("index-title-section2", section2.FullTitle);
+                            foreach(var article in section2.Children)
+                            {
+                                writer.Div("index-title-article", article.FullTitle);
+                                writer.PP(article.Content.Law);
+                            }
+                        }
+                    }
                 }
                 writer.EndDiv();
             }
