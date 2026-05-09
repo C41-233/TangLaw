@@ -31,6 +31,7 @@ namespace Generator
             TransformHeader();
             TransformLaw();
             TransformSrc();
+            TransformWord();
             TransformContainer();
         }
 
@@ -42,7 +43,7 @@ namespace Generator
                 var a = doc.CreateElement("a");
                 a.SetAttribute("href", $"{text}.html");
                 a.SetAttribute("class", "link-article");
-                Replace(node, a);
+                ReplaceTag(node, a);
 
                 if (text.Contains("."))
                 {
@@ -77,7 +78,7 @@ namespace Generator
                 TransformText(node);
                 var div = doc.CreateElement("div");
                 div.SetAttribute("class", "law");
-                Replace(node, div);
+                ReplaceTag(node, div);
             }
         }
         
@@ -93,6 +94,31 @@ namespace Generator
                 div.InnerXml = node.InnerXml;
                 Remove(node);
                 parent.AppendChild(div);
+            }
+        }
+
+        private void TransformWord()
+        {
+            foreach (XmlElement node in doc.SelectNodes(".//word"))
+            {
+                var name = node.GetAttribute("value");
+
+                var word = doc.CreateElement("div");
+                word.SetAttribute("class", "word");
+
+                var title = doc.CreateElement("div");
+                title.SetAttribute("class", "world-title");
+                title.InnerText = name;
+                word.AppendChild(title);
+
+                var content = doc.CreateElement("div");
+                content.SetAttribute("class", "word-content");
+
+                content.InnerXml = Main.Words[name];
+
+                word.AppendChild(content);
+
+                Replace(node, word);
             }
         }
 
@@ -152,9 +178,14 @@ namespace Generator
             node.ParentNode.RemoveChild(node);
         }
 
-        private static void Replace(XmlElement from, XmlElement to)
+        private static void ReplaceTag(XmlElement from, XmlElement to)
         {
             to.InnerXml = from.InnerXml;
+            from.ParentNode.ReplaceChild(to, from);
+        }
+
+        private static void Replace(XmlElement from, XmlElement to)
+        {
             from.ParentNode.ReplaceChild(to, from);
         }
 

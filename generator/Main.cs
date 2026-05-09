@@ -31,6 +31,7 @@ internal partial class Main
 
         CollectDocuments();
         CollectLaws();
+        CollectWords();
 
         OutputIndex();
         OutputPreamble();
