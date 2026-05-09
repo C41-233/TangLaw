@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Generator
 {
@@ -26,8 +27,7 @@ namespace Generator
 
         public void Run()
         {
-            TransformArticleLink();
-            TransformText(doc.DocumentElement);
+            TransformNormal(doc.DocumentElement);
             TransformHeader();
             TransformLaw();
             TransformSrc();
@@ -35,12 +35,18 @@ namespace Generator
             TransformContainer();
         }
 
-        private void TransformArticleLink()
+        private static void TransformNormal(XmlElement root)
         {
-            foreach (XmlElement node in doc.SelectNodes(".//article"))
+            TransformArticleLink(root);
+            TransformText(root);
+        }
+
+        private static void TransformArticleLink(XmlElement root)
+        {
+            foreach (XmlElement node in root.SelectNodes(".//article"))
             {
                 var text = node.InnerText.Trim();
-                var a = doc.CreateElement("a");
+                var a = root.OwnerDocument.CreateElement("a");
                 a.SetAttribute("href", $"{text}.html");
                 a.SetAttribute("class", "link-article");
                 ReplaceTag(node, a);
@@ -115,6 +121,7 @@ namespace Generator
                 content.SetAttribute("class", "word-content");
 
                 content.InnerXml = Main.Words[name];
+                TransformNormal(content);
 
                 word.AppendChild(content);
 
@@ -134,46 +141,11 @@ namespace Generator
             doc.DocumentElement.AppendChild(div);
         }
 
-        private void TransformText(XmlElement node)
+        private static void TransformText(XmlElement node)
         {
-            var toRemove = new List<XmlNode>();
-            foreach (var child in node.ChildNodes)
-            {
-                if (child is XmlText textNode)
-                {
-                    var sections = textNode.InnerText.Trim().Split("\r\n\r\n");
-                    foreach (var section in sections)
-                    {
-                        var p = doc.CreateElement("p");
-                        p.InnerText = section.Trim();
-                        textNode.ParentNode.InsertBefore(p, textNode);
-                    }
-                    toRemove.Add(textNode);
-                }
-            }
-            foreach (var remove in toRemove)
-            {
-                Remove(remove);
-            }
-            toRemove.Clear();
-
-            // 相邻的a需要合并
-            foreach (XmlElement a in node.SelectNodes(".//a"))
-            {
-                var prev = a.PreviousSibling as XmlElement;
-                var next = a.NextSibling as XmlElement;
-                prev.InnerXml += a.OuterXml + next.InnerXml;
-                toRemove.Add(a);
-                toRemove.Add(next);
-            }
-            foreach (var remove in toRemove)
-            {
-                Remove(remove);
-            }
-            toRemove.Clear();
         }
 
-        private void Remove(XmlNode node)
+        private static void Remove(XmlNode node)
         {
             node.ParentNode.RemoveChild(node);
         }

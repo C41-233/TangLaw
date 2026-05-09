@@ -126,3 +126,38 @@ p{
 .link-article{
     color: #2c2c2c;
 }
+
+/* --- 词语注释 (word annotation) --- */
+.word {
+    background: #f9f6ef;
+    border: 1px solid #e6dac8;
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    margin: 1rem 0 1rem 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #3d3d3d;
+}
+
+.world-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #8b4513;
+    margin-bottom: 0.3rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px dashed #dcd0c0;
+}
+
+.word-content p {
+    margin: 0.3rem 0;
+}
+
+.word-content link {
+    color: #6a3d0e;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.word-content link:hover {
+    color: #8b4513;
+}
