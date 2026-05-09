@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Xml;
 using static System.Collections.Specialized.BitVector32;
 
@@ -143,6 +144,68 @@ namespace Generator
 
         private static void TransformText(XmlElement node)
         {
+            var splits = new List<(string, bool)>();
+            var current = new StringBuilder();
+            foreach (var child in node.ChildNodes)
+            {
+                if (child is XmlText text)
+                {
+                    var lines = text.InnerText.Split("\r\n");
+                    for (int i = 0; i < lines.Length; i++)
+                    {
+                        string? line = lines[i];
+                        if (line.Trim().Length == 0)
+                        {
+                            if (current.Length > 0)
+                            {
+                                splits.Add((current.ToString(), true));
+                                current.Clear();
+                            }
+                            continue;
+                        }
+                        current.Append(line.Trim());
+                        if (i < lines.Length - 1)
+                        {
+                            current.AppendLine();
+                        }
+                    }
+                }
+                else if (child is XmlElement element)
+                {
+                    if (element.Name == "a")
+                    {
+                        current.Append(element.OuterXml);
+                    }
+                    else
+                    {
+                        if (current.Length > 0)
+                        {
+                            splits.Add((current.ToString(), true));
+                            current.Clear();
+                        }
+                        splits.Add((element.OuterXml, false));
+                    }
+                }
+            }
+            if (current.Length > 0)
+            {
+                splits.Add((current.ToString(), true));
+            }
+            current.Clear();
+
+            node.InnerXml = "";
+            foreach (var kv in splits)
+            {
+                if (kv.Item2)
+                {
+                    current.Append($"<p>{kv.Item1}</p>");
+                }
+                else
+                {
+                    current.Append(kv.Item1);
+                }
+            }
+            node.InnerXml = current.ToString();
         }
 
         private static void Remove(XmlNode node)
