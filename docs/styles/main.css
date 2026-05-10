@@ -127,6 +127,50 @@ p{
     color: #2c2c2c;
 }
 
+/* --- 表格 --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0;
+    font-size: 0.9rem;
+}
+
+thead th {
+    border: 1px solid #dcd0c0;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    line-height: 1.6;
+    background: #f0e8d8;
+    color: #3e1f0a;
+    font-weight: 700;
+}
+
+tbody th {
+    border: 1px solid #dcd0c0;
+    padding: 0.4rem 0.8rem;
+    line-height: 1.6;
+    background: #f5f0e8;
+    color: #3e1f0a;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+    width: 1%;
+}
+
+tbody td {
+    border: 1px solid #dcd0c0;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    line-height: 1.6;
+    background: #fffcf8;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
 /* --- 词语注释 (word annotation) --- */
 .word {
     background: #f9f6ef;
