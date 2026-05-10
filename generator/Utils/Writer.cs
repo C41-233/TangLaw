@@ -10,7 +10,7 @@ internal class Writer
     private readonly StringBuilder sb = new ();
     private readonly string path;
 
-    public Writer(string path)
+    public Writer(string path, string title)
     {
         this.path = path;
         sb.AppendLine("<html>");
@@ -18,6 +18,7 @@ internal class Writer
         sb.AppendLine("<meta charset=\"UTF-8\">");
         sb.AppendLine("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
         sb.AppendLine("<link rel=\"stylesheet\" href=\"../styles/main.css\">");
+        sb.AppendLine($"<title>{title}</title>");
         sb.AppendLine("</head>");
         sb.AppendLine("<body>");
     }

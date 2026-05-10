@@ -54,7 +54,7 @@ internal partial class Main
     private void OutputPreamble()
     {
         var output = Path.Combine(DestDir, Preamble.Output);
-        var writer = new Writer(output);
+        var writer = new Writer(output, Preamble.Title);
         writer.WriteLine(Preamble.GetBody());
         writer.Flush();
     }
@@ -72,7 +72,7 @@ internal partial class Main
         if (section1.Content != null)
         {
             var output = Path.Combine(DestDir, section1.Content.Output);
-            var writer = new Writer(output);
+            var writer = new Writer(output, section1.Content.Title);
             writer.WriteLine(section1.Content.GetBody());
             writer.Flush();
         }
@@ -87,7 +87,7 @@ internal partial class Main
         if (section2.Content != null)
         {
             var output = Path.Combine(DestDir, section2.Content.Output);
-            var writer = new Writer(output);
+            var writer = new Writer(output, section2.Content.Title);
             writer.WriteLine(section2.Content.GetBody());
             writer.Flush();
         }
@@ -100,7 +100,7 @@ internal partial class Main
     private void OutputArticle(LawArticle article)
     {
         var output = Path.Combine(DestDir, article.Content.Output);
-        var writer = new Writer(output);
+        var writer = new Writer(output, article.Content.Title);
         writer.WriteLine(article.Content.GetBody());
         writer.Flush();
     }

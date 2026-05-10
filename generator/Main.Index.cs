@@ -11,7 +11,7 @@ internal partial class Main
     private void OutputIndex()
     {
         var output = Path.Combine(DestDir, "index.html");
-        var writer = new Writer(output);
+        var writer = new Writer(output, "唐律");
         writer.BeginDiv("container");
         {
             writer.WriteLine("<header>");
