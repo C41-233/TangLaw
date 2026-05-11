@@ -121,7 +121,7 @@ namespace Generator
                 var content = doc.CreateElement("div");
                 content.SetAttribute("class", "word-content");
 
-                content.InnerXml = Main.Words[name];
+                content.InnerXml = Main.Instance.Words[name];
                 TransformNormal(content);
 
                 word.AppendChild(content);

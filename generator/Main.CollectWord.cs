@@ -7,7 +7,7 @@ namespace Generator;
 internal partial class Main
 {
 
-    public static Dictionary<string, string> Words = new Dictionary<string, string>();
+    public Dictionary<string, string> Words = new Dictionary<string, string>();
 
     private void CollectWords()
     {

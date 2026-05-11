@@ -10,11 +10,14 @@ namespace Generator;
 internal partial class Main
 {
 
+    public static Main Instance { get; private set; }
+
     private readonly string SrcDir;
     private readonly string DestDir;
 
     public Main(string srcDir, string destDir)
     {
+        Instance = this;
         SrcDir = srcDir;
         DestDir = destDir;
     }
@@ -32,10 +35,12 @@ internal partial class Main
         CollectDocuments();
         CollectLaws();
         CollectWords();
+        CollectAppendixes();
 
         OutputIndex();
         OutputPreamble();
         OutputLaws();
+        OutputAppendixes();
     }
 
     private void CollectDocuments()
@@ -104,4 +109,27 @@ internal partial class Main
         writer.WriteLine(article.Content.GetBody());
         writer.Flush();
     }
+
+    private void OutputAppendixes()
+    {
+        OutputAppendix(Appendix);
+        void OutputAppendix(AppendixEntry entry)
+        {
+            if (entry.Content != null)
+            {
+                var output = Path.Combine(DestDir, entry.Content.Output);
+                var writer = new Writer(output, entry.Content.Title);
+                writer.WriteLine(entry.Content.GetBody());
+                writer.Flush();
+            }
+            else
+            {
+                foreach(var child in entry.Children)
+                {
+                    OutputAppendix(child);
+                }
+            }
+        }
+    }
+
 }

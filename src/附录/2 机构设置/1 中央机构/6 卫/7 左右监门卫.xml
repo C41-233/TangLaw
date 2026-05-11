@@ -1,0 +1,286 @@
+<h2>大将军</h2>　
+　　
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>大将军</td>
+			<td>一人</td>
+			<td>正三品</td>
+			<td rowspan="2">掌诸门禁卫门籍之法</td>
+		</tr>
+		<tr>
+			<td>将军</td>
+			<td>二人</td>
+			<td>从三品</td>
+		</tr>
+		<tr>
+			<td>中郎将</td>
+			<td>四人</td>
+			<td>正四品下</td>
+			<td>掌监诸门及巡警之法</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>监门校尉</td>
+			<td>二百二十人</td>
+		</tr>
+		<tr>
+			<td>直长</td>
+			<td>六百八十人</td>
+		</tr>
+		<tr>
+			<td>长人长上</td>
+			<td>二十人</td>
+		</tr>
+		<tr>
+			<td>直长长上</td>
+			<td>二十人</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>大将军</h5>
+
+大将军各一人，正三品。
+
+汉、魏以来城门校尉之职也。隋置左、右监门府，各将军一人，有郎将二人、校尉·直长各三十人。炀帝改左、右监门卫将军为郎将。皇朝置大将军、郎将等员。龙朔二年，改府为卫。
+
+左、右监门卫大将军·将军之职，掌诸门禁卫门籍之法。
+
+凡京司应以籍入宫殿门者，皆本司具其官爵、姓名，以移牒其门，（若流外官承脚色，并具其年纪、颜状。）以门司送于监门，勘同，然后听入。
+
+凡财物器用应入宫者，所由以籍傍取左监门将军判，门司检以入之；应出宫者，所由亦以籍傍取右监门将军判，门司检以出之。其籍月一换。若大驾行幸，则依卤簿之法，率其属于牙门之下以为监守。
+
+<h5>将军</h5>
+
+将军各二人，从三品。
+
+左、右监门卫大将军·将军之职，掌诸门禁卫门籍之法。
+
+<h5>中郎将</h5>
+
+中郎将各四人，正四品下。
+
+隋左、右监门府郎将四人，炀帝置二人，皇朝置四人。
+
+中郎将掌监诸门及巡警之法。
+
+凡宫殿门及城门皆左入右出。其监门官司检校者，听从便门出入。
+
+<h2>长史</h2>　
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>长史</td>
+			<td>一人</td>
+			<td>从六品上</td>
+			<td>掌判诸曹及诸禁门之事，以省其出入巡检，而司其籍傍</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>亭长</td>
+			<td>二人</td>
+		</tr>
+		<tr>
+			<td>掌固</td>
+			<td>二人</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>长史</h5>
+
+长史各一人，从六品上。
+
+隋左、右开府有长史、录事、兵曹等员，皇朝因之。胄曹已具上注。
+
+长史掌判诸曹及诸禁门之事，以省其出入巡检，而司其籍傍。
+
+<h2>录事</h2>　
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>录事参军事</td>
+			<td>一人</td>
+			<td>正八品上</td>
+			<td>掌印发，勾检稽失</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>录事</td>
+			<td>一人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>二人</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>录事参军事</h5>
+
+录事参军事各一人，正八品上。
+
+录事参军掌印发，勾检稽失。
+
+诸司籍傍押于监门者，印署而遣之。
+
+<h2>兵曹</h2>　
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>兵曹参军事</td>
+			<td>一人</td>
+			<td>正八品下</td>
+			<td>掌本卫文、武官之职簿</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>府</td>
+			<td>三人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>五人</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>兵曹参军事</h5>
+
+兵曹参军事各二人，正八品下。
+
+兵曹掌本卫文、武官之职簿。
+
+凡授上、解免、勋阶、考课、假使、禄赐主事，皆判而申牒之。
+
+<h2>胄曹</h2>　
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>胄曹参军事</td>
+			<td>一人</td>
+			<td>正八品下</td>
+			<td>掌军戎器械及承直马、公廨兴造、决罚</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>府</td>
+			<td>三人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>四人</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>胄曹参军事</h5>
+
+胄曹参军事各一人，正八品下。
+
+胄曹掌军戎器械及承直马、公廨兴造、决罚。

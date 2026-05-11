@@ -1,0 +1,276 @@
+<h2>尚食</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>尚食</td>
+			<td>二人</td>
+			<td>正五品</td>
+			<td>掌供膳羞品齐之数</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>尚食</h5>
+
+尚食二人，正五品。
+
+尚食掌供膳羞品齐之数，惣司膳、司酝、司药、司馆四司之官属。凡进食，先尝之。
+
+<h2>司膳</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司膳</td>
+			<td>四人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌割烹煎和之事</td>
+		</tr>
+		<tr>
+			<td>典膳</td>
+			<td>四人</td>
+			<td>正七品</td>
+		</tr>
+		<tr>
+			<td>掌膳</td>
+			<td>四人</td>
+			<td>正八品</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>四人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司膳</h5>
+
+司膳四人，正六品。
+
+司膳掌割烹煎和之事。
+
+<h5>典膳、掌膳</h5>
+
+典膳四人，正七品，掌膳四人，正八品。
+
+典膳、掌膳佐之。
+
+<h2>司酝</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司酝</td>
+			<td>二人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌酒醴枌饮之事</td>
+		</tr>
+		<tr>
+			<td>典酝</td>
+			<td>二人</td>
+			<td>正七品</td>
+		</tr>
+		<tr>
+			<td>掌酝</td>
+			<td>二人</td>
+			<td>正八品</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>二人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司酝</h5>
+
+司酝二人；正六品。
+
+司酝掌酒醴枌饮之事。
+
+<h5>典酝、掌酝</h5>
+
+典酝二人，正七品；掌酝二人，正八品。
+
+典酝、掌酝佐之。
+
+<h2>司药</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司药</td>
+			<td>二人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌医方药物之事</td>
+		</tr>
+		<tr>
+			<td>典药</td>
+			<td>二人</td>
+			<td>正七品</td>
+		</tr>
+		<tr>
+			<td>掌药</td>
+			<td>二人</td>
+			<td>正八品</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>四人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司药司</h5>
+
+司药二人，正六品。
+
+司药掌医方药物之事。
+
+<h5>典药、掌药</h5>
+
+典药二人，正七品；掌药二人，正八品。
+
+典药、掌药佐之。
+
+<h2>司饎</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司饎</td>
+			<td>二人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌给宫人廪饩、饮食、薪炭之事</td>
+		</tr>
+		<tr>
+			<td>典饎</td>
+			<td>二人</td>
+			<td>正七品</td>
+		</tr>
+		<tr>
+			<td>掌饎</td>
+			<td>二人</td>
+			<td>正八品</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>四人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司饎</h5>
+
+司饎二人，正六品。
+
+司饎掌给宫人廪饩、饮食、薪炭之事。
+
+<h5>典饎、掌饎</h5>
+
+典饎二人，正七品；掌饎二人，正八品。
+
+典饎、掌饎佐之。
+

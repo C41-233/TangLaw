@@ -1,0 +1,391 @@
+<h2>大都护</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>大都护</td>
+			<td>一人</td>
+			<td>从二品</td>
+			<td rowspan="5">掌抚慰诸蕃，辑宁外寇，觇候奸诱，征讨携离</td>
+		</tr>
+		<tr>
+			<td>副大都护</td>
+			<td>一人</td>
+			<td>从三品</td>
+		</tr>
+		<tr>
+			<td>副都护</td>
+			<td>二人</td>
+			<td>正四品上</td>
+		</tr>
+		<tr>
+			<td>长史</td>
+			<td>一人</td>
+			<td>正五品上</td>
+		</tr>
+		<tr>　
+			<td>司马</td>
+			<td>一人</td>
+			<td>正五品下</td>
+		</tr>
+	</tbody>
+</table>
+　
+<h5>大都护</h5>
+
+大都护一人，从二品。
+
+都护、副都护之职，掌抚慰诸蕃，辑宁外寇，觇候奸诱，征讨携离。
+
+<h5>副大都护</h5>
+
+副大都护一人，从三品。
+
+<h5>副都护</h5>
+
+副都护二人，正四品上。
+
+汉武帝开西域，安其种落三十六国，置使者、校尉以领护之。宣帝时，郑吉为西域都护，始立幕府；都护之名，自吉始也。至章帝时，废西域都护，令戊己校尉领之。魏、晋之间，有都护左·右军、都护将军之号，遂废都护之名。皇朝永徽中，始置安南、安西大都护。景云二年，又置单于都护。开元初，置北庭都护。今有单于副都护。
+
+<h5>长史</h5>
+
+长史一人，正五品上。
+
+汉宣帝置西域都护长史一人，自后不绝，今单干则不置。
+
+长史、司马贰焉。
+
+<h5>司马</h5>
+
+司马一人，正五品下。
+
+汉武帝置护乌桓校尉、护羌校尉，各司马二人；元帝置戊己校尉，亦置司马一人，皆都护司马之任也。
+
+长史、司马贰焉。
+
+<h2>录事</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>录事参军事</td>
+			<td>一人</td>
+			<td>正七品上</td>
+			<td>掌付事勾稽，省署杪目，糺正非违，监守符印</td>
+		</tr>
+		<tr>　
+			<td>录事</td>
+			<td>二人</td>
+			<td>从九品上</td>
+			<td>-</td>
+		</tr>
+	</tbody>
+</table>
+　
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>史</td>
+			<td>二人</td>
+		</tr>
+	</tbody>
+</table>
+　
+<h5>录事参军事</h5>
+
+录事参军事一人，正七品上。
+
+<h5>录事</h5>
+
+录事二人，从九品上。
+
+<h2>功曹</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>功曹参军事</td>
+			<td>一人</td>
+			<td>正七品下</td>
+			<td>掌官吏考课、假使、选举、祭祀、祯祥、道佛、学校、表疏、书启、医药、陈设之事</td>
+		</tr>
+	</tbody>
+</table>
+　
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>府</td>
+			<td>二人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>二人</td>
+		</tr>
+	</tbody>
+</table>
+　
+单于无功曹。
+
+<h5>功曹参军事</h5>
+
+功曹参军事一人，正七品下。
+
+<h2>仓曹</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>仓曹参军事</td>
+			<td>一人</td>
+			<td>正七品下</td>
+			<td>掌公廨、度量、庖厨、仓库、租赋、徵收、田园、市肆之事</td>
+		</tr>
+	</tbody>
+</table>
+　
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>府</td>
+			<td>二人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>二人</td>
+		</tr>
+	</tbody>
+</table>
+　
+<h5>仓曹参军事</h5>
+
+仓曹参军事一人，正七品下。
+
+<h2>户曹</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>户曹参军事</td>
+			<td>一人</td>
+			<td>正七品下</td>
+			<td>掌户籍、计帐，道路、逆旅，田畴、六畜、过所、蠲符之事，而剖断人之诉竞</td>
+		</tr>
+	</tbody>
+</table>
+　
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>府</td>
+			<td>三人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>三人</td>
+		</tr>
+		<tr>
+			<td>帐史</td>
+			<td>一人</td>
+		</tr>
+	</tbody>
+</table>
+　
+单于无户曹。
+
+<h5>户曹参军事</h5>
+
+户曹参军事一人，正七品下。
+
+<h2>兵曹</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>兵曹参军事</td>
+			<td>一人</td>
+			<td>正七品下</td>
+			<td>掌武官选举，兵甲器仗，门户管钥，烽候传驿之事</td>
+		</tr>
+	</tbody>
+</table>
+　
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>府</td>
+			<td>三人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>四人</td>
+		</tr>
+	</tbody>
+</table>
+　
+<h5>兵曹参军事</h5>
+
+兵曹参军事一人，正七品下。
+
+<h2>法曹</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>法曹参军事</td>
+			<td>一人</td>
+			<td>正七品下</td>
+			<td>掌律、令、格、式，鞫狱定刑，督捕盗贼，糺逖奸非之事，以究其情伪，而制其文法</td>
+		</tr>
+	</tbody>
+</table>
+　
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>府</td>
+			<td>三人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>四人</td>
+		</tr>
+	</tbody>
+</table>
+
+单于无法曹。
+
+<h5>法曹参军事</h5>
+
+法曹参军事一人，正七品下。
+
+<h2>参军事</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>参军事</td>
+			<td>三人</td>
+			<td>正八品下</td>
+			<td>掌出使检校及导引之事</td>
+		</tr>
+	</tbody>
+</table>
+　
+<h5>参军事</h5>
+
+参军事三人，正八品下。

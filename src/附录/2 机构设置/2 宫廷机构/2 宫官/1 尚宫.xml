@@ -1,0 +1,278 @@
+<h2>尚宫</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>尚宫</td>
+			<td>二人</td>
+			<td>正五品</td>
+			<td>掌导引中宫</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>尚宫</h5>
+
+尚宫二人，正五品。
+
+尚宫掌导引中宫，惣司记、司言、司簿、司闱四司之官属。凡六尚事物出纳文籍，皆印署之。（六尚须物，外物之司受敕连署牒，仍取尚宫押印，司记录目，为抄出，付内侍省受牒，便移外司。其五尚之印唯于当司宫内行用，不得印出外文牒。）
+
+<h2>司记</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司记</td>
+			<td>二人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌印</td>
+		</tr>
+		<tr>
+			<td>典记</td>
+			<td>二人</td>
+			<td>正七品</td>
+		</tr>
+		<tr>
+			<td>掌记</td>
+			<td>二人</td>
+			<td>正八品</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>六人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司记</h5>
+
+司记二人，正六品。
+
+司记掌印。凡宫内诸司簿书出入录目，审而付行焉。
+
+<h5>典记、掌记</h5>
+
+典记二人，正七品；掌记二人，正八品。
+
+典记、掌记佐之。
+
+<h2>司言</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司言</td>
+			<td>二人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌宣传启奏之事</td>
+		</tr>
+		<tr>
+			<td>典言</td>
+			<td>二人</td>
+			<td>正七品</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>掌言</td>
+			<td>二人</td>
+			<td>正八品</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>四人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司言</h5>
+
+司言二人，正六品。
+
+司言掌宣传启奏之事。（凡有敕处分，承敕人宣付司言连署、案记，别钞一本，付门司传出。若外司附奏，受事人奏闻，承敕处分，传付外司；仍录事目、旨意，亦连署为案。）
+
+<h5>典言、掌言</h5>
+
+典言二人，正七品；掌簿二人，正八品。
+
+典言、掌言佐之。
+
+<h2>司簿</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司簿</td>
+			<td>二人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌宫人名簿、廪赐之事</td>
+		</tr>
+		<tr>
+			<td>典簿</td>
+			<td>二人</td>
+			<td>正七品</td>
+		</tr>
+		<tr>
+			<td>掌簿</td>
+			<td>二人</td>
+			<td>正八品</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>六人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司簿</h5>
+
+司簿二人，正六品。
+
+司簿掌宫人名簿、廪赐之事。
+
+<h5>典簿、掌簿</h5>
+
+典簿六人，正七品；掌簿二人，正八品。
+
+典簿、掌簿佐之。
+
+<h2>司闱</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司闱</td>
+			<td>六人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌宫闱管钥之事</td>
+		</tr>
+		<tr>
+			<td>典闱</td>
+			<td>六人</td>
+			<td>正七品</td>
+		</tr>
+		<tr>
+			<td>掌闱</td>
+			<td>六人</td>
+			<td>正八品</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>四人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司闱</h5>
+
+司闱六人，正六品。
+
+司闱掌宫闱管钥之事。
+
+<h5>典闱、掌闱</h5>
+
+典闱六人，正七品；掌闱六人，正八品。
+
+典闱、掌闱佐之。
+

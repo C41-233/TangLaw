@@ -69,9 +69,47 @@ internal partial class Main
                 writer.EndDiv();
             }
             writer.WriteLine("</section>");
+
+            // 附录部分
+            writer.WriteLine("<section>");
+            {
+                writer.H2("附录");
+                writer.WriteLine("<nav>");
+                {
+                    writer.WriteLine("<ul>");
+                    foreach (var appendix in Appendix.Children)
+                    {
+                        OutputIndexAppendix(writer, appendix);
+                    }
+                    writer.WriteLine("</ul>");
+                }
+                writer.WriteLine("</nav>");
+            }
+            writer.WriteLine("</section>");
         }
         writer.EndDiv();
         writer.Flush();
+    }
+
+    private void OutputIndexAppendix(Writer writer, AppendixEntry appendix)
+    {
+        if (appendix.Content != null)
+        {
+            writer.WriteLine($"<li>{HTML.Href(appendix.EntryTitle.Title, appendix.Content.Output)}</li>");
+        }
+        else
+        {
+            writer.WriteLine($"<li>{appendix.EntryTitle.Title}</li>");
+        }
+        if (appendix.Children.Count > 0)
+        {
+            writer.WriteLine("<ul>");
+            foreach (var sub in appendix.Children)
+            {
+                OutputIndexAppendix(writer, sub);
+            }
+            writer.WriteLine("</ul>");
+        }
     }
 
     private void OutputIndexSection1(Writer writer, LawSection1 section1)

@@ -19,7 +19,7 @@ body {
 
 /* --- Layout --- */
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     background: #fffcf8;
     padding: 2.5rem 2.5rem 3rem;

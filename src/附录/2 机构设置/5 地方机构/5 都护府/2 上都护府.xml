@@ -1,0 +1,275 @@
+<h2>大都护</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>都护</td>
+			<td>一人</td>
+			<td>正三品</td>
+			<td rowspan="4">掌抚慰诸蕃，辑宁外寇，觇候奸诱，征讨携离</td>
+		</tr>
+		<tr>
+			<td>副都护</td>
+			<td>二人</td>
+			<td>从四品上</td>
+		</tr>
+		<tr>
+			<td>长史</td>
+			<td>一人</td>
+			<td>正五品上</td>
+		</tr>
+		<tr>　
+			<td>司马</td>
+			<td>一人</td>
+			<td>正五品下</td>
+		</tr>
+	</tbody>
+</table>
+　
+<h2>录事</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>录事参军事</td>
+			<td>一人</td>
+			<td>正七品下</td>
+			<td>掌付事勾稽，省署杪目，糺正非违，监守符印</td>
+		</tr>
+		<tr>　
+			<td>录事</td>
+			<td>二人</td>
+			<td>从九品上</td>
+			<td>-</td>
+		</tr>
+	</tbody>
+</table>
+　
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>史</td>
+			<td>三人</td>
+		</tr>
+	</tbody>
+</table>
+　
+<h2>功曹</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>功曹参军事</td>
+			<td>一人</td>
+			<td>从七品上</td>
+			<td>掌官吏考课、假使、选举、祭祀、祯祥、道佛、学校、表疏、书启、医药、陈设之事</td>
+		</tr>
+	</tbody>
+</table>
+　
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>府</td>
+			<td>二人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>二人</td>
+		</tr>
+	</tbody>
+</table>
+　
+<h2>仓曹</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>仓曹参军事</td>
+			<td>一人</td>
+			<td>从七品上</td>
+			<td>掌公廨、度量、庖厨、仓库、租赋、徵收、田园、市肆之事</td>
+		</tr>
+	</tbody>
+</table>
+　
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>府</td>
+			<td>二人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>二人</td>
+		</tr>
+	</tbody>
+</table>
+　
+<h2>户曹</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>户曹参军事</td>
+			<td>一人</td>
+			<td>从七品上</td>
+			<td>掌户籍、计帐，道路、逆旅，田畴、六畜、过所、蠲符之事，而剖断人之诉竞</td>
+		</tr>
+	</tbody>
+</table>
+　
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>府</td>
+			<td>三人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>三人</td>
+		</tr>
+		<tr>
+			<td>帐史</td>
+			<td>一人</td>
+		</tr>
+	</tbody>
+</table>
+　
+<h2>兵曹</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>兵曹参军事</td>
+			<td>一人</td>
+			<td>从七品上</td>
+			<td>掌武官选举，兵甲器仗，门户管钥，烽候传驿之事</td>
+		</tr>
+	</tbody>
+</table>
+　
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>府</td>
+			<td>三人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>四人</td>
+		</tr>
+	</tbody>
+</table>
+　
+<h2>参军事</h2>
+
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>参军事</td>
+			<td>三人</td>
+			<td>从八品上</td>
+			<td>掌出使检校及导引之事</td>
+		</tr>
+	</tbody>
+</table>
+　

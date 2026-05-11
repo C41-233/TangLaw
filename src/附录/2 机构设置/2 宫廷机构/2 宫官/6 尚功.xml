@@ -1,0 +1,275 @@
+<h2>尚功</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>尚功</td>
+			<td>二人</td>
+			<td>正五品</td>
+			<td>掌女工之程课</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>尚功</h5>
+
+尚功二人，正五品。
+
+尚功掌女工之程课，总司制、司珍、司彩、司计四司之官属。
+
+<h2>司制</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司制</td>
+			<td>二人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌衣服裁制缝线之事</td>
+		</tr>
+		<tr>
+			<td>典制</td>
+			<td>二人</td>
+			<td>正七品</td>
+		</tr>
+		<tr>
+			<td>掌制</td>
+			<td>二人</td>
+			<td>正八品</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>四人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司制</h5>
+
+司制二人，正六品。
+
+司制掌衣服裁制缝线之事。
+
+<h5>典制、掌制</h5>
+
+典制二人，正七品；掌制二人，正八品。
+
+典制、掌制佐之。
+
+<h2>司珍</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司珍</td>
+			<td>二人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌金玉宝货之事</td>
+		</tr>
+		<tr>
+			<td>典珍</td>
+			<td>二人</td>
+			<td>正七品</td>
+		</tr>
+		<tr>
+			<td>掌珍</td>
+			<td>二人</td>
+			<td>正八品</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>六人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司珍</h5>
+
+司珍二人，正六品。
+
+司珍掌金玉宝货之事。
+
+<h5>典珍、掌珍</h5>
+
+典珍二人，正七品；掌珍二人，正八品。
+
+典珍、掌珍佐之。
+
+<h2>司彩</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司彩</td>
+			<td>二人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌彩物、缯锦、丝臬之事</td>
+		</tr>
+		<tr>
+			<td>典彩</td>
+			<td>二人</td>
+			<td>正七品</td>
+		</tr>
+		<tr>
+			<td>掌彩</td>
+			<td>二人</td>
+			<td>正八品</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>六人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司彩</h5>
+
+司彩二人，正六品。
+
+司彩掌彩物、缯锦、丝臬之事。
+
+<h5>典彩、掌彩</h5>
+
+典彩二人，正七品；掌彩二人，正八品。
+
+典彩、掌彩佐之。
+
+<h2>司计</h2>
+
+<table>
+	<caption>宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>司计</td>
+			<td>二人</td>
+			<td>正六品</td>
+			<td rowspan="3">掌支度衣服、饮食、薪炭之事</td>
+		</tr>
+		<tr>
+			<td>典计</td>
+			<td>二人</td>
+			<td>正七品</td>
+		</tr>
+		<tr>
+			<td>掌计</td>
+			<td>二人</td>
+			<td>正八品</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外宫官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>女史</td>
+			<td>四人</td>
+			<td>掌执文书</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>司计</h5>
+
+司计二人，正六品。
+
+司计掌支度衣服、饮食、薪炭之事。
+
+<h5>典计、掌计</h5>
+
+典计二人，正七品；掌计二人，正八品。
+
+典计、掌计佐之。

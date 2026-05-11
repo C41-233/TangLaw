@@ -1,0 +1,89 @@
+<table>
+	<caption>职事官</caption>
+	<thead>
+		<tr>
+			<th>官职</th>
+			<th>编制</th>
+			<th>品阶</th>
+			<th>职责</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>中郎将</td>
+			<td>一人</td>
+			<td>正四品下</td>
+			<td rowspan="3">掌领其府校尉、旅帅、翊卫之属以宿卫，而总其府事</td>
+		</tr>
+		<tr>
+			<td>左郎将</td>
+			<td>一人</td>
+			<td>正五品上</td>
+		</tr>
+		<tr>
+			<td>右郎将</td>
+			<td>一人</td>
+			<td>正五品上</td>
+		</tr>
+		<tr>
+			<td>兵曹参军事</td>
+			<td>一人</td>
+			<td>正九品上</td>
+			<td>-</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<caption>流外官</caption>
+	<thead>
+		<tr>　
+			<th>官职</th>
+			<th>编制</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>录事</td>
+			<td>一人</td>
+		</tr>
+		<tr>
+			<td>府</td>
+			<td>一人</td>
+		</tr>
+		<tr>
+			<td>史</td>
+			<td>二人</td>
+		</tr>
+		<tr>
+			<td>校尉</td>
+			<td>五人</td>
+		</tr>
+		<tr>
+			<td>旅帅</td>
+			<td>十人</td>
+		</tr>
+		<tr>
+			<td>队正</td>
+			<td>二十人</td>
+		</tr>
+		<tr>
+			<td>副队正</td>
+			<td>二十人</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>中郎将</h5>
+
+翊府中郎将各一人，正四品下。
+
+中郎将掌领其府校尉、旅帅、翊卫之属以宿卫，而总其府事，余如左、右卫。
+
+<h5>左、右郎将</h5>
+
+左、右郎将各一人，正五品上。
+
+<h5>兵曹参军事</h5>
+
+兵曹参军事各一人，正九品上。
