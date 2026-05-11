@@ -152,7 +152,7 @@ tbody th {
     background: #f5f0e8;
     color: #3e1f0a;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
     white-space: nowrap;
     width: 1%;
 }
@@ -163,12 +163,6 @@ tbody td {
     text-align: center;
     line-height: 1.6;
     background: #fffcf8;
-}
-
-table.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
 }
 
 /* --- 词语注释 (word annotation) --- */
