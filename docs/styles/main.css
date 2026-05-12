@@ -58,6 +58,45 @@ h2 {
     line-height: 1.4;
 }
 
+h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #4a2a10;
+    margin-top: 1.1rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #e0d8cc;
+}
+
+h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #5a3a1a;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #6a4a2a;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+h6 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #7a5a3a;
+    margin-top: 0.7rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.5;
+}
+
 /* --- Nav --- */
 nav ul {
     list-style: none;
