@@ -32,7 +32,7 @@ namespace Generator
             TransformHeader();
             TransformLaw();
             TransformSrc();
-            TransformWord();
+            TransformWord(doc.DocumentElement);
             TransformContainer();
         }
 
@@ -104,9 +104,10 @@ namespace Generator
             }
         }
 
-        private void TransformWord()
+        private static void TransformWord(XmlElement root)
         {
-            foreach (XmlElement node in doc.SelectNodes(".//word"))
+            var doc = root.OwnerDocument;
+            foreach (XmlElement node in root.SelectNodes(".//word"))
             {
                 var name = node.GetAttribute("value");
 
@@ -125,6 +126,8 @@ namespace Generator
                 TransformNormal(content);
 
                 word.AppendChild(content);
+
+                TransformWord(word);
 
                 Replace(node, word);
             }

@@ -22,7 +22,7 @@
 		<tr>
 			<th>谋杀</th>
 			<td>皆斩</td>
-			<td>恶逆（既遂）</td>
+			<td>恶逆（致死）</td>
 			<td><article>253</article></td>
 		</tr>
 		<tr>
@@ -33,8 +33,8 @@
 		</tr>
 		<tr>
 			<th>厌魅（意图致人疾苦）</th>
-			<td>皆徒三年</td>
-			<td>不道</td>
+			<td>皆徒三年；致死的，皆斩</td>
+			<td>不道，恶逆（致死）</td>
 			<td><article>264</article></td>
 		</tr>
 		<tr>
@@ -45,8 +45,8 @@
 		</tr>
 		<tr>
 			<th>诅咒（意图致人疾苦）</th>
-			<td>皆徒三年</td>
-			<td></td>
+			<td>皆徒三年；致死的，皆斩</td>
+			<td>恶逆（致死）</td>
 			<td><article>264</article></td>
 		</tr>
 	</tbody>
