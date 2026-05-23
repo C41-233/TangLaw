@@ -204,6 +204,10 @@ tbody td {
     background: #fffcf8;
 }
 
+table caption{
+	font-weight: bold;
+}
+
 /* --- 词语注释 (word annotation) --- */
 .word {
     background: #f9f6ef;
