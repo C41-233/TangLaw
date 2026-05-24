@@ -42,12 +42,30 @@ internal partial class Transformer
 
             var children = new Dictionary<string, List<string>>();
             var allRights = new HashSet<string>();
+            var displayNames = new Dictionary<string, string>();
             foreach (var (left, right) in pairs)
             {
                 if (!children.ContainsKey(left))
                     children[left] = new List<string>();
-                children[left].Add(right);
-                allRights.Add(right);
+
+                var starStart = right.IndexOf('*');
+                var starEnd = right.LastIndexOf('*');
+                if (starStart >= 0 && starEnd > starStart)
+                {
+                    var key = right[(starStart + 1)..starEnd];
+                    if (!children[left].Contains(key))
+                        children[left].Add(key);
+                    allRights.Add(key);
+                    var suffix = right[(starEnd + 1)..];
+                    if (suffix.Length > 0)
+                        displayNames[key] = key + suffix;
+                }
+                else
+                {
+                    if (!children[left].Contains(right))
+                        children[left].Add(right);
+                    allRights.Add(right);
+                }
             }
 
             var roots = new List<string>();
@@ -126,7 +144,7 @@ internal partial class Transformer
                     }
 
                     var td = doc.CreateElement("td");
-                    td.InnerText = item;
+                    td.InnerText = displayNames.TryGetValue(item, out var display) ? display : item;
                     int span = CalcColspan(item, children);
                     if (span > 1)
                         td.SetAttribute("colspan", span.ToString());
