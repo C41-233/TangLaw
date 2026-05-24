@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Xml;
 
@@ -84,26 +85,60 @@ internal partial class Transformer
             foreach (var rootItem in roots)
                 totalCols += CalcColspan(rootItem, children);
 
+            var startCols = new Dictionary<string, int>();
+            int col = 0;
+            foreach (var rootItem in roots)
+            {
+                startCols[rootItem] = col;
+                col += CalcColspan(rootItem, children);
+            }
+
             int maxLevel = levels.Keys.Max();
+            for (int level = 0; level < maxLevel; level++)
+            {
+                if (!levels.TryGetValue(level, out var items)) continue;
+                foreach (var item in items)
+                {
+                    if (!children.TryGetValue(item, out var kids)) continue;
+                    int childStart = startCols[item];
+                    foreach (var kid in kids)
+                    {
+                        startCols[kid] = childStart;
+                        childStart += CalcColspan(kid, children);
+                    }
+                }
+            }
+
             for (int level = 0; level <= maxLevel; level++)
             {
                 if (!levels.TryGetValue(level, out var items)) continue;
 
                 var tr = doc.CreateElement("tr");
-                int rowCols = 0;
-                foreach (var item in items)
+                var sortedItems = items.OrderBy(item => startCols[item]).ToList();
+
+                int currentCol = 0;
+                foreach (var item in sortedItems)
                 {
+                    while (currentCol < startCols[item])
+                    {
+                        tr.AppendChild(doc.CreateElement("td"));
+                        currentCol++;
+                    }
+
                     var td = doc.CreateElement("td");
                     td.InnerText = item;
                     int span = CalcColspan(item, children);
                     if (span > 1)
                         td.SetAttribute("colspan", span.ToString());
                     tr.AppendChild(td);
-                    rowCols += span;
+                    currentCol += span;
                 }
 
-                for (int i = rowCols; i < totalCols; i++)
+                while (currentCol < totalCols)
+                {
                     tr.AppendChild(doc.CreateElement("td"));
+                    currentCol++;
+                }
 
                 table.AppendChild(tr);
             }
