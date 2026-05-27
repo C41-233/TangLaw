@@ -27,6 +27,14 @@ internal partial class Transformer
             var table = doc.CreateElement("table");
             table.SetAttribute("class", "x-table");
 
+            var title = node.GetAttribute("title");
+            if (title.Length > 0)
+            {
+                var caption = doc.CreateElement("caption");
+                caption.InnerText = title;
+                table.AppendChild(caption);
+            }
+
             // Phase 1: parse all lines, separate * -> first-row definitions
             var firstRows = new List<List<string>>();
             var dataLines = new List<string>();
