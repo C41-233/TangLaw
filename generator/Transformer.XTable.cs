@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Xml;
 
 namespace Generator;
@@ -28,17 +27,57 @@ internal partial class Transformer
             var table = doc.CreateElement("table");
             table.SetAttribute("class", "x-table");
 
-            var pairs = new List<(string Left, string Right)>();
+            // Phase 1: parse all lines, separate * -> first-row definitions
+            var firstRows = new List<List<string>>();
+            var dataLines = new List<string>();
+
             foreach (var rawLine in node.InnerText.Split('\n'))
             {
                 var line = rawLine.Trim();
                 if (line.Length == 0) continue;
                 var arrow = line.IndexOf("->", StringComparison.Ordinal);
                 if (arrow < 0) continue;
+                var left = line[..arrow].Trim();
+                if (left == "*")
+                {
+                    // * -> xxx 作为表格第一行普通单元格
+                    var right = line[(arrow + 2)..];
+                    var cells = right.Split("->", StringSplitOptions.TrimEntries);
+                    var row = new List<string>();
+                    foreach (var cell in cells)
+                    {
+                        var trimmed = cell.Trim();
+                        var starStart = trimmed.IndexOf('*');
+                        var starEnd = trimmed.LastIndexOf('*');
+                        if (starStart >= 0 && starEnd > starStart)
+                        {
+                            var key = trimmed[(starStart + 1)..starEnd];
+                            var suffix = trimmed[(starEnd + 1)..];
+                            row.Add((key + suffix).Replace("\\n", "<br/>"));
+                        }
+                        else
+                        {
+                            row.Add(trimmed.Replace("\\n", "<br/>"));
+                        }
+                    }
+                    if (row.Count > 0)
+                        firstRows.Add(row);
+                }
+                else
+                {
+                    dataLines.Add(line);
+                }
+            }
+
+            // Phase 2: build tree from data lines
+            var pairs = new List<(string Left, string Right)>();
+            foreach (var line in dataLines)
+            {
+                var arrow = line.IndexOf("->", StringComparison.Ordinal);
                 pairs.Add((line[..arrow].Trim(), line[(arrow + 2)..].Trim()));
             }
 
-            if (pairs.Count == 0) continue;
+            if (pairs.Count == 0 && firstRows.Count == 0) continue;
 
             var children = new Dictionary<string, List<string>>();
             var allRights = new HashSet<string>();
@@ -78,8 +117,8 @@ internal partial class Transformer
             var visited = new HashSet<string>();
             foreach (var rootItem in roots)
             {
-                visited.Add(rootItem);
-                queue.Enqueue((rootItem, 0));
+                if (visited.Add(rootItem))
+                    queue.Enqueue((rootItem, 0));
             }
 
             while (queue.Count > 0)
@@ -111,7 +150,7 @@ internal partial class Transformer
                 col += CalcColspan(rootItem, children);
             }
 
-            int maxLevel = levels.Keys.Max();
+            int maxLevel = levels.Keys.Count > 0 ? levels.Keys.Max() : -1;
             for (int level = 0; level < maxLevel; level++)
             {
                 if (!levels.TryGetValue(level, out var items)) continue;
@@ -127,7 +166,35 @@ internal partial class Transformer
                 }
             }
 
-            for (int level = 0; level <= maxLevel; level++)
+            // Phase 3: render first rows from * -> definitions (as normal cells, not headers)
+            foreach (var rowCells in firstRows)
+            {
+                var tr = doc.CreateElement("tr");
+                if (rowCells.Count == 1 && totalCols > 1)
+                {
+                    var td = doc.CreateElement("td");
+                    td.SetAttribute("colspan", totalCols.ToString());
+                    td.InnerXml = rowCells[0];
+                    tr.AppendChild(td);
+                }
+                else
+                {
+                    foreach (var cell in rowCells)
+                    {
+                        var td = doc.CreateElement("td");
+                        td.InnerXml = cell;
+                        tr.AppendChild(td);
+                    }
+                    for (int i = rowCells.Count; i < totalCols; i++)
+                        tr.AppendChild(doc.CreateElement("td"));
+                }
+                table.AppendChild(tr);
+            }
+
+            // Phase 4: render tree rows
+            // When * -> first rows exist, skip level 0 (star's children) to avoid redundancy
+            int startLevel = firstRows.Count > 0 ? 1 : 0;
+            for (int level = startLevel; level <= maxLevel; level++)
             {
                 if (!levels.TryGetValue(level, out var items)) continue;
 
@@ -144,7 +211,8 @@ internal partial class Transformer
                     }
 
                     var td = doc.CreateElement("td");
-                    td.InnerText = displayNames.TryGetValue(item, out var display) ? display : item;
+                    var content = displayNames.TryGetValue(item, out var display) ? display : item;
+                    td.InnerXml = content.Replace("\\n", "<br/>");
                     int span = CalcColspan(item, children);
                     if (span > 1)
                         td.SetAttribute("colspan", span.ToString());
