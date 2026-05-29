@@ -1,0 +1,24 @@
+<table>
+	<thead>
+		<tr>
+			<th>客体</th>
+			<th>法定刑</th>
+			<th>十恶</th>
+			<th>法条</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>父母</th>
+			<td>绞</td>
+			<td>不孝</td>
+			<td><article>329</article></td>
+		</tr>
+		<tr>
+			<th>祖父母<br/>曾祖父母<br/>高祖父母</th>
+			<td>绞</td>
+			<td>不孝</td>
+			<td><article>329</article></td>
+		</tr>
+	</tbody>
+</table>
