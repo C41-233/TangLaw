@@ -99,6 +99,8 @@ internal partial class Main
 
     private readonly List<LawSection1> Section1List = new();
 
+    public readonly Dictionary<int, string?> ArticleLawMap = new();
+
     // 正文
     private void CollectLaws()
     {
@@ -108,6 +110,11 @@ internal partial class Main
             Section1List.Add(CollectSection1(filename));
         }
         Section1List.Sort((e1, e2) => Comparer<EntryTitle>.Default.Compare(e1.EntryTitle, e2.EntryTitle));
+
+        foreach (var s1 in Section1List)
+            foreach (var s2 in s1.Children)
+                foreach (var article in s2.Children)
+                    ArticleLawMap[article.EntryTitle.Number] = article.Content.Law;
     }
 
     private static LawSection1 CollectSection1(string path)

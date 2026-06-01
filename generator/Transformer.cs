@@ -38,6 +38,7 @@ internal partial class Transformer
     private static void TransformNormal(XmlElement root)
     {
         TransformArticleLink(root);
+        TransformArticleRef(root);
         TransformXTable(root);
         TransformText(root);
     }
@@ -176,6 +177,10 @@ internal partial class Transformer
             else if (child is XmlElement element)
             {
                 if (element.Name == "a")
+                {
+                    current.Append(element.OuterXml);
+                }
+                else if (element.Name == "span")
                 {
                     current.Append(element.OuterXml);
                 }

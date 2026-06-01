@@ -1,3 +1,28 @@
+<h2>诬告谋反、大逆</h2>
+
+<table>
+	<thead>
+		<tr>
+			<th>客体</th>
+			<th>法定刑</th>
+			<th>法条</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>凡人</th>
+			<td>斩</td>
+			<td><article>341</article></td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>诬告</h2>
+
+<article-ref>342-2</article-ref>（<article>342</article>）
+
+<article-ref>344-1</article-ref>（<article>344</article>第一款）
+
 <table>
 	<thead>
 		<tr>
@@ -5,62 +30,107 @@
 			<th>法定刑</th>
 			<th>十恶</th>
 			<th>法条</th>
+			<th>备注</th>
 		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<th>凡人</th>
+			<td>反坐<br/></td>
+			<td></td>
+			<td><article>342</article></td>
+			<td></td>
+		</tr>
 		<tr>
 			<th>父母</th>
 			<td>绞</td>
 			<td>不孝</td>
 			<td><article>345</article></td>
+			<td>不适用<article>344</article>第一款</td>
 		</tr>
 		<tr>
 			<th>祖父母<br/>曾祖父母<br/>高祖父母</th>
 			<td>绞</td>
 			<td>不孝</td>
 			<td><article>345</article></td>
+			<td>不适用<article>344</article>第一款</td>
 		</tr>
 		<tr>
 			<th>外祖父母</th>
 			<td>徒二年；诬告之罪加一等处罚更重的，从重罪处罚	</td>
 			<td></td>
 			<td><article>346.1</article></td>
+			<td>不适用<article>344</article>第一款</td>
 		</tr>
 		<tr>
 			<th>夫</th>
 			<td>徒二年；诬告之罪加一等处罚更重的，从重罪处罚</td>
 			<td></td>
 			<td><article>346.1</article></td>
+			<td>不适用<article>344</article>第一款</td>
 		</tr>
 		<tr>
 			<th>夫之祖父母<br/>夫之曾祖父母<br/>夫之高祖父母</th>
 			<td>徒二年；诬告之罪加一等处罚更重的，从重罪处罚</td>
 			<td></td>
 			<td><article>346.1</article></td>
+			<td>不适用<article>344</article>第一款</td>
 		</tr>
 		<tr>
 			<th>期亲尊长</th>
 			<td>徒二年；诬告之罪加一等处罚更重的，从重罪处罚</td>
 			<td></td>
 			<td><article>346.1</article></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>期亲卑幼</th>
+			<td>杖六十；诬告之罪减二等处罚更重的，从重罪处罚</td>
+			<td></td>
+			<td><article>346.1</article></td>
+			<td></td>
 		</tr>
 		<tr>
 			<th>大功尊长</th>
 			<td>徒一年半；诬告之罪加一等处罚更重的，从重罪处罚</td>
 			<td></td>
 			<td><article>346.1</article></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>大功卑幼</th>
+			<td>杖七十；诬告之罪减一等处罚更重的，从重罪处罚</td>
+			<td></td>
+			<td><article>346.1</article></td>
+			<td></td>
 		</tr>
 		<tr>
 			<th>小功尊长</th>
 			<td>徒一年；诬告之罪加一等处罚更重的，从重罪处罚</td>
 			<td></td>
 			<td><article>346.1</article></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>小功卑幼</th>
+			<td>杖八十；反坐处罚更重的，从重罪处罚</td>
+			<td></td>
+			<td><article>346.1</article></td>
+			<td></td>
 		</tr>
 		<tr>
 			<th>缌麻尊长</th>
 			<td>徒一年；诬告之罪加一等处罚更重的，从重罪处罚</td>
 			<td></td>
 			<td><article>346.1</article></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>缌麻卑幼</th>
+			<td>杖八十；反坐处罚更重的，从重罪处罚</td>
+			<td></td>
+			<td><article>346.1</article></td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>
