@@ -14,21 +14,23 @@ internal partial class Transformer
             var span = root.OwnerDocument.CreateElement("span");
             span.SetAttribute("class", "article-ref");
 
-            int articleNum;
+            // Format: X.Y-Z  or  X-Z  or  X.Y  or  X
+            // X = article number, Y = sub-article number (optional), Z = paragraph number (optional)
             int paragraphNum = 0;
+            string seqNumber;
 
-            if (text.Contains("-"))
+            var dashIndex = text.LastIndexOf('-');
+            if (dashIndex >= 0)
             {
-                var tokens = text.Split("-");
-                articleNum = int.Parse(tokens[0]);
-                paragraphNum = int.Parse(tokens[1]);
+                seqNumber = text[..dashIndex];
+                paragraphNum = int.Parse(text[(dashIndex + 1)..]);
             }
             else
             {
-                articleNum = int.Parse(text);
+                seqNumber = text;
             }
 
-            if (Main.Instance.ArticleLawMap.TryGetValue(articleNum, out var law) && law != null)
+            if (Main.Instance.ArticleLawMap.TryGetValue(seqNumber, out var law) && law != null)
             {
                 if (paragraphNum > 0)
                 {
