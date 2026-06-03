@@ -80,6 +80,13 @@
 			<td></td>
 		</tr>
 		<tr>
+			<th>妾</th>
+			<td>无罪</td>
+			<td></td>
+			<td><article>347.2</article></td>
+			<td></td>
+		</tr>
+		<tr>
 			<th>妻对妾</th>
 			<td>杖六十；诬告之罪减二等处罚更重的，依照重罪处罚</td>
 			<td></td>
@@ -88,6 +95,48 @@
 		</tr>
 		<tr>
 			<th>子（女）</th>
+			<td>无罪</td>
+			<td></td>
+			<td><article>347.2</article></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>子之妻</th>
+			<td>无罪</td>
+			<td></td>
+			<td><article>347.2</article></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>子之妾</th>
+			<td>无罪</td>
+			<td></td>
+			<td><article>347.2</article></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>外孙</th>
+			<td>无罪</td>
+			<td></td>
+			<td><article>347.2</article></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>孙子（女）<br/>曾孙（女）<br/>玄孙（女）</th>
+			<td>无罪</td>
+			<td></td>
+			<td><article>347.2</article></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>孙之妻<br/>曾孙之妻<br/>玄孙之妻</th>
+			<td>无罪</td>
+			<td></td>
+			<td><article>347.2</article></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>孙之妾<br/>曾孙之妾<br/>玄孙之妾</th>
 			<td>无罪</td>
 			<td></td>
 			<td><article>347.2</article></td>
