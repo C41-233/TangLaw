@@ -37,12 +37,12 @@ internal partial class Transformer
                     var paragraphs = law.Split("\r\n\r\n", StringSplitOptions.RemoveEmptyEntries);
                     if (paragraphNum <= paragraphs.Length)
                     {
-                        span.InnerText = paragraphs[paragraphNum - 1].Trim();
+                        span.InnerText = $"「{paragraphs[paragraphNum - 1].Trim()}」";
                     }
                 }
                 else
                 {
-                    span.InnerText = law;
+                    span.InnerText = $"「{law}」";
                 }
             }
 
