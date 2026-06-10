@@ -1,0 +1,10 @@
+@echo off
+setlocal
+set "PATH=C:\Program Files\Git\mingw64\bin;%PATH%"
+
+tasklist /fi "imagename eq pageant.exe" | find /i "pageant.exe" >nul
+if errorlevel 1 start "" "C:\Program Files\TortoiseGit\bin\pageant.exe" "%USERPROFILE%\.ssh\id_rsa.ppk"
+
+git add -A
+git commit -m "update"
+git push
