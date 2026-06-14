@@ -1,13 +1,24 @@
 @echo off
-chcp 65001 >nul
-setlocal
-set "PATH=C:\Program Files\Git\mingw64\bin;%PATH%"
-set "GIT_SSH=C:\Program Files\TortoiseGit\bin\TortoiseGitPlink.exe"
+cd /d "%~dp0"
 
-rem 如果 Pageant 没运行则启动并加载密钥
-tasklist /fi "imagename eq pageant.exe" | find /i "pageant.exe" >nul
-if errorlevel 1 start "" "C:\Program Files\TortoiseGit\bin\pageant.exe" "%USERPROFILE%\.ssh\id_rsa.ppk"
+REM ---- Auto-detect Git root ----
+set "GIT_ROOT="
+for /f "tokens=2*" %%a in ('reg query "HKLM\SOFTWARE\GitForWindows" /v InstallPath 2^>nul') do set "GIT_ROOT=%%b"
+if not defined GIT_ROOT for %%d in (
+    "C:\Program Files\Git"
+    "C:\Program Files (x86)\Git"
+    "%LOCALAPPDATA%\Programs\Git"
+) do if exist "%%~d\usr\bin\bash.exe" set "GIT_ROOT=%%~d"
+if not defined GIT_ROOT (
+    echo Git not found. Please install Git for Windows.
+    pause
+    exit /b 1
+)
 
-git add -A
-git commit -m "update"
-git push
+REM Use the real bash (usr/bin/bash.exe), not the stub (bin/bash.exe)
+set "BASH=%GIT_ROOT%\usr\bin\bash.exe"
+set "PATH=%GIT_ROOT%\usr\bin;%GIT_ROOT%\mingw64\bin;%GIT_ROOT%\cmd;%PATH%"
+set "MSYSTEM=MINGW64"
+
+"%BASH%" "%~dp0push.sh"
+pause
