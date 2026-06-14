@@ -1,8 +1,10 @@
 @echo off
+chcp 65001 >nul
 setlocal
 set "PATH=C:\Program Files\Git\mingw64\bin;%PATH%"
 set "GIT_SSH=C:\Program Files\TortoiseGit\bin\TortoiseGitPlink.exe"
 
+rem 如果 Pageant 没运行则启动并加载密钥
 tasklist /fi "imagename eq pageant.exe" | find /i "pageant.exe" >nul
 if errorlevel 1 start "" "C:\Program Files\TortoiseGit\bin\pageant.exe" "%USERPROFILE%\.ssh\id_rsa.ppk"
 

@@ -147,242 +147,198 @@
 
 共为婚姻者知情的，再减五等，杖七十。不知情的，不坐。
 
+<table>
+	<caption>居父母丧纳作妾</caption>
+	<thead>
+		<tr>
+			<th colspan="2"></th>
+			<th>主婚者</th>
+			<th>男女</th>
+			<th>共为婚姻之家长（知情）</th>
+			<th>媒人</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th rowspan="6">已成</th>
+		</tr>
+		<tr>
+			<th>无主婚</th>
+			<td>-</td>
+			<td>徒一年半</td>
+			<td>杖七十</td>
+			<td>杖一百</td>
+		</tr>
+		<tr>
+			<th>父祖主婚</th>
+			<td>徒一年半</td>
+			<td>无罪</td>
+			<td>杖七十</td>
+			<td>杖一百</td>
+		</tr>
+		<tr>
+			<th>期亲尊长主婚</th>
+			<td>徒一年半</td>
+			<td>徒一年</td>
+			<td>杖七十</td>
+			<td>杖一百</td>
+		</tr>
+		<tr>
+			<th>其他亲属主婚（主婚发起）</th>
+			<td>徒一年半</td>
+			<td>徒一年</td>
+			<td>杖七十</td>
+			<td>杖一百</td>
+		</tr>
+		<tr>
+			<th>其他亲属主婚（男女发起）</th>
+			<td>徒一年</td>
+			<td>徒一年半</td>
+			<td>杖七十</td>
+			<td>杖一百</td>
+		</tr>
+		<tr>
+			<th rowspan="6">未成</th>
+		</tr>
+		<tr>
+			<th>无主婚</th>
+			<td>-</td>
+			<td>杖七十</td>
+			<td>笞二十</td>
+			<td>笞五十</td>
+		</tr>
+		<tr>
+			<th>父祖主婚</th>
+			<td>杖七十</td>
+			<td>无罪</td>
+			<td>笞二十</td>
+			<td>笞五十</td>
+		</tr>
+		<tr>
+			<th>期亲尊长主婚</th>
+			<td>杖七十</td>
+			<td>杖六十</td>
+			<td>笞二十</td>
+			<td>笞五十</td>
+		</tr>
+		<tr>
+			<th>其他亲属主婚（主婚发起）</th>
+			<td>杖七十</td>
+			<td>杖六十</td>
+			<td>笞二十</td>
+			<td>笞五十	</td>
+		</tr>
+		<tr>
+			<th>其他亲属主婚（男女发起）</th>
+			<td>杖六十</td>
+			<td>杖七十</td>
+			<td>笞二十</td>
+			<td>笞五十	</td>
+		</tr>
+	</tbody>
+</table>
+
 <h2>居夫丧</h2>
-
-<h3>法定刑的规定</h3>
-
-夫为妇天，本就不重尚再嫁。在父母丧期二十七个月内，子娶妻、女出嫁的，或者在夫二十七个月丧期内，妻改嫁的，处徒刑三年。
-
-纳作妾的，减三等，是指子纳妾，或者女、妻出嫁作妾，减徒三年三等为徒一年半。
-
-在夫之丧期内，改嫁的，构成不义。纳作妾的，不构成不孝或不义。
 
 <word value="夫"/>
 
-<h3>法定刑的适用</h3>
+<h3>改嫁</h3>
 
-适用本罪，应综合考虑<link>195</link>和<link>195.1</link>的规定，依法对主婚者、男女、媒人确定刑罚。
+夫为妇天，本就不重尚再嫁。在夫二十七个月丧期内，妻改嫁的，处徒刑三年。
 
-<table class="center">
-	<caption>居父母、夫丧（嫁娶妻）</caption>
-	<tr>
-		<th rowspan="2"></th>
-		<th colspan="5">已成</th>
-		<th colspan="5">未成</th>
-	</tr>
-	<tr>
-		<th>无主婚</th>
-		<th>父祖主婚</th>
-		<th>期亲尊长主婚</th>
-		<th>其他亲属主婚<br/>（主婚首犯）</th>
-		<th>其他亲属主婚<br/>（男女首犯）</th>
-		<th>无主婚</th>
-		<th>父祖主婚</th>
-		<th>期亲尊长主婚</th>
-		<th>其他亲属主婚<br/>（主婚首犯）</th>
-		<th>其他亲属主婚<br/>（男女首犯）</th>
-	</tr>
-	<tr>
-		<th>主婚者</th>
-		<td>-</td>
-		<td>徒三年</td>
-		<td>徒三年</td>
-		<td>徒三年</td>
-		<td>徒二年半</td>
-		<td>-</td>
-		<td>杖一百</td>
-		<td>杖一百</td>
-		<td>杖一百</td>
-		<td>杖九十</td>
-	</tr>
-	<tr>
-		<th>男女</th>
-		<td>徒三年</td>
-		<td>无罪</td>
-		<td>徒二年半</td>
-		<td>徒二年半</td>
-		<td>徒三年</td>
-		<td>杖一百</td>
-		<td>无罪</td>
-		<td>杖九十</td>
-		<td>杖九十</td>
-		<td>杖一百</td>
-	</tr>
-	<tr>
-		<th>媒人</th>
-		<td>徒二年</td>
-		<td>徒二年</td>
-		<td>徒二年</td>
-		<td>徒二年</td>
-		<td>徒二年</td>
-		<td>杖八十</td>
-		<td>杖八十</td>
-		<td>杖八十</td>
-		<td>杖八十</td>
-		<td>杖八十</td>
-	</tr>
-</table>
+若婚姻已成，构成十恶之罪中的不义。
 
-<table class="center">
-	<caption>居父母、夫丧（纳作妾）</caption>
-	<tr>
-		<th rowspan="2"></th>
-		<th colspan="5">已成</th>
-		<th colspan="5">未成</th>
-	</tr>
-	<tr>
-		<th>无主婚</th>
-		<th>父祖主婚</th>
-		<th>期亲尊长主婚</th>
-		<th>其他亲属主婚<br/>（主婚首犯）</th>
-		<th>其他亲属主婚<br/>（男女首犯）</th>
-		<th>无主婚</th>
-		<th>父祖主婚</th>
-		<th>期亲尊长主婚</th>
-		<th>其他亲属主婚<br/>（主婚首犯）</th>
-		<th>其他亲属主婚<br/>（男女首犯）</th>
-	</tr>
-	<tr>
-		<th>主婚者</th>
-		<td>-</td>
-		<td>徒一年半</td>
-		<td>徒一年半</td>
-		<td>徒一年半</td>
-		<td>徒一年</td>
-		<td>-</td>
-		<td>杖七十</td>
-		<td>杖七十</td>
-		<td>杖七十</td>
-		<td>杖六十</td>
-	</tr>
-	<tr>
-		<th>男女</th>
-		<td>徒一年半</td>
-		<td>无罪</td>
-		<td>徒一年</td>
-		<td>徒一年</td>
-		<td>徒一年半</td>
-		<td>杖七十</td>
-		<td>无罪</td>
-		<td>杖六十</td>
-		<td>杖六十</td>
-		<td>杖七十</td>
-	</tr>
-	<tr>
-		<th>媒人</th>
-		<td>杖一百</td>
-		<td>杖一百</td>
-		<td>杖一百</td>
-		<td>杖一百</td>
-		<td>杖一百</td>
-		<td>笞五十</td>
-		<td>笞五十</td>
-		<td>笞五十</td>
-		<td>笞五十</td>
-		<td>笞五十</td>
-	</tr>
-</table>
+共为婚姻之家长知情的，减五等，杖一百。不知情的，不坐。
 
-<h3>共为婚姻者</h3>
-
-婚姻中的丧家，构成居丧嫁娶罪，婚姻中的另一家即为共犯，法条的表述为“共为婚姻者”。
-
-共为婚姻者根据是否知情来定罪。知情，指知道另一家处于丧期内。知情的，减丧家五等；不知情的，无罪。
-
-共为婚姻者知情的，其法定刑如下表。
-
-<table class="center">
-	<caption>居父母、夫丧（嫁娶妻）</caption>
-	<tr>
-		<th rowspan="2"></th>
-		<th colspan="5">已成</th>
-		<th colspan="5">未成</th>
-	</tr>
-	<tr>
-		<th>无主婚</th>
-		<th>父祖主婚</th>
-		<th>期亲尊长主婚</th>
-		<th>其他亲属主婚<br/>（主婚首犯）</th>
-		<th>其他亲属主婚<br/>（男女首犯）</th>
-		<th>无主婚</th>
-		<th>父祖主婚</th>
-		<th>期亲尊长主婚</th>
-		<th>其他亲属主婚<br/>（主婚首犯）</th>
-		<th>其他亲属主婚<br/>（男女首犯）</th>
-	</tr>
-	<tr>
-		<th>主婚者</th>
-		<td>-</td>
-		<td>杖一百</td>
-		<td>杖一百</td>
-		<td>杖一百</td>
-		<td>杖九十</td>
-		<td>-</td>
-		<td>笞五十</td>
-		<td>笞五十</td>
-		<td>笞五十</td>
-		<td>笞四十</td>
-	</tr>
-	<tr>
-		<th>男女</th>
-		<td>杖一百</td>
-		<td>无罪</td>
-		<td>杖九十</td>
-		<td>杖九十</td>
-		<td>杖一百</td>
-		<td>笞五十</td>
-		<td>无罪</td>
-		<td>笞四十</td>
-		<td>笞四十</td>
-		<td>笞五十</td>
-	</tr>
-</table>
-
-<table class="center">
-	<caption>居父母、夫丧（纳作妾）</caption>
-	<tr>
-		<th rowspan="2"></th>
-		<th colspan="5">已成</th>
-		<th colspan="5">未成</th>
-	</tr>
-	<tr>
-		<th>无主婚</th>
-		<th>父祖主婚</th>
-		<th>期亲尊长主婚</th>
-		<th>其他亲属主婚<br/>（主婚首犯）</th>
-		<th>其他亲属主婚<br/>（男女首犯）</th>
-		<th>无主婚</th>
-		<th>父祖主婚</th>
-		<th>期亲尊长主婚</th>
-		<th>其他亲属主婚<br/>（主婚首犯）</th>
-		<th>其他亲属主婚<br/>（男女首犯）</th>
-	</tr>
-	<tr>
-		<th>主婚者</th>
-		<td>-</td>
-		<td>杖七十</td>
-		<td>杖七十</td>
-		<td>杖七十</td>
-		<td>杖六十</td>
-		<td>-</td>
-		<td>笞二十</td>
-		<td>笞二十</td>
-		<td>笞二十</td>
-		<td>笞一十</td>
-	</tr>
-	<tr>
-		<th>男女</th>
-		<td>杖七十</td>
-		<td>无罪</td>
-		<td>杖七十</td>
-		<td>杖七十</td>
-		<td>杖七十</td>
-		<td>笞二十</td>
-		<td>无罪</td>
-		<td>笞一十</td>
-		<td>笞一十</td>
-		<td>笞二十</td>
-	</tr>
+<table>
+	<caption>居夫丧改嫁</caption>
+	<thead>
+		<tr>
+			<th colspan="2"></th>
+			<th>主婚者</th>
+			<th>妻</th>
+			<th>共为婚姻之家长（知情）</th>
+			<th>媒人</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th rowspan="6">已成</th>
+		</tr>
+		<tr>
+			<th>无主婚</th>
+			<td>-</td>
+			<td>徒三年（不义）</td>
+			<td>杖一百</td>
+			<td>徒二年</td>
+		</tr>
+		<tr>
+			<th>父祖主婚</th>
+			<td>徒三年</td>
+			<td>无罪</td>
+			<td>杖一百</td>
+			<td>徒二年</td>
+		</tr>
+		<tr>
+			<th>期亲尊长主婚</th>
+			<td>徒三年</td>
+			<td>徒二年半（不义）</td>
+			<td>杖一百</td>
+			<td>徒二年</td>
+		</tr>
+		<tr>
+			<th>其他亲属主婚（主婚发起）</th>
+			<td>徒三年</td>
+			<td>徒二年半（不义）</td>
+			<td>杖一百</td>
+			<td>徒二年</td>
+		</tr>
+		<tr>
+			<th>其他亲属主婚（妻发起）</th>
+			<td>徒二年半</td>
+			<td>徒三年（不义）</td>
+			<td>杖一百</td>
+			<td>徒二年</td>
+		</tr>
+		<tr>
+			<th rowspan="6">未成</th>
+		</tr>
+		<tr>
+			<th>无主婚</th>
+			<td>-</td>
+			<td>杖一百</td>
+			<td>杖五十</td>
+			<td>杖八十</td>
+		</tr>
+		<tr>
+			<th>父祖主婚</th>
+			<td>杖一百</td>
+			<td>无罪</td>
+			<td>杖五十</td>
+			<td>杖八十</td>
+		</tr>
+		<tr>
+			<th>期亲尊长主婚</th>
+			<td>杖一百</td>
+			<td>杖九十</td>
+			<td>杖五十</td>
+			<td>杖八十</td>
+		</tr>
+		<tr>
+			<th>其他亲属主婚（主婚发起）</th>
+			<td>杖一百</td>
+			<td>杖九十</td>
+			<td>杖五十</td>
+			<td>杖八十	</td>
+		</tr>
+		<tr>
+			<th>其他亲属主婚（妻发起）</th>
+			<td>杖九十</td>
+			<td>杖一百</td>
+			<td>杖五十</td>
+			<td>杖八十	</td>
+		</tr>
+	</tbody>
 </table>
 
 <h2>居期亲丧</h2>
