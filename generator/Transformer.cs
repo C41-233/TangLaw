@@ -105,12 +105,19 @@ internal partial class Transformer
         }
     }
 
-    private static void TransformWord(XmlElement root)
+    private static void TransformWord(XmlElement root, HashSet<string>? expanding = null)
     {
+        expanding ??= new HashSet<string>();
         var doc = root.OwnerDocument;
         foreach (XmlElement node in root.SelectNodes(".//word"))
         {
             var name = node.GetAttribute("value");
+
+            if (expanding.Contains(name))
+            {
+                Remove(node);
+                continue;
+            }
 
             var word = doc.CreateElement("div");
             word.SetAttribute("class", "word");
@@ -128,7 +135,9 @@ internal partial class Transformer
 
             word.AppendChild(content);
 
-            TransformWord(word);
+            expanding.Add(name);
+            TransformWord(word, expanding);
+            expanding.Remove(name);
 
             Replace(node, word);
         }
