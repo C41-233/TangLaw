@@ -66,7 +66,7 @@
 
 <h2>亲等关系</h2>
 
-<x-table title="父系">
+<x-table title="父系" type="arrow">
 * -> *高祖父*\n（高祖母）\n[期亲]
 
 高祖父 -> *曾祖父*\n（曾祖母）\n[期亲]
@@ -104,7 +104,7 @@
 
 </x-table>
 
-<x-table title="母系">
+<x-table title="母系" type="arrow">
 * -> *外祖父*\n（外祖母）\n[小功]
 外祖父 -> 母
 外祖父 -> *舅*\n[小功]
@@ -116,7 +116,7 @@
 从母 -> 从母兄弟姊妹\n[缌麻]
 </x-table>
 
-<x-table title="子系">
+<x-table title="子系" type="arrow">
 * -> 父母
 
 父母 -> 己身
@@ -150,7 +150,7 @@
 侄孙 -> 曾侄孙\n[缌麻]
 </x-table>
 
-<x-table title="外亲">
+<x-table title="外亲" type="arrow">
 己身 -> *父*
 
 父 -> *祖父*\n[期亲]
@@ -178,7 +178,7 @@
 外曾祖父 -> 外高祖母\n[缌麻]
 </x-table>
 
-<x-table title="夫之父系">
+<x-table title="夫之父系" type="arrow">
 * -> *夫之高祖父（母）*\n[大功]
 夫之高祖父（母） -> *夫之曾祖父（母）*\n[大功]
 夫之曾祖父（母） -> *夫之祖父（母）*\n[大功]
@@ -195,7 +195,7 @@
 夫之兄弟 -> 夫之侄女\n[小功]
 </x-table>
 
-<x-table title="夫之母系">
+<x-table title="夫之母系" type="arrow">
 夫之外祖父（母） -> 夫之母
 夫之外祖父（母） -> 夫之舅\n[缌麻]
 夫之外祖父（母） -> 夫之从母\n[缌麻]

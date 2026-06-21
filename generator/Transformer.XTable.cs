@@ -24,6 +24,8 @@ internal partial class Transformer
         var doc = root.OwnerDocument;
         foreach (XmlElement node in root.SelectNodes(".//x-table"))
         {
+            if (node.GetAttribute("type") != "arrow") continue;
+
             var table = doc.CreateElement("table");
             table.SetAttribute("class", "x-table");
 
