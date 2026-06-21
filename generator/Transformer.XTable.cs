@@ -308,6 +308,8 @@ internal partial class Transformer
         int logicalCols = headerTexts.Count;
 
         // Parse data rows, detect （...） pattern for rowspan groups
+        // （...） only triggers rowspan when header has * (any merged column)
+        bool hasMergedCol = colspans.Any(s => s > 1);
         var dataRows = new List<(List<string> Cells, string? Parent, string? Child)>();
         for (int i = 1; i < lines.Count; i++)
         {
@@ -317,14 +319,17 @@ internal partial class Transformer
 
             string? parent = null;
             string? child = null;
-            var first = cells[0];
-            var parenStart = first.IndexOf('（');
-            if (parenStart >= 0)
+            if (hasMergedCol)
             {
-                parent = first[..parenStart];
-                var parenEnd = first.IndexOf('）', parenStart);
-                if (parenEnd > parenStart)
-                    child = first[(parenStart + 1)..parenEnd];
+                var first = cells[0];
+                var parenStart = first.IndexOf('（');
+                if (parenStart >= 0)
+                {
+                    parent = first[..parenStart];
+                    var parenEnd = first.IndexOf('）', parenStart);
+                    if (parenEnd > parenStart)
+                        child = first[(parenStart + 1)..parenEnd];
+                }
             }
             dataRows.Add((cells, parent, child));
         }
@@ -398,8 +403,11 @@ internal partial class Transformer
                     for (int j = 1; j < logicalCols && j < cells.Count; j++)
                     {
                         var raw = cells[j];
+                        var span = colspans[j];
                         var td = doc.CreateElement("td");
                         td.InnerXml = ProcessContent(doc, raw == "-" ? "" : Esc(raw));
+                        if (span > 1)
+                            td.SetAttribute("colspan", span.ToString());
                         tr.AppendChild(td);
                     }
                     tbody.AppendChild(tr);
