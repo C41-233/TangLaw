@@ -21,11 +21,23 @@
 			<td>不义</td>
 			<td><article>179</article></td>
 		</tr>
+		<tr>
+			<th>期亲尊长</th>
+			<td>杖一百</td>
+			<td></td>
+			<td><article>179.1</article></td>
+		</tr>
+		<tr>
+			<th>期亲卑幼</th>
+			<td>杖八十</td>
+			<td></td>
+			<td><article>179.1</article></td>
+		</tr>
 	</tbody>
 </table>
 
 <table>
-	<caption>居丧纳作妾</caption>
+	<caption>居丧嫁娶妾</caption>
 	<thead>
 		<tr>
 			<th>客体</th>
