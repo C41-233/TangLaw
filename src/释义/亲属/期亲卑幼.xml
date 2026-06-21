@@ -8,7 +8,6 @@
 			<th>法定刑</th>
 			<th>十恶</th>
 			<th>法条</th>
-			<th>备注</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -17,35 +16,30 @@
 			<td>杖一百</td>
 			<td></td>
 			<td><article>120</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>闻丧择日举哀</th>
 			<td>杖八十</td>
 			<td></td>
 			<td><article>120</article></td>
-			<td>以不应为重论</td>
 		</tr>
 		<tr>
 			<th>居丧嫁娶妻</th>
 			<td>杖八十</td>
 			<td></td>
 			<td><article>179.1</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>告</th>
 			<td>杖六十</td>
 			<td></td>
 			<td><article>347</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>诬告</th>
 			<td>杖六十；诬告之罪减二等处罚更重的，依照重罪处罚</td>
 			<td></td>
 			<td><article>347</article></td>
-			<td></td>
 		</tr>
 	</tbody>
 </table>

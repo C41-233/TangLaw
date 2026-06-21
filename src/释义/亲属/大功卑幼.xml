@@ -8,7 +8,6 @@
 			<th>法定刑</th>
 			<th>十恶</th>
 			<th>法条</th>
-			<th>备注</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -17,28 +16,24 @@
 			<td>杖八十</td>
 			<td></td>
 			<td><article>120</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>闻丧择日举哀</th>
 			<td>笞四十</td>
 			<td></td>
 			<td><article>120</article></td>
-			<td>以不应为轻论</td>
 		</tr>
 		<tr>
 			<th>告</th>
 			<td>杖七十</td>
 			<td></td>
 			<td><article>347</article></td>
-			<td>曾孙（女）、玄孙（女）、孙（女）除外</td>
 		</tr>
 		<tr>
 			<th>诬告</th>
 			<td>杖七十；诬告之罪减一等处罚更重的，依照重罪处罚</td>
 			<td></td>
 			<td><article>347</article></td>
-			<td>曾孙（女）、玄孙（女）、孙（女）除外</td>
 		</tr>
 	</tbody>
 </table>

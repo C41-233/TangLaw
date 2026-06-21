@@ -8,7 +8,6 @@
 			<th>法定刑</th>
 			<th>十恶</th>
 			<th>法条</th>
-			<th>备注</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -17,70 +16,60 @@
 			<td>徒一年</td>
 			<td></td>
 			<td><article>120</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>闻丧择日举哀</th>
 			<td>杖八十</td>
 			<td></td>
 			<td><article>120</article></td>
-			<td>以不应为重论</td>
 		</tr>
 		<tr>
 			<th>居丧嫁娶妻</th>
 			<td>杖一百</td>
 			<td></td>
 			<td><article>179.1</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>谋杀</th>
 			<td>皆斩</td>
 			<td></td>
 			<td><article>253</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>厌魅（意图杀人）</th>
 			<td>皆斩</td>
 			<td>不道</td>
 			<td><article>264</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>厌魅（意图致人疾苦）</th>
 			<td>皆徒三年；致死的，皆斩</td>
 			<td>不道</td>
 			<td><article>264</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>诅咒（意图杀人）</th>
 			<td>皆斩</td>
 			<td></td>
 			<td><article>264</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>诅咒（意图致人疾苦）</th>
 			<td>皆徒三年；致死的，皆斩</td>
 			<td></td>
 			<td><article>264</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>告</th>
 			<td>徒二年；所告之罪减一等处罚更重的，依照重罪处罚</td>
 			<td></td>
 			<td><article>346</article></td>
-			<td></td>
 		</tr>
 		<tr>
 			<th>诬告</th>
 			<td>徒二年；诬告之罪加一等处罚更重的，依照重罪处罚</td>
 			<td></td>
 			<td><article>346.1</article></td>
-			<td></td>
 		</tr>
 	</tbody>
 </table>
