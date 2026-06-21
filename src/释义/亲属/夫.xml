@@ -6,113 +6,23 @@
 1、三月庙见、未庙见、就婚夫，都是刑法上的夫。
 2、订婚夫，在婚姻关系中属于法律上的夫，但不属于刑法上的夫。
 
-<table>
-	<caption>对夫的犯罪</caption>
-	<thead>
-		<tr>
-			<th>罪行</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>闻丧匿不举哀</th>
-			<td>流二千里</td>
-			<td>不义</td>
-			<td><article>120</article></td>
-		</tr>
-		<tr>
-			<th>闻丧择日举哀</th>
-			<td>杖八十</td>
-			<td></td>
-			<td><article>120</article></td>
-		</tr>
-		<tr>
-			<th>居丧释服从吉</th>
-			<td>徒三年</td>
-			<td>不义（妻）</td>
-			<td><article>120.1</article></td>
-		</tr>
-		<tr>
-			<th>居丧忘哀作舞乐</th>
-			<td>徒三年</td>
-			<td>不义（妻）</td>
-			<td><article>120.2</article></td>
-		</tr>
-		<tr>
-			<th>居丧作杂戏</th>
-			<td>徒一年</td>
-			<td></td>
-			<td><article>120.2</article></td>
-		</tr>
-		<tr>
-			<th>居丧听奏乐</th>
-			<td>杖一百</td>
-			<td></td>
-			<td><article>120.2</article></td>
-		</tr>
-		<tr>
-			<th>居丧参加吉席</th>
-			<td>杖一百</td>
-			<td></td>
-			<td><article>120.2</article></td>
-		</tr>
-		<tr>
-			<th>居丧改嫁作妻</th>
-			<td>徒三年</td>
-			<td>不义</td>
-			<td><article>179</article></td>
-		</tr>
-		<tr>
-			<th>居丧改嫁作妾</th>
-			<td>徒一年半</td>
-			<td></td>
-			<td><article>179</article></td>
-		</tr>
-		<tr>
-			<th>谋杀</th>
-			<td>皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>厌魅（意图杀人）</th>
-			<td>皆斩</td>
-			<td>不道，恶逆（致死）</td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>厌魅（意图致人疾苦）</th>
-			<td>皆徒三年；致死的，皆斩</td>
-			<td>不道，恶逆（致死）</td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>诅咒（意图杀人）</th>
-			<td>皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>诅咒（意图致人疾苦）</th>
-			<td>皆徒三年；致死的，皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>告</th>
-			<td>徒二年；所告之罪减一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346</article></td>
-		</tr>
-		<tr>
-			<th>诬告</th>
-			<td>徒二年；诬告之罪加一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-		</tr>
-	</tbody>
-</table>
+<x-table title="对夫的犯罪" type="table">
+罪行	*				法定刑						十恶			法条
+闻丧匿不举哀			流二千里					不义			<article>120</article>
+闻丧择日举哀			杖八十						-				<article>120</article>
+居丧释服从吉			徒三年						不义（妻）		<article>120.1</article>
+居丧玩乐（忘哀作舞乐）	徒三年						不义（妻）		<article>120.2</article>
+居丧玩乐（作杂戏）		徒一年						-				<article>120.2</article>
+居丧玩乐（听奏乐）		杖一百						-				<article>120.2</article>
+居丧玩乐（参加吉席）	杖一百						-				<article>120.2</article>
+居丧改嫁（妻）			徒三年						不义			<article>179</article>
+居丧改嫁（妾）			徒一年半					-				<article>179</article>
+谋杀					皆斩						恶逆（致死）		<article>253</article>
+厌魅（意图杀人）		皆斩						不道，恶逆（致死）	<article>264</article>
+厌魅（意图致人疾苦）	皆徒三年；致死的，皆斩		不道，恶逆（致死）	<article>264</article>
+诅咒（意图杀人）		皆斩						恶逆（致死）	<article>264</article>
+诅咒（意图致人疾苦）	皆徒三年；致死的，皆斩		不道，恶逆（致死）	<article>264</article>
+告						徒二年；所告之罪减一等处罚更重的，依照重罪处罚		-	<article>346</article>
+诬告					徒二年；诬告之罪加一等处罚更重的，依照重罪处罚		-	<article>346.1</article>
+</x-table>
 

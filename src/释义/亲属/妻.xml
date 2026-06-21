@@ -2,6 +2,14 @@
 
 妻属期亲，服制为齐衰杖期。
 
+<x-table title="夫对妻的犯罪" type="table">
+罪行	法定刑	十恶	法条
+闻丧匿不举哀	杖一百	-	<article>120</article>
+闻丧择日举哀	杖八十	-	<article>120</article>
+告	杖六十	-	<article>347.2</article>
+诬告	杖六十；诬告之罪减二等处罚更重的，依照重罪处罚	-	<article>347.2</article>
+</x-table>
+
 <table>
 	<caption>夫对妻的犯罪</caption>
 	<thead>

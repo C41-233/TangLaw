@@ -2,31 +2,11 @@
 
 根据<article>52</article>的规定，「 <article-ref>52-4</article-ref> 」因此，子包括儿和女。但是在适用缘坐时，子仅指儿，不包括女。
 
-根据<article>52</article>的规定，「 <article-ref>52-2</article-ref> 」因此，除适用缘坐外，“嫡孙”适用有关“子”的规定。
+根据<article>52</article>的规定，「 <article-ref>52-2</article-ref> 」因此，除适用缘坐外，"嫡孙"适用有关"子"的规定。
 
-<table>
-	<caption>父母对子女的犯罪</caption>
-	<thead>
-		<tr>
-			<th>罪行</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>告</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-		<tr>
-			<th>诬告</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-	</tbody>
-</table>
+<x-table title="父母对子女的犯罪" type="table">
+罪行	法定刑	十恶	法条
+告		无罪	-		<article>347.2</article>
+诬告	无罪	-		<article>347.2</article>
+</x-table>
 

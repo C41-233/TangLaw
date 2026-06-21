@@ -1,26 +1,6 @@
-<table>
-	<caption>对子之妾的犯罪</caption>
-	<thead>
-		<tr>
-			<th>罪行</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>告</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-		<tr>
-			<th>诬告</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-	</tbody>
-</table>
+<x-table title="对子之妾的犯罪" type="table">
+罪行	法定刑	十恶	法条
+告		无罪	-		<article>347.2</article>
+诬告	无罪	-		<article>347.2</article>
+</x-table>
 
