@@ -13,6 +13,27 @@
 	</thead>
 	<tbody>
 		<tr>
+			<th>闻丧匿不举哀</th>
+			<td>徒一年</td>
+			<td></td>
+			<td><article>120</article></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th>闻丧择日举哀</th>
+			<td>杖八十</td>
+			<td></td>
+			<td><article>120</article></td>
+			<td>以不应为重论</td>
+		</tr>
+		<tr>
+			<th>居丧嫁娶妻</th>
+			<td>杖一百</td>
+			<td></td>
+			<td><article>179.1</article></td>
+			<td></td>
+		</tr>
+		<tr>
 			<th>谋杀</th>
 			<td>皆斩</td>
 			<td></td>
@@ -60,13 +81,6 @@
 			<td></td>
 			<td><article>346.1</article></td>
 			<td>祖父母除外</td>
-		</tr>
-		<tr>
-			<th>居丧嫁娶</th>
-			<td>杖一百</td>
-			<td></td>
-			<td><article>179.1</article></td>
-			<td></td>
 		</tr>
 	</tbody>
 </table>

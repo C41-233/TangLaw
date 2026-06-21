@@ -105,35 +105,35 @@
 			<th>无主婚</th>
 			<td>-</td>
 			<td>杖一百</td>
-			<td>杖五十</td>
+			<td>笞五十</td>
 			<td>杖八十</td>
 		</tr>
 		<tr>
 			<th>父祖主婚</th>
 			<td>杖一百</td>
 			<td>无罪</td>
-			<td>杖五十</td>
+			<td>笞五十</td>
 			<td>杖八十</td>
 		</tr>
 		<tr>
 			<th>期亲尊长主婚</th>
 			<td>杖一百</td>
 			<td>杖九十</td>
-			<td>杖五十</td>
+			<td>笞五十</td>
 			<td>杖八十</td>
 		</tr>
 		<tr>
 			<th>其他亲属主婚（主婚发起）</th>
 			<td>杖一百</td>
 			<td>杖九十</td>
-			<td>杖五十</td>
+			<td>笞五十</td>
 			<td>杖八十</td>
 		</tr>
 		<tr>
 			<th>其他亲属主婚（男女发起）</th>
 			<td>杖九十</td>
 			<td>杖一百</td>
-			<td>杖五十</td>
+			<td>笞五十</td>
 			<td>杖八十</td>
 		</tr>
 	</tbody>
@@ -305,35 +305,35 @@
 			<th>无主婚</th>
 			<td>-</td>
 			<td>杖一百</td>
-			<td>杖五十</td>
+			<td>笞五十</td>
 			<td>杖八十</td>
 		</tr>
 		<tr>
 			<th>父祖主婚</th>
 			<td>杖一百</td>
 			<td>无罪</td>
-			<td>杖五十</td>
+			<td>笞五十</td>
 			<td>杖八十</td>
 		</tr>
 		<tr>
 			<th>期亲尊长主婚</th>
 			<td>杖一百</td>
 			<td>杖九十</td>
-			<td>杖五十</td>
+			<td>笞五十</td>
 			<td>杖八十</td>
 		</tr>
 		<tr>
 			<th>其他亲属主婚（主婚发起）</th>
 			<td>杖一百</td>
 			<td>杖九十</td>
-			<td>杖五十</td>
+			<td>笞五十</td>
 			<td>杖八十	</td>
 		</tr>
 		<tr>
 			<th>其他亲属主婚（妻发起）</th>
 			<td>杖九十</td>
 			<td>杖一百</td>
-			<td>杖五十</td>
+			<td>笞五十</td>
 			<td>杖八十	</td>
 		</tr>
 	</tbody>
