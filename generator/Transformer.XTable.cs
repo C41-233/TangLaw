@@ -253,6 +253,17 @@ internal partial class Transformer
 
         static string Esc(string s) => s.Replace("\\n", "<br/>");
 
+        static string ProcessContent(XmlDocument doc, string content)
+        {
+            if (content.Length == 0)
+                return "";
+            var temp = doc.CreateElement("temp");
+            temp.InnerXml = content;
+            TransformArticleLink(temp);
+            TransformArticleRef(temp);
+            return temp.InnerXml;
+        }
+
         static List<string> ParseLine(string line)
         {
             var parts = line.Split('\t');
@@ -263,7 +274,17 @@ internal partial class Transformer
             return cells;
         }
 
-        var lines = node.InnerText.Split('\n')
+        // Flatten child nodes to text, preserving XML elements as OuterXml
+        var flatText = new System.Text.StringBuilder();
+        foreach (var child in node.ChildNodes)
+        {
+            if (child is XmlText t)
+                flatText.Append(t.InnerText);
+            else if (child is XmlElement e)
+                flatText.Append(e.OuterXml);
+        }
+
+        var lines = flatText.ToString().Split('\n')
             .Select(l => l.Trim())
             .Where(l => l.Length > 0)
             .ToList();
@@ -344,7 +365,7 @@ internal partial class Transformer
         for (int i = 0; i < logicalCols; i++)
         {
             var th = doc.CreateElement("th");
-            th.InnerXml = Esc(headerTexts[i]);
+            th.InnerXml = ProcessContent(doc, Esc(headerTexts[i]));
             if (colspans[i] > 1)
                 th.SetAttribute("colspan", colspans[i].ToString());
             headerTr.AppendChild(th);
@@ -363,7 +384,7 @@ internal partial class Transformer
                 var parentRow = doc.CreateElement("tr");
                 var parentTh = doc.CreateElement("th");
                 parentTh.SetAttribute("rowspan", rowspan.ToString());
-                parentTh.InnerXml = Esc(parent);
+                parentTh.InnerXml = ProcessContent(doc, Esc(parent));
                 parentRow.AppendChild(parentTh);
                 tbody.AppendChild(parentRow);
 
@@ -371,14 +392,14 @@ internal partial class Transformer
                 {
                     var tr = doc.CreateElement("tr");
                     var childTh = doc.CreateElement("th");
-                    childTh.InnerXml = Esc(child ?? "");
+                    childTh.InnerXml = ProcessContent(doc, Esc(child ?? ""));
                     tr.AppendChild(childTh);
 
                     for (int j = 1; j < logicalCols && j < cells.Count; j++)
                     {
                         var raw = cells[j];
                         var td = doc.CreateElement("td");
-                        td.InnerXml = raw == "-" ? "" : Esc(raw);
+                        td.InnerXml = ProcessContent(doc, raw == "-" ? "" : Esc(raw));
                         tr.AppendChild(td);
                     }
                     tbody.AppendChild(tr);
@@ -399,7 +420,7 @@ internal partial class Transformer
                     else
                         cellEl = doc.CreateElement("td");
 
-                    cellEl.InnerXml = raw == "-" ? "" : Esc(raw);
+                    cellEl.InnerXml = ProcessContent(doc, raw == "-" ? "" : Esc(raw));
 
                     if (colspans[j] > 1)
                         cellEl.SetAttribute("colspan", colspans[j].ToString());

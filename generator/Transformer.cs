@@ -37,9 +37,9 @@ internal partial class Transformer
 
     private static void TransformNormal(XmlElement root)
     {
+        TransformXTable(root);
         TransformArticleLink(root);
         TransformArticleRef(root);
-        TransformXTable(root);
         TransformText(root);
     }
 
