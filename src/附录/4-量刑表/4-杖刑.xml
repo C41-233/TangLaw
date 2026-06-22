@@ -1,0 +1,34 @@
+<h2>杖一百</h2>
+
+<x-table type="table">
+罪行	*												十恶	法条
+合和御药失职（医者合和御药料理、拣择不精未进御）		-		<article>102</article>
+合和御药失职（医者合和皇太子药料理、拣择不精已进御）	-		<article>102</article>
+合和御药失职（监当官司合和御药料理、拣择不精已进御）	-		<article>102</article>
+制作御膳失职（主食制作御膳拣择不精未进御）				-		<article>103</article>
+制作御膳失职（主食制作御膳违反食令未进御）				-		<article>103</article>
+制作御膳失职（监当官司制作御膳拣择不精已进御）			-		<article>103</article>
+制作御膳失职（监当官司制作御膳违反食令已进御）			-		<article>103</article>
+</x-table>
+
+<h2>杖九十</h2>
+
+<x-table type="table">
+罪行	*													十恶	法条
+合和御药失职（医者合和皇太子药料理、拣择不精未进御）		-		<article>102</article>
+合和御药失职（监当官司合和御药料理、拣择不精未进御）		-		<article>102</article>
+合和御药失职（监当官司合和皇太子药料理、拣择不精已进御）	-		<article>102</article>
+制作御膳失职（监当官司制作御膳拣择不精未进御）				-		<article>103</article>
+制作御膳失职（监当官司制作御膳违反食令未进御）				-		<article>103</article>
+</x-table>
+
+<h2>杖八十</h2>
+
+<x-table type="table">
+罪行	*													十恶	法条
+合和御药失职（监当官司合和皇太子药料理、拣择不精未进御）	-		<article>102</article>
+</x-table>
+
+<h2>杖七十</h2>
+
+<h2>杖六十</h2>
