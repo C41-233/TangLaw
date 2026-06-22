@@ -5,7 +5,7 @@
  *   2. 按需修改 insertEntries() 函数中的新条目
  *   3. 运行：node insert.js
  *
- * 脚本会自动读取 4 个量刑表文件，执行插入，并验证结构完整性。
+ * 脚本会自动读取 5 个量刑表文件，执行插入，并验证结构完整性。
  */
 
 const fs = require('fs');
@@ -88,8 +88,8 @@ function entryDash(text, article, fileType) {
   const w = width(text);
   let beforeDash = '\t';  // 至少 1 tab
 
-  if (fileType === 'zhang') {
-    // 杖刑文件
+  if (fileType === 'zhang' || fileType === 'chi') {
+    // 杖刑/笞刑文件
     if (w <= 42) beforeDash = '\t\t\t\t';  // 主食级别
     else if (w <= 46) beforeDash = '\t\t\t'; // 监当官司级别
     else beforeDash = '\t';                  // 长文本
@@ -100,8 +100,23 @@ function entryDash(text, article, fileType) {
     else beforeDash = '\t';
   }
 
-  const afterDash = fileType === 'liu' || fileType === 'tu' ? '\t\t' : '\t\t';
+  const afterDash = fileType === 'chi' ? '\t\t\t' : '\t\t';
   return `${text}${beforeDash}-${afterDash}<article>${article}</article>`;
+}
+
+// 在某个 <h2> 空节中创建 x-table 并插入条目
+// 适用场景：目标刑罚节还没有 <x-table>（首次添加条目）
+function createSection(lines, sectionTitle, entries) {
+  const idx = lines.findIndex(l => l.startsWith(`<h2>${sectionTitle}`));
+  if (idx === -1) { console.error(`未找到节: ${sectionTitle}`); return; }
+  const header = '罪行\t*\t\t\t\t\t\t\t\t\t\t\t\t十恶\t法条';
+  lines.splice(idx + 1, 0,
+    '',
+    '<x-table type="table">',
+    header,
+    ...entries,
+    '</x-table>'
+  );
 }
 
 // ========== 入口：在此定义要插入的条目 ==========
@@ -113,9 +128,13 @@ function insertEntries() {
     liu:   load('2-流刑.xml'),
     tu:    load('3-徒刑.xml'),
     zhang: load('4-杖刑.xml'),
+    chi:   load('5-笞刑.xml'),
   };
 
   // --- 示例：在 死刑·绞 节末尾追加 ---
+  // 注意：不要用全局 find(lines, '</x-table>') 查找锚点，
+  // 这只会找到文件中的第一个 </x-table>。应使用该节内
+  // 具体条目的行作为锚点，在本节内操作。
   {
     const lines = files.si;
     const anchor = find(lines, '</x-table>');
@@ -171,11 +190,18 @@ function insertEntries() {
     );
   }
 
+  // --- 示例：在 笞刑·笞五十 空节中创建（可用 createSection） ---
+  // 如果目标节还没有 <x-table>，使用 createSection：
+  // createSection(files.chi, '笞五十', [
+  //   entryDash('御用物管理失职（乘舆服御物持护修整违反法律规定未进御）', 105, 'chi'),
+  // ]);
+
   // ========== 写回与验证 ==========
   save('1-死刑.xml', files.si);
   save('2-流刑.xml', files.liu);
   save('3-徒刑.xml', files.tu);
   save('4-杖刑.xml', files.zhang);
+  save('5-笞刑.xml', files.chi);
 
   // 读回验证
   const saved = {
@@ -183,6 +209,7 @@ function insertEntries() {
     '2-流刑.xml': load('2-流刑.xml'),
     '3-徒刑.xml': load('3-徒刑.xml'),
     '4-杖刑.xml': load('4-杖刑.xml'),
+    '5-笞刑.xml': load('5-笞刑.xml'),
   };
 
   console.log('\n结构验证：');
