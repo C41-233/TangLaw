@@ -14,6 +14,11 @@
 制备御船失职（工匠制备皇太子船误不牢固未进御）			大不敬	<article>104</article>
 制备御船失职（监当官司制备御船误不牢固未进御）		-		<article>104</article>
 制备御船失职（监当官司制备皇太子船误不牢固已进御）	-		<article>104</article>
+居丧释服从吉（父母）	不孝		<article>120.1</article>
+居丧释服从吉（夫）		不义		<article>120.1</article>
+居丧玩乐（居父母丧忘哀作舞乐）	不孝		<article>120.2</article>
+居丧玩乐（居夫丧忘哀作舞乐）	不义		<article>120.2</article>
+祖父母、父母在，另立户口或者分割家产	不孝		<article>155</article>
 </x-table>
 
 <h2>徒二年半</h2>
@@ -36,6 +41,8 @@
 制备御船失职（工匠制备御船缺少设施已进御）			-		<article>104</article>
 御用物管理失职（御用车马等不调习已进御）			-		<article>105</article>
 御用物管理失职（御用车马等驾驭用具不完备、牢固已进御）	-		<article>105</article>
+指斥乘舆			-		<article>122</article>
+祖父母、父母教令子孙另立户口	-		<article>155</article>
 </x-table>
 
 <h2>徒一年半</h2>
@@ -55,6 +62,7 @@
 御用物管理失职（皇太子车马等驾驭用具不完备、牢固已进御）	-		<article>105</article>
 御用物管理失职（监当官司御用车马等不调习已进御）		-		<article>105</article>
 御用物管理失职（监当官司御用车马等驾驭用具不完备、牢固已进御）	-		<article>105</article>
+指斥皇太子			-		<article>122</article>
 </x-table>
 
 <h2>徒一年</h2>
@@ -76,4 +84,8 @@
 御用物管理失职（应供奉御用之物短缺已进御）			-		<article>105</article>
 御用物管理失职（监当官司皇太子车马等不调习已进御）		-		<article>105</article>
 御用物管理失职（监当官司皇太子车马等驾驭用具不完备、牢固已进御）	-		<article>105</article>
+闻丧匿不举哀（祖父母）			不孝	<article>120</article>
+闻丧匿不举哀（期亲尊长）		-	<article>120</article>
+居丧玩乐（居父母丧作杂戏）		-		<article>120.2</article>
+居丧玩乐（居夫丧作杂戏）		-		<article>120.2</article>
 </x-table>

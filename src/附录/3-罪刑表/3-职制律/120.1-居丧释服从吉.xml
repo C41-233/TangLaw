@@ -1,72 +1,14 @@
-<table>
-	<thead>
-		<tr>
-			<th>客体</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>父母</th>
-			<td>徒三年</td>
-			<td>不孝</td>
-			<td><article>120.1</article></td>
-		</tr>
-		<tr>
-			<th>夫</th>
-			<td>徒三年</td>
-			<td>不义（妻）</td>
-			<td><article>120.1</article></td>
-		</tr>
-		<tr>
-			<th>期亲尊长</th>
-			<td>杖一百</td>
-			<td></td>
-			<td><article>120.1</article></td>
-		</tr>
-		<tr>
-			<th>期亲卑幼</th>
-			<td>杖九十</td>
-			<td></td>
-			<td><article>120.1</article></td>
-		</tr>
-		<tr>
-			<th>大功尊长</th>
-			<td>杖八十</td>
-			<td></td>
-			<td><article>120.1</article></td>
-		</tr>
-		<tr>
-			<th>大功卑幼</th>
-			<td>杖七十</td>
-			<td></td>
-			<td><article>120.1</article></td>
-		</tr>
-		<tr>
-			<th>小功尊长</th>
-			<td>杖六十</td>
-			<td></td>
-			<td><article>120.1</article></td>
-		</tr>
-		<tr>
-			<th>小功卑幼</th>
-			<td>笞五十</td>
-			<td></td>
-			<td><article>120.1</article></td>
-		</tr>
-		<tr>
-			<th>缌麻尊长</th>
-			<td>笞四十</td>
-			<td></td>
-			<td><article>120.1</article></td>
-		</tr>
-		<tr>
-			<th>缌麻卑幼</th>
-			<td>笞三十</td>
-			<td></td>
-			<td><article>120.1</article></td>
-		</tr>
-	</tbody>
-</table>
+<x-table type="table">
+客体		法定刑		十恶			法条
+父母		徒三年		不孝			<article>120.1</article>
+夫			徒三年		不义（妻）		<article>120.1</article>
+妻			杖九十		-				<article>120.1</article>
+期亲尊长	杖一百		-				<article>120.1</article>
+期亲卑幼	杖九十		-				<article>120.1</article>
+大功尊长	杖八十		-				<article>120.1</article>
+大功卑幼	杖七十		-				<article>120.1</article>
+小功尊长	杖六十		-				<article>120.1</article>
+小功卑幼	笞五十		-				<article>120.1</article>
+缌麻尊长	笞四十		-				<article>120.1</article>
+缌麻卑幼	笞三十		-				<article>120.1</article>
+</x-table>
