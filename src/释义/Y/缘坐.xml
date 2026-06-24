@@ -1,8 +1,19 @@
 缘坐，是一种犯罪后不仅罪犯本人受刑罚处罚，其一定范围内的亲属受牵连也受刑罚处罚的制度。只有部分极其严重的犯罪适用缘坐。
 
 <x-table title="适用缘坐的犯罪">
-罪行	范围						法条
-谋反	父、子年十六以上者，绞<br/>子年不满十六者、母女、妻妾、子之妻妾、祖孙、兄弟、姊妹，没官\n部曲、资财、田宅，没官\n伯叔父、兄弟之子，不限同籍，流三千里				<article>248</article>
+罪行	范围					法定刑					法条
+谋反	父						绞						<article>248</article>
+谋反	子年十六以上者			绞						<article>248</article>
+谋反	子年不满十六者			没官					<article>248</article>
+谋反	母						没官					<article>248</article>
+谋反	女						没官					<article>248</article>
+谋反	妻妾					没官					<article>248</article>
+谋反	子之妻妾				没官					<article>248</article>
+谋反	祖父母\n曾祖父母\n高祖父母	没官				<article>248</article>
+谋反	孙\n曾孙\n玄孙			没官				<article>248</article>
+谋反	兄弟姊妹				没官					<article>248</article>
+谋反	伯叔父					流三千里				<article>248</article>
+谋反	兄弟之子				流三千里				<article>248</article>
 </x-table>
 
 （1）谋大逆罪（<article>248.1</article>）、谋叛罪（<article>251</article>）。
@@ -10,4 +21,5 @@
 （3）造畜蛊毒罪（<article>262</article>）。
 
 适用缘坐制度时，还应注意以下规定：
-（1）妇人年六十以上或者废疾的，免除缘坐。（<article>248.2</article>）
+（1）<article-ref>248.2</article-ref>（<article>248.2</article>）
+（2）<article-ref>52-4</article-ref>（<article>52</article>）

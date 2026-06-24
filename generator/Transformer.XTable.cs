@@ -293,63 +293,89 @@ internal partial class Transformer
 
         // Parse header: * means merge with previous column
         var headerCells = ParseLine(lines[0]);
-        var colspans = new List<int>();
+
+
         var headerTexts = new List<string>();
+        var headerColspans = new List<int>();
         foreach (var cell in headerCells)
         {
             if (cell == "*")
-                colspans[colspans.Count - 1]++;
+                headerColspans[headerColspans.Count - 1]++;
             else
             {
                 headerTexts.Add(cell);
-                colspans.Add(1);
+                headerColspans.Add(1);
             }
         }
-        int logicalCols = headerTexts.Count;
 
-        // Parse data rows, detect （...） pattern for rowspan groups
-        // （...） only triggers rowspan when header has * (any merged column)
-        bool hasMergedCol = colspans.Any(s => s > 1);
-        var dataRows = new List<(List<string> Cells, string? Parent, string? Child)>();
+        int physicalCols = headerCells.Count;
+
+        // Parse data rows (physical columns)
+        var dataRows = new List<List<string>>();
         for (int i = 1; i < lines.Count; i++)
         {
             var cells = ParseLine(lines[i]);
-            while (cells.Count < logicalCols)
+            while (cells.Count < physicalCols)
                 cells.Add("-");
-
-            string? parent = null;
-            string? child = null;
-            if (hasMergedCol)
-            {
-                var first = cells[0];
-                var parenStart = first.IndexOf('（');
-                if (parenStart >= 0)
-                {
-                    parent = first[..parenStart];
-                    var parenEnd = first.IndexOf('）', parenStart);
-                    if (parenEnd > parenStart)
-                        child = first[(parenStart + 1)..parenEnd];
-                }
-            }
-            dataRows.Add((cells, parent, child));
+            dataRows.Add(cells);
         }
 
-        // Group consecutive rows with same parent into rowspan groups
-        var rowGroups = new List<(string? Parent, List<(List<string> Cells, string? Child)> Children)>();
+        // Build rendered view per row: * cells are merged into previous cell via colspan
+        // Each rendered cell is (Value, Colspan, PhysicalIndex)
+        var renderedRows = new List<List<(string Value, int Colspan, int PhysIdx)>>();
         foreach (var row in dataRows)
         {
-            if (row.Parent != null)
+            var rendered = new List<(string, int, int)>();
+            int i = 0;
+            while (i < physicalCols)
             {
-                var last = rowGroups.Count > 0 ? rowGroups[^1] : default;
-                if (last.Parent == row.Parent)
-                    last.Children.Add((row.Cells, row.Child));
+                if (row[i] == "*")
+                {
+                    if (rendered.Count > 0)
+                    {
+                        var prev = rendered[^1];
+                        rendered[^1] = (prev.Item1, prev.Item2 + 1, prev.Item3);
+                    }
+                    i++;
+                }
                 else
-                    rowGroups.Add((row.Parent, new List<(List<string>, string?)> { (row.Cells, row.Child) }));
+                {
+                    rendered.Add((row[i], 1, i));
+                    i++;
+                }
             }
-            else
+            renderedRows.Add(rendered);
+        }
+
+        // Group consecutive rows by first rendered cell value
+        var groups = new List<(int PrefixLen, List<int> RowIndices)>();
+        int idx = 0;
+        while (idx < renderedRows.Count)
+        {
+            var firstVal = renderedRows[idx][0].Item1;
+            int endIdx = idx + 1;
+            while (endIdx < renderedRows.Count && renderedRows[endIdx][0].Item1 == firstVal)
+                endIdx++;
+
+            var groupIndices = Enumerable.Range(idx, endIdx - idx).ToList();
+
+            int prefixLen = 0;
+            if (groupIndices.Count > 1)
             {
-                rowGroups.Add((null, new List<(List<string>, string?)> { (row.Cells, null) }));
+                var firstRow = renderedRows[groupIndices[0]];
+                int maxCompare = firstRow.Count;
+                for (int c = 0; c < maxCompare; c++)
+                {
+                    var val = firstRow[c].Item1;
+                    if (groupIndices.All(r => c < renderedRows[r].Count && renderedRows[r][c].Item1 == val))
+                        prefixLen++;
+                    else
+                        break;
+                }
             }
+
+            groups.Add((prefixLen, groupIndices));
+            idx = endIdx;
         }
 
         // Build table
@@ -367,12 +393,12 @@ internal partial class Transformer
         // thead
         var thead = doc.CreateElement("thead");
         var headerTr = doc.CreateElement("tr");
-        for (int i = 0; i < logicalCols; i++)
+        for (int i = 0; i < headerTexts.Count; i++)
         {
             var th = doc.CreateElement("th");
             th.InnerXml = ProcessContent(doc, Esc(headerTexts[i]));
-            if (colspans[i] > 1)
-                th.SetAttribute("colspan", colspans[i].ToString());
+            if (headerColspans[i] > 1)
+                th.SetAttribute("colspan", headerColspans[i].ToString());
             headerTr.AppendChild(th);
         }
         thead.AppendChild(headerTr);
@@ -380,61 +406,38 @@ internal partial class Transformer
 
         // tbody
         var tbody = doc.CreateElement("tbody");
-        foreach (var (parent, children) in rowGroups)
+        foreach (var (prefixLen, rowIndices) in groups)
         {
-            if (parent != null)
+            int rowspan = rowIndices.Count;
+            for (int ri = 0; ri < rowIndices.Count; ri++)
             {
-                // Rowspan group: parent row + child rows
-                int rowspan = children.Count + 1;
-                var parentRow = doc.CreateElement("tr");
-                var parentTh = doc.CreateElement("th");
-                parentTh.SetAttribute("rowspan", rowspan.ToString());
-                parentTh.InnerXml = ProcessContent(doc, Esc(parent));
-                parentRow.AppendChild(parentTh);
-                tbody.AppendChild(parentRow);
-
-                foreach (var (cells, child) in children)
-                {
-                    var tr = doc.CreateElement("tr");
-                    var childTh = doc.CreateElement("th");
-                    childTh.InnerXml = ProcessContent(doc, Esc(child ?? ""));
-                    tr.AppendChild(childTh);
-
-                    for (int j = 1; j < logicalCols && j < cells.Count; j++)
-                    {
-                        var raw = cells[j];
-                        var span = colspans[j];
-                        var td = doc.CreateElement("td");
-                        td.InnerXml = ProcessContent(doc, raw == "-" ? "" : Esc(raw));
-                        if (span > 1)
-                            td.SetAttribute("colspan", span.ToString());
-                        tr.AppendChild(td);
-                    }
-                    tbody.AppendChild(tr);
-                }
-            }
-            else
-            {
-                // Regular row
-                var cells = children[0].Cells;
                 var tr = doc.CreateElement("tr");
-                for (int j = 0; j < logicalCols && j < cells.Count; j++)
+                var rendered = renderedRows[rowIndices[ri]];
+
+                for (int c = 0; c < rendered.Count; c++)
                 {
-                    var raw = cells[j];
+                    if (ri > 0 && c < prefixLen)
+                        continue;
+
+                    var (value, colspan, physIdx) = rendered[c];
 
                     XmlElement cellEl;
-                    if (j == 0)
+                    if (physIdx == 0 || headerCells[physIdx] == "*")
                         cellEl = doc.CreateElement("th");
                     else
                         cellEl = doc.CreateElement("td");
 
-                    cellEl.InnerXml = ProcessContent(doc, raw == "-" ? "" : Esc(raw));
+                    cellEl.InnerXml = ProcessContent(doc, value == "-" ? "" : Esc(value));
 
-                    if (colspans[j] > 1)
-                        cellEl.SetAttribute("colspan", colspans[j].ToString());
+                    if (ri == 0 && c < prefixLen)
+                        cellEl.SetAttribute("rowspan", rowspan.ToString());
+
+                    if (colspan > 1)
+                        cellEl.SetAttribute("colspan", colspan.ToString());
 
                     tr.AppendChild(cellEl);
                 }
+
                 tbody.AppendChild(tr);
             }
         }
