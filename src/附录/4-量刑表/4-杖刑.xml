@@ -1,6 +1,6 @@
 <h2>杖一百</h2>
 
-<x-table type="table">
+<x-table>
 罪行	*													十恶	法条
 合和御药失职（医者合和御药料理、拣择不精未进御）			-		<article>102</article>
 合和御药失职（医者合和皇太子药料理、拣择不精已进御）		-		<article>102</article>
@@ -30,7 +30,7 @@
 
 <h2>杖九十</h2>
 
-<x-table type="table">
+<x-table>
 罪行	*													十恶	法条
 合和御药失职（医者合和皇太子药料理、拣择不精未进御）		-		<article>102</article>
 合和御药失职（监当官司合和御药料理、拣择不精未进御）		-		<article>102</article>
@@ -57,7 +57,7 @@
 
 <h2>杖八十</h2>
 
-<x-table type="table">
+<x-table>
 罪行	*													十恶	法条
 合和御药失职（监当官司合和皇太子药料理、拣择不精未进御）	-		<article>102</article>
 制作御膳失职（主食制作皇太子膳拣择不精未进御）			-		<article>103</article>
@@ -80,7 +80,7 @@
 
 <h2>杖七十</h2>
 
-<x-table type="table">
+<x-table>
 罪行	*													十恶	法条
 制作御膳失职（监当官司制作皇太子膳不品尝未进御）			-		<article>103</article>
 御用物管理失职（皇太子服御物持护修整违反法律规定已进御）		-		<article>105</article>
@@ -91,7 +91,7 @@
 
 <h2>杖六十</h2>
 
-<x-table type="table">
+<x-table>
 罪行	*													十恶	法条
 御用物管理失职（监当官司皇太子服御物持护修整违反法律规定已进御）	-		<article>105</article>
 闻丧匿不举哀（小功卑幼）	-	<article>120</article>

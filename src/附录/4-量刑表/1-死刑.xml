@@ -1,6 +1,6 @@
 <h2>斩</h2>
 
-<x-table type="table">
+<x-table>
 罪行	*										十恶	法条
 指斥乘舆（情节严重）							-		<article>122</article>
 谋反											谋反	<article>122</article>
@@ -8,7 +8,7 @@
 
 <h2>绞</h2>
 
-<x-table type="table">
+<x-table>
 罪行	*										十恶	法条
 合和御药失职（医者合和御药误不如本方已进御）	大不敬	<article>102</article>
 合和御药失职（医者合和御药封题误已进御）		大不敬	<article>102</article>

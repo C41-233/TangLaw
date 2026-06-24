@@ -163,7 +163,7 @@ internal partial class Transformer
         {
             if (child is XmlText text)
             {
-                var lines = text.InnerText.Split("\r\n");
+                var lines = text.InnerText.Split("\n");
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string? line = lines[i];

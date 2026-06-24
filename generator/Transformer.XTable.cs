@@ -15,7 +15,7 @@ internal partial class Transformer
             var type = node.GetAttribute("type");
             if (type == "arrow")
                 TransformXTableArrow(node);
-            else if (type == "table")
+            else
                 TransformXTableTable(node);
         }
     }

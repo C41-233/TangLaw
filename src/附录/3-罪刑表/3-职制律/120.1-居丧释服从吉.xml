@@ -1,4 +1,4 @@
-<x-table type="table">
+<x-table>
 客体		法定刑		十恶			法条
 父母		徒三年		不孝			<article>120.1</article>
 夫			徒三年		不义（妻）		<article>120.1</article>

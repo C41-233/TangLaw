@@ -1,4 +1,4 @@
-<x-table title="闻丧匿不举哀" type="table">
+<x-table title="闻丧匿不举哀">
 客体	法定刑	十恶	法条
 父母	流二千里	不孝	<article>120</article>
 夫	流二千里	不义	<article>120</article>
@@ -14,7 +14,7 @@
 缌麻卑幼	笞四十	-	<article>120</article>
 </x-table>
 
-<x-table title="闻丧择日举哀" type="table">
+<x-table title="闻丧择日举哀">
 客体	法定刑	法条
 期以上亲	杖八十	<article>120</article>
 大功亲	笞四十	<article>120</article>

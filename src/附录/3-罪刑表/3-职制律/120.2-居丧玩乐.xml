@@ -1,4 +1,4 @@
-<x-table title="居丧忘哀作舞乐" type="table">
+<x-table title="居丧忘哀作舞乐">
 客体			法定刑		十恶			法条
 父母			徒三年		不孝			<article>120.2</article>
 夫				徒三年		不义			<article>120.2</article>
@@ -6,19 +6,19 @@
 大功以下亲		笞四十		-				<article>120.2</article>
 </x-table>
 
-<x-table title="居丧作杂戏" type="table">
+<x-table title="居丧作杂戏">
 客体		法定刑		十恶			法条
 父母		徒一年		-				<article>120.2</article>
 夫			徒一年		-				<article>120.2</article>
 </x-table>
 
-<x-table title="居丧听奏乐" type="table">
+<x-table title="居丧听奏乐">
 客体		法定刑		十恶			法条
 父母		杖一百		-			<article>120.2</article>
 夫			杖一百		-			<article>120.2</article>
 </x-table>
 
-<x-table title="居丧参加吉席" type="table">
+<x-table title="居丧参加吉席">
 客体		法定刑		十恶			法条
 父母		杖一百		-				<article>120.2</article>
 夫			杖一百		-			<article>120.2</article>

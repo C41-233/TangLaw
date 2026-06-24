@@ -1,6 +1,6 @@
 <h2>流三千里</h2>
 
-<x-table type="table">
+<x-table>
 罪行	*											十恶	法条
 合和御药失职（医者合和御药误不如本方未进御）		大不敬	<article>102</article>
 合和御药失职（医者合和御药封题误未进御）			大不敬	<article>102</article>
@@ -22,7 +22,7 @@
 
 <h2>流二千里</h2>
 
-<x-table type="table">
+<x-table>
 罪行	*											十恶	法条
 闻丧匿不举哀（父母）								不孝	<article>120</article>
 闻丧匿不举哀（夫）									不义	<article>120</article>
