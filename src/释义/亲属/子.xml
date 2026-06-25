@@ -10,3 +10,8 @@
 诬告	无罪	-		<article>347.2</article>
 </x-table>
 
+<x-table title="缘坐">
+罪行		法定刑									法条				
+谋反		绞（年十六以上）\n没官（年不满十六）	<article>248</article>
+谋反（言词不能煽动众人，威力不足以率领他人起事的）		流三千里			<article>248</article>
+</x-table>
