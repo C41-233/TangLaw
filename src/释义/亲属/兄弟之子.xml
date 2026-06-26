@@ -2,6 +2,6 @@
 
 <x-table title="缘坐">
 罪行			法定刑				法条				
-谋反			流三千里				<article>248</article>
-大逆			流三千里			<article>248.1</article>
+谋反			流三千里				248
+大逆			流三千里			248.1
 </x-table>

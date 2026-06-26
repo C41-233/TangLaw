@@ -6,12 +6,12 @@
 
 <x-table title="祖父母对孙（曾祖父母对曾孙、高祖父母对玄孙）的犯罪">
 罪行	法定刑	十恶	法条
-告		无罪	-		<article>347.2</article>
-诬告	无罪	-		<article>347.2</article>
+告		无罪	-		347.2
+诬告	无罪	-		347.2
 </x-table>
 
 <x-table title="缘坐">
 罪行			法定刑				法条				
-谋反			没官				<article>248</article>
-大逆			没官				<article>248.1</article>
+谋反			没官				248
+大逆			没官				248.1
 </x-table>

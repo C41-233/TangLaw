@@ -427,7 +427,10 @@ internal partial class Transformer
                     else
                         cellEl = doc.CreateElement("td");
 
-                    cellEl.InnerXml = ProcessContent(doc, value == "-" ? "" : Esc(value));
+                    var display = value == "-" ? "" : Esc(value);
+                    if (display.Length > 0 && headerCells[physIdx] == "法条" && !display.Contains("<article>"))
+                        display = $"<article>{display}</article>";
+                    cellEl.InnerXml = ProcessContent(doc, display);
 
                     if (ri == 0 && c < prefixLen)
                         cellEl.SetAttribute("rowspan", rowspan.ToString());

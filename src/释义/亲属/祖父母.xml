@@ -4,28 +4,28 @@
 
 <x-table title="孙对祖父母（曾孙对曾祖父母、玄孙对高祖父母）的犯罪">
 罪行			*				法定刑		十恶			法条					
-闻丧匿不举哀	*				徒一年		不孝			<article>120</article>	
-闻丧择日举哀	*				杖八十		-				<article>120</article>	
-谋杀			*				皆斩		恶逆			<article>253</article>	
-殴打			*				斩			恶逆			<article>329</article>	
-过失杀			*				流三千里	-				<article>329</article>	
-过失伤			*				徒三年		-				<article>329</article>
-詈骂			*				绞			不孝			<article>329</article>	
-厌魅			意图杀人		皆斩		不道\n恶逆		<article>264</article>	
-厌魅			意图致人疾苦	皆斩		不道			<article>264</article>	
-厌魅			意图致人疾苦（致死）	皆斩		不道\n恶逆	<article>264</article>	
-厌魅			为求爱媚		流二千里	不孝			<article>264</article>	
-诅咒			意图杀人		皆斩		恶逆			<article>264</article>	
-诅咒			意图致人疾苦	皆斩		-				<article>264</article>	
-诅咒			意图致人疾苦（致死）	皆斩		恶逆	<article>264</article>	
-诅咒			为求爱媚		流二千里	不孝			<article>264</article>	
-告				*				绞			不孝			<article>345</article>	
-诬告			*				绞			不孝			<article>345</article>	
+闻丧匿不举哀	*				徒一年		不孝			120	
+闻丧择日举哀	*				杖八十		-				120	
+谋杀			*				皆斩		恶逆			253	
+殴打			*				斩			恶逆			329	
+过失杀			*				流三千里	-				329	
+过失伤			*				徒三年		-				329
+詈骂			*				绞			不孝			329	
+厌魅			意图杀人		皆斩		不道\n恶逆		264	
+厌魅			意图致人疾苦	皆斩		不道			264	
+厌魅			意图致人疾苦（致死）	皆斩		不道\n恶逆	264	
+厌魅			为求爱媚		流二千里	不孝			264	
+诅咒			意图杀人		皆斩		恶逆			264	
+诅咒			意图致人疾苦	皆斩		-				264	
+诅咒			意图致人疾苦（致死）	皆斩		恶逆	264	
+诅咒			为求爱媚		流二千里	不孝			264	
+告				*				绞			不孝			345	
+诬告			*				绞			不孝			345	
 </x-table>
 
 <x-table title="缘坐">
 罪行			法定刑				法条				
-谋反			没官				<article>248</article>
-大逆			没官				<article>248.1</article>
+谋反			没官				248
+大逆			没官				248.1
 </x-table>
 
