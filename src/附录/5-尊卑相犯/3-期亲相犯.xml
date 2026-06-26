@@ -1,8 +1,21 @@
+<h2>祖父母、曾祖父母、高祖父母</h2>
+
 <word value="祖父母"/>
+
+<h2>伯叔父母、姑</h2>
+
 <word value="伯叔父"/>
-<word value="伯叔父母"/>
+<word value="伯叔母"/>
 <word value="姑"/>
-<word value="兄姊"/>
+
+<h2>兄弟姊妹</h2>
+<word value="兄"/>
+<word value="弟"/>
+<word value="姊"/>
+<word value="妹"/>
 <word value="兄弟之子"/>
-<word value="期亲"/>
+
+<h2>其他期亲</h2>
+<word value="期亲尊长"/>
+<word value="期亲卑幼"/>
 

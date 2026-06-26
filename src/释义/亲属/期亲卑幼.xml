@@ -1,65 +1,15 @@
 期亲亲属中的卑幼，如弟妹等。
 
 <x-table title="尊长对期亲卑幼的犯罪">
-罪行	法定刑	十恶	法条
-闻丧匿不举哀	杖一百	-	<article>120</article>
-闻丧择日举哀	杖八十	-	<article>120</article>
-居丧释服从吉	杖九十	-	<article>120.1</article>
-居丧嫁娶妻	杖八十	-	<article>179.1</article>
-告	杖六十	-	<article>347</article>
-诬告	杖六十；诬告之罪减二等处罚更重的，依照重罪处罚	-	<article>347</article>
+罪行						法定刑		十恶		法条
+闻丧匿不举哀				杖一百		-		<article>120</article>
+闻丧择日举哀				杖八十		-		<article>120</article>
+居丧释服从吉				杖九十		-		<article>120.1</article>
+居丧忘哀作舞乐				杖八十 		-		<article>120.2</article>
+居丧嫁娶妻					杖八十		-		<article>179.1</article>
+告							杖六十		-		<article>347</article>
+诬告						杖六十；诬告之罪减二等处罚更重的，依照重罪处罚	-	<article>347</article>
 </x-table>
 
-<table>
-	<caption>尊长对期亲卑幼的犯罪</caption>
-	<thead>
-		<tr>
-			<th>罪行</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>闻丧匿不举哀</th>
-			<td>杖一百</td>
-			<td></td>
-			<td><article>120</article></td>
-		</tr>
-		<tr>
-			<th>闻丧择日举哀</th>
-			<td>杖八十</td>
-			<td></td>
-			<td><article>120</article></td>
-		</tr>
-		<tr>
-			<th>居丧释服从吉</th>
-			<td>杖九十</td>
-			<td></td>
-			<td><article>120.1</article></td>
-		</tr>
-		<tr>
-			<th>居丧嫁娶妻</th>
-			<td>杖八十</td>
-			<td></td>
-			<td><article>179.1</article></td>
-		</tr>
-		<tr>
-			<th>告</th>
-			<td>杖六十</td>
-			<td></td>
-			<td><article>347</article></td>
-		</tr>
-		<tr>
-			<th>诬告</th>
-			<td>杖六十；诬告之罪减二等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>347</article></td>
-		</tr>
-	</tbody>
-</table>
-
 <word value="期亲"/>
-
 <word value="卑幼"/>

@@ -1,11 +1,15 @@
 <h2>父母</h2>
 
-<word value="父母"/>
+<word value="父"/>
+<word value="母"/>
 
 <h2>子女</h2>
 
 <word value="子"/>
 <word value="女"/>
+
+<h2>子之妻妾</h2>
+
 <word value="子之妻"/>
 <word value="子之妾"/>
 

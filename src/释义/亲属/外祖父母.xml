@@ -9,69 +9,15 @@
 外祖父母的服制变化，取决于父母的婚姻关系变动。母在夫亡或离婚后改嫁，子对继母之父母（也称外祖父母）无服，子对出母之父母无服。
 
 <x-table title="对外祖父母的犯罪">
-罪行	法定刑	十恶	法条
-谋杀	皆斩	恶逆（致死）	<article>253</article>
-厌魅（意图杀人）	皆斩	不道，恶逆（致死）	<article>264</article>
-厌魅（意图致人疾苦）	皆徒三年；致死的，皆斩	不道，恶逆（致死）	<article>264</article>
-诅咒（意图杀人）	皆斩	恶逆（致死）	<article>264</article>
-诅咒（意图致人疾苦）	皆徒三年；致死的，皆斩	不道，恶逆（致死）	<article>264</article>
-告	徒二年；所告之罪减一等处罚更重的，依照重罪处罚	-	<article>346</article>
-诬告	徒二年；所告之罪加一等处罚更重的，依照重罪处罚	-	<article>346.1</article>
+罪行		*						法定刑		十恶					法条
+谋杀		*						皆斩		恶逆（致死）			<article>253</article>
+厌魅		意图杀人				皆斩		不道\n恶逆（致死）		<article>264</article>
+厌魅		意图致人疾苦			皆徒三年	不道					<article>264</article>
+厌魅		意图致人疾苦（致死）	皆斩		不道\n恶逆				<article>264</article>
+诅咒		意图杀人				皆斩		恶逆（致死）			<article>264</article>
+诅咒		意图致人疾苦			皆徒三年	不道					<article>264</article>
+诅咒		意图致人疾苦（致死）	皆斩	不道\n恶逆					<article>264</article>
+告			*						徒二年；所告之罪减一等处罚更重的，依照重罪处罚	-	<article>346</article>
+诬告		*						徒二年；所告之罪加一等处罚更重的，依照重罪处罚	-	<article>346.1</article>
 </x-table>
-
-<table>
-	<caption>对外祖父母的犯罪</caption>
-	<thead>
-		<tr>
-			<th>罪行</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>谋杀</th>
-			<td>皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>厌魅（意图杀人）</th>
-			<td>皆斩</td>
-			<td>不道，恶逆（致死）</td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>厌魅（意图致人疾苦）</th>
-			<td>皆徒三年；致死的，皆斩</td>
-			<td>不道，恶逆（致死）</td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>诅咒（意图杀人）</th>
-			<td>皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>诅咒（意图致人疾苦）</th>
-			<td>皆徒三年；致死的，皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>告</th>
-			<td>徒二年；所告之罪减一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346</article></td>
-		</tr>
-		<tr>
-			<th>诬告</th>
-			<td>徒二年；诬告之罪加一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-		</tr>
-	</tbody>
-</table>
 

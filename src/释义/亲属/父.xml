@@ -4,9 +4,38 @@
 
 根据<article>52</article>的规定，嫡孙承祖的，祖父母同父母，但是适用缘坐的除外。
 
+<x-table title="对父的犯罪">
+罪行					*				法定刑		十恶			法条					备注
+闻丧匿不举哀			*				流二千里	不孝			<article>120</article>	-
+闻丧择日举哀			*				杖八十		-				<article>120</article>	-
+居丧释服从吉			*				徒三年		不孝			<article>120.1</article>	-
+居丧玩乐				忘哀作舞乐		徒三年		不孝			<article>120.2</article>	-
+居丧玩乐				作杂戏			徒一年		-				<article>120.2</article>	-
+居丧玩乐				听奏乐			杖一百		-				<article>120.2</article>	-
+居丧玩乐				参加吉席		杖一百		-				<article>120.2</article>	-
+居丧嫁娶				嫁娶妻			徒三年		不孝			<article>179</article>		-
+居丧嫁娶				嫁娶妾			徒一年半	-				<article>179</article>		-
+谋杀					*				皆斩		恶逆			<article>253</article>	-
+殴打					*				斩			恶逆			<article>329</article>	-
+过失杀					*				流三千里	-				<article>329</article>	-
+过失伤					*				徒三年		-				<article>329</article>	-
+詈骂					*				绞			不孝			<article>329</article>	-
+厌魅					意图杀人		皆斩		不道<br/>恶逆		<article>264</article>	-
+厌魅					意图致人疾苦	皆斩		不道<br/>恶逆（既遂）	<article>264</article>	-
+厌魅					为求爱媚		流二千里	不孝			<article>264</article>	-
+诅咒					意图杀人		皆斩		恶逆			<article>264</article>	-
+诅咒					意图致人疾苦	皆斩		恶逆（既遂）		<article>264</article>	-
+诅咒					为求爱媚		流二千里	不孝			<article>264</article>	-
+告						*				绞			不孝			<article>345</article>	-
+诬告					*				绞			不孝			<article>345</article>	-
+违犯教令				*				徒二年		-				<article>348</article>	亲告罪
+供养有缺				*				徒二年		不孝			<article>348</article>	亲告罪
+</x-table>
+
 <x-table title="缘坐">
 罪行														法定刑				法条				
 谋反														绞					<article>248</article>
 谋反（言词不能煽动众人，威力不足以率领他人起事的）		流三千里			<article>248</article>
 大逆														绞					<article>248.1</article>
 </x-table>
+
