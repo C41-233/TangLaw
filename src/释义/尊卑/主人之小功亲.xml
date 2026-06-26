@@ -1,25 +1,5 @@
-<table>
-	<caption>奴婢、部曲对主人之小功亲的犯罪</caption>
-	<thead>
-		<tr>
-			<th>罪行</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>告</th>
-			<td>徒一年</td>
-			<td></td>
-			<td><article>349</article></td>
-		</tr>
-		<tr>
-			<th>诬告</th>
-			<td>徒一年<br/>以诬告凡人论加二等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>349.1</article></td>
-		</tr>
-	</tbody>
-</table>
+<x-table title="奴婢、部曲对主人之小功亲的犯罪">
+罪行		法定刑		十恶	法条
+告			徒一年		-		349
+诬告		徒一年\n以诬告凡人论加二等处罚更重的，依照重罪处罚	-	349.1
+</x-table>

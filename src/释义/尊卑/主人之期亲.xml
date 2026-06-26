@@ -1,55 +1,10 @@
-<table>
-	<caption>奴婢、部曲对主人之期亲的犯罪</caption>
-	<thead>
-		<tr>
-			<th>罪行</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>谋杀</th>
-			<td>绞；致伤的，皆斩</td>
-			<td></td>
-			<td><article>254</article></td>
-		</tr>
-		<tr>
-			<th>厌魅（意图杀人）</th>
-			<td>徒三年；致伤的，皆徒三年；致死的，皆斩</td>
-			<td>不道</td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>厌魅（意图致人疾苦）</th>
-			<td>徒二年；致伤的，皆徒二年；致死的，皆斩</td>
-			<td>不道</td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>诅咒（意图杀人）</th>
-			<td>徒三年；致伤的，皆徒三年；致死的，皆斩</td>
-			<td></td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>诅咒（意图致人疾苦）</th>
-			<td>徒二年；致伤的，皆徒二年；致死的，皆斩</td>
-			<td></td>
-			<td><article>264</article></td>
-		</tr>
-		<tr>
-			<th>告</th>
-			<td>流</td>
-			<td></td>
-			<td><article>349</article></td>
-		</tr>
-		<tr>
-			<th>诬告</th>
-			<td>流</td>
-			<td></td>
-			<td><article>349.1</article></td>
-		</tr>
-	</tbody>
-</table>
+<x-table title="奴婢、部曲对主人之期亲的犯罪">
+罪行					法定刑										十恶	法条
+谋杀					绞；致伤的，皆斩							-		254
+厌魅（意图杀人）		徒三年；致伤的，皆徒三年；致死的，皆斩		不道	264
+厌魅（意图致人疾苦）	徒二年；致伤的，皆徒二年；致死的，皆斩		不道	264
+诅咒（意图杀人）		徒三年；致伤的，皆徒三年；致死的，皆斩		-		264
+诅咒（意图致人疾苦）	徒二年；致伤的，皆徒二年；致死的，皆斩		-		264
+告						流											-		349
+诬告					流											-		349.1
+</x-table>
