@@ -16,6 +16,17 @@
 谋反（言词不能煽动众人，威力不足以率领他人起事）	父子	流三千里				<article>248</article>
 谋反（言词不能煽动众人，威力不足以率领他人起事）	母女	流三千里				<article>248</article>
 谋反（言词不能煽动众人，威力不足以率领他人起事）	妻妾	流三千里				<article>248</article>
+大逆	父						绞						<article>248.1</article>
+大逆	子年十六以上者			绞						<article>248.1</article>
+大逆	子年不满十六者			没官					<article>248.1</article>
+大逆	母女						没官					<article>248.1</article>
+大逆	妻妾					没官					<article>248.1</article>
+大逆	子之妻妾				没官					<article>248.1</article>
+大逆	祖父母\n曾祖父母\n高祖父母	没官				<article>248.1</article>
+大逆	孙\n曾孙\n玄孙			没官				<article>248.1</article>
+大逆	兄弟姊妹				没官					<article>248.1</article>
+大逆	伯叔父					流三千里				<article>248.1</article>
+大逆	兄弟之子				流三千里				<article>248.1</article>
 </x-table>
 
 （1）谋大逆罪（<article>248.1</article>）、谋叛罪（<article>251</article>）。
