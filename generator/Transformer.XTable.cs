@@ -347,14 +347,16 @@ internal partial class Transformer
             renderedRows.Add(rendered);
         }
 
-        // Group consecutive rows by first rendered cell value
+        // Group consecutive rows by first rendered cell value AND same merge pattern
         var groups = new List<(int PrefixLen, List<int> RowIndices)>();
         int idx = 0;
         while (idx < renderedRows.Count)
         {
             var firstVal = renderedRows[idx][0].Item1;
             int endIdx = idx + 1;
-            while (endIdx < renderedRows.Count && renderedRows[endIdx][0].Item1 == firstVal)
+            while (endIdx < renderedRows.Count
+                && renderedRows[endIdx][0].Item1 == firstVal
+                && renderedRows[endIdx].Count == renderedRows[idx].Count)
                 endIdx++;
 
             var groupIndices = Enumerable.Range(idx, endIdx - idx).ToList();
@@ -408,15 +410,59 @@ internal partial class Transformer
         var tbody = doc.CreateElement("tbody");
         foreach (var (prefixLen, rowIndices) in groups)
         {
-            int rowspan = rowIndices.Count;
-            for (int ri = 0; ri < rowIndices.Count; ri++)
+            int groupSize = rowIndices.Count;
+            int renderedCols = renderedRows[rowIndices[0]].Count;
+
+            // Precompute prefix length between each consecutive pair in the group
+            var pairPrefix = new int[groupSize]; // pairPrefix[gi] = prefix len between row gi and gi-1
+            for (int gi = 1; gi < groupSize; gi++)
+            {
+                var prev = renderedRows[rowIndices[gi - 1]];
+                var curr = renderedRows[rowIndices[gi]];
+                int p = 0;
+                int maxC = Math.Min(prev.Count, curr.Count);
+                while (p < maxC && prev[p].Item1 == curr[p].Item1) p++;
+                pairPrefix[gi] = p;
+            }
+
+            // For each rendered column, build segments where all consecutive pairs have prefix >= c+1
+            var subSegments = new List<List<(int Start, int End)>>();
+            for (int c = 0; c < renderedCols; c++)
+            {
+                var colSegments = new List<(int Start, int End)>();
+                int segStart = 0;
+                for (int gi = 1; gi <= groupSize; gi++)
+                {
+                    bool split = gi == groupSize || pairPrefix[gi] < c + 1;
+                    if (split)
+                    {
+                        int segLen = gi - segStart;
+                        if (segLen > 1)
+                            colSegments.Add((segStart, gi));
+                        segStart = gi;
+                    }
+                }
+                subSegments.Add(colSegments);
+            }
+
+            for (int ri = 0; ri < groupSize; ri++)
             {
                 var tr = doc.CreateElement("tr");
                 var rendered = renderedRows[rowIndices[ri]];
 
                 for (int c = 0; c < rendered.Count; c++)
                 {
+                    // Skip if covered by group-level rowspan
                     if (ri > 0 && c < prefixLen)
+                        continue;
+
+                    // Skip if covered by sub-group rowspan
+                    bool subCovered = false;
+                    foreach (var (start, end) in subSegments[c])
+                    {
+                        if (ri > start && ri < end) { subCovered = true; break; }
+                    }
+                    if (subCovered)
                         continue;
 
                     var (value, colspan, physIdx) = rendered[c];
@@ -432,8 +478,19 @@ internal partial class Transformer
                         display = $"<article>{display}</article>";
                     cellEl.InnerXml = ProcessContent(doc, display);
 
+                    // Group-level rowspan
                     if (ri == 0 && c < prefixLen)
-                        cellEl.SetAttribute("rowspan", rowspan.ToString());
+                        cellEl.SetAttribute("rowspan", groupSize.ToString());
+
+                    // Sub-group rowspan
+                    foreach (var (start, end) in subSegments[c])
+                    {
+                        if (ri == start)
+                        {
+                            cellEl.SetAttribute("rowspan", (end - start).ToString());
+                            break;
+                        }
+                    }
 
                     if (colspan > 1)
                         cellEl.SetAttribute("colspan", colspan.ToString());
