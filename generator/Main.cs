@@ -58,10 +58,17 @@ internal partial class Main
     // 序言
     private void OutputPreamble()
     {
-        var output = Path.Combine(DestDir, Preamble.Output);
-        var writer = new Writer(output, Preamble.Title);
-        writer.WriteLine(Preamble.GetBody());
-        writer.Flush();
+        try
+        {
+            var output = Path.Combine(DestDir, Preamble.Output);
+            var writer = new Writer(output, Preamble.Title);
+            writer.WriteLine(Preamble.GetBody());
+            writer.Flush();
+        }
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException($"输出「{Preamble.Title}」时发生错误", ex);
+        }
     }
 
     private void OutputLaws()
@@ -76,10 +83,17 @@ internal partial class Main
     {
         if (section1.Content != null)
         {
-            var output = Path.Combine(DestDir, section1.Content.Output);
-            var writer = new Writer(output, section1.Content.Title);
-            writer.WriteLine(section1.Content.GetBody());
-            writer.Flush();
+            try
+            {
+                var output = Path.Combine(DestDir, section1.Content.Output);
+                var writer = new Writer(output, section1.Content.Title);
+                writer.WriteLine(section1.Content.GetBody());
+                writer.Flush();
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"输出篇「{section1.Content.Title}」时发生错误", ex);
+            }
         }
         foreach (var section2 in section1.Children)
         {
@@ -91,10 +105,17 @@ internal partial class Main
     {
         if (section2.Content != null)
         {
-            var output = Path.Combine(DestDir, section2.Content.Output);
-            var writer = new Writer(output, section2.Content.Title);
-            writer.WriteLine(section2.Content.GetBody());
-            writer.Flush();
+            try
+            {
+                var output = Path.Combine(DestDir, section2.Content.Output);
+                var writer = new Writer(output, section2.Content.Title);
+                writer.WriteLine(section2.Content.GetBody());
+                writer.Flush();
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"输出章「{section2.Content.Title}」时发生错误", ex);
+            }
         }
         foreach (var article in section2.Children)
         {
@@ -104,10 +125,17 @@ internal partial class Main
 
     private void OutputArticle(LawArticle article)
     {
-        var output = Path.Combine(DestDir, article.Content.Output);
-        var writer = new Writer(output, article.Content.Title);
-        writer.WriteLine(article.Content.GetBody());
-        writer.Flush();
+        try
+        {
+            var output = Path.Combine(DestDir, article.Content.Output);
+            var writer = new Writer(output, article.Content.Title);
+            writer.WriteLine(article.Content.GetBody());
+            writer.Flush();
+        }
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException($"输出条「{article.Content.Title}」时发生错误", ex);
+        }
     }
 
     private void OutputAppendixes()
@@ -117,10 +145,17 @@ internal partial class Main
         {
             if (entry.Content != null)
             {
-                var output = Path.Combine(DestDir, entry.Content.Output);
-                var writer = new Writer(output, entry.Content.Title);
-                writer.WriteLine(entry.Content.GetBody());
-                writer.Flush();
+                try
+                {
+                    var output = Path.Combine(DestDir, entry.Content.Output);
+                    var writer = new Writer(output, entry.Content.Title);
+                    writer.WriteLine(entry.Content.GetBody());
+                    writer.Flush();
+                }
+                catch (Exception ex)
+                {
+                    throw new InvalidOperationException($"输出附录「{entry.Content.Title}」时发生错误", ex);
+                }
             }
             else
             {
