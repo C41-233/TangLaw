@@ -1,247 +1,45 @@
 <h2>诬告谋反、大逆</h2>
 
-<table>
-	<thead>
-		<tr>
-			<th>客体</th>
-			<th>法定刑</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>凡人</th>
-			<td>斩</td>
-			<td><article>341</article></td>
-		</tr>
-	</tbody>
-</table>
+<x-table type="table">
+客体	法定刑	法条
+凡人	斩		341
+</x-table>
 
 <h2>诬告</h2>
 
-<table>
-	<thead>
-		<tr>
-			<th>客体</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-			<th>备注</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>凡人</th>
-			<td>反坐<br/></td>
-			<td></td>
-			<td><article>342</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>父母</th>
-			<td>绞</td>
-			<td>不孝</td>
-			<td><article>345</article></td>
-			<td>不适用<article>344</article>第一款</td>
-		</tr>
-		<tr>
-			<th>祖父母<br/>曾祖父母<br/>高祖父母</th>
-			<td>绞</td>
-			<td>不孝</td>
-			<td><article>345</article></td>
-			<td>不适用<article>344</article>第一款</td>
-		</tr>
-		<tr>
-			<th>外祖父母</th>
-			<td>徒二年<br/>诬告之罪加一等处罚更重的，依照重罪处罚	</td>
-			<td></td>
-			<td><article>346.1</article></td>
-			<td>不适用<article>344</article>第一款</td>
-		</tr>
-		<tr>
-			<th>夫</th>
-			<td>徒二年<br/>诬告之罪加一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-			<td>不适用<article>344</article>第一款</td>
-		</tr>
-		<tr>
-			<th>夫之祖父母<br/>夫之曾祖父母<br/>夫之高祖父母</th>
-			<td>徒二年<br/>诬告之罪加一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-			<td>不适用<article>344</article>第一款</td>
-		</tr>
-		<tr>
-			<th>妻</th>
-			<td>杖六十<br/>诬告之罪减二等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>347.2</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>妾</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>妻对妾</th>
-			<td>杖六十<br/>诬告之罪减二等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>347.2</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>子（女）</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>子之妻</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>子之妾</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>外孙</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>孙子（女）<br/>曾孙（女）<br/>玄孙（女）</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>孙之妻<br/>曾孙之妻<br/>玄孙之妻</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>孙之妾<br/>曾孙之妾<br/>玄孙之妾</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>期亲尊长</th>
-			<td>徒二年<br/>诬告之罪加一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>期亲卑幼</th>
-			<td>杖六十<br/>诬告之罪减二等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>大功尊长</th>
-			<td>徒一年半<br/>诬告之罪加一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>大功卑幼</th>
-			<td>杖七十<br/>诬告之罪减一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>小功尊长</th>
-			<td>徒一年<br/>诬告之罪加一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>小功卑幼</th>
-			<td>杖八十<br/>反坐处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>缌麻尊长</th>
-			<td>徒一年<br/>诬告之罪加一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>缌麻卑幼</th>
-			<td>杖八十<br/>反坐处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346.1</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>主人</th>
-			<td>皆绞</td>
-			<td></td>
-			<td><article>349</article></td>
-			<td>不适用<article>344</article>第一款</td>
-		</tr>
-		<tr>
-			<th>主人之外祖父母</th>
-			<td>流</td>
-			<td></td>
-			<td><article>349.1</article></td>
-			<td>不适用<article>344</article>第一款</td>
-		</tr>
-		<tr>
-			<th>主人之期亲</th>
-			<td>流</td>
-			<td></td>
-			<td><article>349.1</article></td>
-			<td>不适用<article>344</article>第一款</td>
-		</tr>
-		<tr>
-			<th>主人之大功亲</th>
-			<td>徒一年<br/>以诬告凡人论加三等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>349.1</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>主人之小功亲</th>
-			<td>徒一年<br/>以诬告凡人论加二等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>349.1</article></td>
-			<td></td>
-		</tr>
-		<tr>
-			<th>主人之缌麻亲</th>
-			<td>徒一年<br/>以诬告凡人论加一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>349.1</article></td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+<x-table type="table">
+客体				法定刑			十恶		法条		排除<article>344</article>
+凡人				反坐			-			342			-
+父母				绞				不孝		345			√
+祖父母				绞				不孝		345			√
+外祖父母			徒二年\n诬告之罪加一等处罚更重的，依照重罪处罚	-	346.1	√
+夫					徒二年\n诬告之罪加一等处罚更重的，依照重罪处罚	-	346.1	√
+夫之祖父母			徒二年\n诬告之罪加一等处罚更重的，依照重罪处罚	-	346.1	√
+妻					杖六十\n诬告之罪减二等处罚更重的，依照重罪处罚	-	347.2	-
+妾					无罪			-			347.2		-
+妻对妾				杖六十\n诬告之罪减二等处罚更重的，依照重罪处罚	-	347.2	-
+子（女）			无罪			-			347.2		-
+子之妻				无罪			-			347.2		-
+子之妾				无罪			-			347.2		-
+外孙				无罪			-			347.2		-
+孙					无罪			-			347.2		-
+孙之妻				无罪			-			347.2		-
+孙之妾				无罪			-			347.2		-
+期亲尊长			徒二年\n诬告之罪加一等处罚更重的，依照重罪处罚		-	346.1	-
+期亲卑幼			杖六十\n诬告之罪减二等处罚更重的，依照重罪处罚		-	347.1	-
+大功尊长			徒一年半\n诬告之罪加一等处罚更重的，依照重罪处罚	-	346.1	-
+大功卑幼			杖七十\n诬告之罪减一等处罚更重的，依照重罪处罚		-	347.1	-
+小功尊长			徒一年\n诬告之罪加一等处罚更重的，依照重罪处罚		-	346.1	-
+小功卑幼			杖八十\n反坐处罚更重的，依照重罪处罚	-	347.1	-
+缌麻尊长			徒一年\n诬告之罪加一等处罚更重的，依照重罪处罚	-	346.1	-
+缌麻卑幼			杖八十\n反坐处罚更重的，依照重罪处罚	-	347.1	-
+（部曲、奴婢犯）主人				皆绞			-			349			√
+（部曲、奴婢犯）主人之外祖父母		流				-			349.1		√
+（部曲、奴婢犯）主人之期亲			流				-			349.1		√
+（部曲、奴婢犯）主人之大功亲		徒一年\n以诬告凡人论加三等处罚更重的，依照重罪处罚	-	349.1	-
+（部曲、奴婢犯）主人之小功亲		徒一年\n以诬告凡人论加二等处罚更重的，依照重罪处罚	-	349.1	-
+（部曲、奴婢犯）主人之缌麻亲		徒一年\n以诬告凡人论加一等处罚更重的，依照重罪处罚	-	349.1	-
+</x-table>
 
 <article-ref>342.1-1</article-ref>（<article>342.1</article>）
 

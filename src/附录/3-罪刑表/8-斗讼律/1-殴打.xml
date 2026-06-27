@@ -1,24 +1,5 @@
-<table>
-	<thead>
-		<tr>
-			<th>客体</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>父母</th>
-			<td>斩</td>
-			<td>恶逆</td>
-			<td><article>329</article></td>
-		</tr>
-		<tr>
-			<th>祖父母<br/>曾祖父母<br/>高祖父母</th>
-			<td>斩</td>
-			<td>恶逆</td>
-			<td><article>329</article></td>
-		</tr>
-	</tbody>
-</table>
+<x-table type="table">
+客体	法定刑	十恶	法条
+父母	斩	恶逆	329
+祖父母\n曾祖父母\n高祖父母	斩	恶逆	329
+</x-table>

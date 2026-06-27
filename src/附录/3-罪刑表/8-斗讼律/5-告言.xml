@@ -1,168 +1,29 @@
-<table>
-	<thead>
-		<tr>
-			<th>客体</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>父母</th>
-			<td>绞</td>
-			<td>不孝</td>
-			<td><article>345</article></td>
-		</tr>
-		<tr>
-			<th>祖父母<br/>曾祖父母<br/>高祖父母</th>
-			<td>绞</td>
-			<td>不孝</td>
-			<td><article>345</article></td>
-		</tr>
-		<tr>
-			<th>外祖父母</th>
-			<td>徒二年；所告之罪减一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346</article></td>
-		</tr>
-		<tr>
-			<th>夫</th>
-			<td>徒二年；所告之罪减一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346</article></td>
-		</tr>
-		<tr>
-			<th>夫之祖父母<br/>夫之曾祖父母<br/>夫之高祖父母</th>
-			<td>徒二年；所告之罪减一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346</article></td>
-		</tr>
-		<tr>
-			<th>妻</th>
-			<td>杖六十</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-		<tr>
-			<th>妻对妾</th>
-			<td>杖六十</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-		<tr>
-			<th>子（女）</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-		<tr>
-			<th>子之妻</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-		<tr>
-			<th>子之妾</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-		<tr>
-			<th>孙子（女）<br/>曾孙（女）<br/>玄孙（女）</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-		<tr>
-			<th>孙之妻<br/>曾孙之妻<br/>玄孙之妻</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-		<tr>
-			<th>孙之妾<br/>曾孙之妾<br/>玄孙之妾</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-		<tr>
-			<th>外孙</th>
-			<td>无罪</td>
-			<td></td>
-			<td><article>347.2</article></td>
-		</tr>
-		<tr>
-			<th>期亲尊长</th>
-			<td>徒二年；所告之罪减一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346</article></td>
-		</tr>
-		<tr>
-			<th>期亲卑幼</th>
-			<td>杖六十</td>
-			<td></td>
-			<td><article>347</article></td>
-		</tr>
-		<tr>
-			<th>大功尊长</th>
-			<td>徒一年半；所告之罪减一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346</article></td>
-		</tr>
-		<tr>
-			<th>大功卑幼</th>
-			<td>杖七十</td>
-			<td></td>
-			<td><article>347</article></td>
-		</tr>
-		<tr>
-			<th>小功尊长</th>
-			<td>徒一年；所告之罪减一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346</article></td>
-		</tr>
-		<tr>
-			<th>小功卑幼</th>
-			<td>杖八十</td>
-			<td></td>
-			<td><article>347</article></td>
-		</tr>
-		<tr>
-			<th>缌麻尊长</th>
-			<td>徒一年；所告之罪减一等处罚更重的，依照重罪处罚</td>
-			<td></td>
-			<td><article>346</article></td>
-		</tr>
-		<tr>
-			<th>缌麻卑幼</th>
-			<td>杖八十</td>
-			<td></td>
-			<td><article>347</article></td>
-		</tr>
-		<tr>
-			<th>主人</th>
-			<td>皆绞</td>
-			<td></td>
-			<td><article>349</article></td>
-		</tr>
-		<tr>
-			<th>主人之外祖父母</th>
-			<td>流</td>
-			<td></td>
-			<td><article>349</article></td>
-		</tr>
-		<tr>
-			<th>主人之期亲</th>
-			<td>流</td>
-			<td></td>
-			<td><article>349</article></td>
-		</tr>
-		<tr>
-			<th>主人之大功以下亲</th>
-			<td>徒一年</td>
-			<td></td>
-			<td><article>349</article></td>
-		</tr>
-	</tbody>
-</table>
+<x-table type="table">
+客体	法定刑	十恶	法条
+父母	绞	不孝	345
+祖父母\n曾祖父母\n高祖父母	绞	不孝	345
+外祖父母	徒二年；所告之罪减一等处罚更重的，依照重罪处罚	-	346
+夫	徒二年；所告之罪减一等处罚更重的，依照重罪处罚	-	346
+夫之祖父母\n夫之曾祖父母\n夫之高祖父母	徒二年；所告之罪减一等处罚更重的，依照重罪处罚	-	346
+妻	杖六十	-	347.2
+妻对妾	杖六十	-	347.2
+子（女）	无罪	-	347.2
+子之妻	无罪	-	347.2
+子之妾	无罪	-	347.2
+孙子（女）\n曾孙（女）\n玄孙（女）	无罪	-	347.2
+孙之妻\n曾孙之妻\n玄孙之妻	无罪	-	347.2
+孙之妾\n曾孙之妾\n玄孙之妾	无罪	-	347.2
+外孙	无罪	-	347.2
+期亲尊长	徒二年；所告之罪减一等处罚更重的，依照重罪处罚	-	346
+期亲卑幼	杖六十	-	347
+大功尊长	徒一年半；所告之罪减一等处罚更重的，依照重罪处罚	-	346
+大功卑幼	杖七十	-	347
+小功尊长	徒一年；所告之罪减一等处罚更重的，依照重罪处罚	-	346
+小功卑幼	杖八十	-	347
+缌麻尊长	徒一年；所告之罪减一等处罚更重的，依照重罪处罚	-	346
+缌麻卑幼	杖八十	-	347
+主人	皆绞	-	349
+主人之外祖父母	流	-	349
+主人之期亲	流	-	349
+主人之大功以下亲	徒一年	-	349
+</x-table>
