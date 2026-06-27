@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Xml;
 
 namespace Generator;
@@ -34,10 +36,25 @@ internal partial class Transformer
             {
                 if (paragraphNum > 0)
                 {
-                    var paragraphs = law.Split("\r\n\r\n", StringSplitOptions.RemoveEmptyEntries);
-                    if (paragraphNum <= paragraphs.Length)
+                    var lines = law.Replace("\r\n", "\n").Replace('\r', '\n').Split('\n');
+                    var paragraphs = new List<string>();
+                    var sb = new StringBuilder();
+                    foreach (var line in lines)
                     {
-                        span.InnerText = $"「{paragraphs[paragraphNum - 1].Trim()}」";
+                        if (string.IsNullOrWhiteSpace(line))
+                        {
+                            if (sb.Length > 0) { paragraphs.Add(sb.ToString().TrimEnd()); sb.Clear(); }
+                        }
+                        else
+                        {
+                            if (sb.Length > 0) sb.AppendLine();
+                            sb.Append(line.Trim());
+                        }
+                    }
+                    if (sb.Length > 0) paragraphs.Add(sb.ToString().TrimEnd());
+                    if (paragraphNum <= paragraphs.Count)
+                    {
+                        span.InnerText = $"「{paragraphs[paragraphNum - 1]}」";
                     }
                 }
                 else
