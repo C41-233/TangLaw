@@ -1,84 +1,34 @@
-<table>
-	<thead>
-		<tr>
-			<th>客体</th>
-			<th>法定刑</th>
-			<th>十恶</th>
-			<th>法条</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th>凡人</th>
-			<td>徒三年；致伤的，绞；致死的，斩</td>
-			<td></td>
-			<td><article>256</article></td>
-		</tr>
-		<tr>
-			<th>父母</th>
-			<td>皆斩</td>
-			<td>恶逆</td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>祖父母<br/>曾祖父母<br/>高祖父母</th>
-			<td>皆斩</td>
-			<td>恶逆</td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>外祖父母</th>
-			<td>皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>夫</th>
-			<td>皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>夫之父母</th>
-			<td>皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>夫之祖父母<br/>夫之曾祖父母<br/>夫之高祖父母</th>
-			<td>皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>伯叔父母</th>
-			<td>皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>姑</th>
-			<td>皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>兄姊</th>
-			<td>皆斩</td>
-			<td>恶逆（致死）</td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>期亲尊长</th>
-			<td>皆斩</td>
-			<td></td>
-			<td><article>253</article></td>
-		</tr>
-		<tr>
-			<th>缌麻尊长</th>
-			<td>流二千里；致伤的，绞；致死的，皆斩</td>
-			<td></td>
-			<td><article>253</article></td>
-		</tr>
-	</tbody>
-</table>
+<x-table title="谋杀">
+客体										法定刑								十恶	法条
+凡人										徒三年								-		256
+父母										皆斩								恶逆	253
+祖父母\n曾祖父母\n高祖父母					皆斩								恶逆	253
+外祖父母									皆斩								-		253
+夫											皆斩								-		253
+夫之父母									皆斩								-		253
+夫之祖父母\n夫之曾祖父母\n夫之高祖父母		皆斩								-		253
+伯叔父母									皆斩								-		253
+姑											皆斩								-		253
+兄姊										皆斩								-		253
+期亲尊长									皆斩								-		253
+缌麻尊长									流二千里							-		253
+</x-table>
+
+<x-table title="谋杀（致伤）">
+客体							法定刑				十恶	法条
+凡人							致伤的，绞			-		256
+缌麻尊长						绞					-		253
+</x-table>
+
+<x-table title="谋杀（致死）">
+客体										法定刑				十恶	法条
+凡人										斩					-		256
+外祖父母									皆斩				恶逆	253
+夫											皆斩				恶逆	253
+夫之父母									皆斩				恶逆	253
+夫之祖父母\n夫之曾祖父母\n夫之高祖父母		皆斩				恶逆	253
+伯叔父母									皆斩				恶逆	253
+姑											皆斩				恶逆	253
+兄姊										皆斩				恶逆	253
+缌麻尊长									皆斩				-		253
+</x-table>
