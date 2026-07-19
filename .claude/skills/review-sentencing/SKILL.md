@@ -2,7 +2,7 @@
 name: review-sentencing
 description: >
   审查《唐律疏议》项目中罪名与量刑的一致性。当用户要求"审查一致性"、"交叉验证"、"检查罪刑"、"核对量刑"、"审查罪名"、"review sentencing"、"check consistency" 或类似表述时触发。
-  对 src/释义/亲属、src/释义/尊卑、src/附录/3-罪刑表、src/附录/4-量刑表、src/释义/Y/缘坐.xml 这五个目录/文件进行全面交叉验证。
+  对 src/释义/亲属、src/释义/尊卑、src/附录/3-罪刑表、src/附录/4-量刑表、src/释义/Y/缘坐.xml、src/释义/S/上请.xml 这六个目录/文件进行全面交叉验证。
 ---
 
 # 罪名量刑一致性审查
