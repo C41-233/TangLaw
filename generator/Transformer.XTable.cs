@@ -301,6 +301,11 @@ internal partial class Transformer
         {
             if (cell == "*")
                 headerColspans[headerColspans.Count - 1]++;
+            else if (cell == "-")
+            {
+                headerTexts.Add("");
+                headerColspans.Add(1);
+            }
             else
             {
                 headerTexts.Add(cell);
