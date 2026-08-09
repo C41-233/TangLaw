@@ -1,8 +1,9 @@
 <word value="斗殴量刑表"/>
 
+<word value="斗殴量刑表（夫殴妻）"/>
+
 <x-table type="table">
 客体	*				法定刑	十恶	法条
 父母	*				斩		恶逆	329
 祖父母	*				斩		恶逆	329
 </x-table>
-
