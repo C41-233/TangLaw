@@ -166,12 +166,32 @@ internal partial class Transformer
         {
             if (child is XmlText text)
             {
-                var lines = text.InnerText.Split("\n");
+                var raw = text.InnerText.Replace("\r\n", "\n").Replace('\r', '\n');
+                if (raw.Length == 0)
+                {
+                    continue;
+                }
+                var lines = raw.Split("\n");
                 for (int i = 0; i < lines.Length; i++)
                 {
                     string? line = lines[i];
                     if (line.Trim().Length == 0)
                     {
+                        // 文本以换行开头（紧邻前一个内容的行尾换行），软换行连接前文
+                        if (i == 0 && raw.StartsWith('\n'))
+                        {
+                            if (current.Length > 0)
+                            {
+                                current.AppendLine();
+                            }
+                            continue;
+                        }
+                        // 文本以换行结尾（行尾换行），前面的行已追加换行
+                        if (i == lines.Length - 1 && raw.EndsWith('\n'))
+                        {
+                            continue;
+                        }
+                        // 真正的空行：段落分隔
                         if (current.Length > 0)
                         {
                             splits.Add((current.ToString(), true));
