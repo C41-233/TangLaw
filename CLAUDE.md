@@ -60,6 +60,6 @@ index.html是网站入口，从上到下依次包含：
 
 ## 基础规则
 
-- 不允许执行任何 `git `命令。
+- 允许执行无副作用的只读 `git` 命令（如 `git log`、`git diff`、`git status`、`git show` 等），用于查看提交历史与工作区变更；禁止执行任何有副作用的 `git` 命令（如 `checkout`、`reset`、`commit`、`push`、`merge`、`stash` 等）。
 - 不允许删除任何文件。
 - 代码修改完毕后，只允许测试编译通过。禁止自行运行测试，必须交由用户代为执行。
