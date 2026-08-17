@@ -223,7 +223,10 @@ internal partial class Transformer
                         splits.Add((current.ToString(), true));
                         current.Clear();
                     }
-                    splits.Add((element.OuterXml, false));
+                    var xml = element.OuterXml;
+                    if (element.Name == "table")
+                        xml = xml.Replace("\\n", "<br/>");
+                    splits.Add((xml, false));
                 }
             }
         }
