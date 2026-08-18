@@ -2,6 +2,7 @@
 
 <word value="斗殴量刑表之一"/>
 <word value="斗殴量刑表之二"/>
+<word value="斗殴量刑表之三"/>
 
 <table>
 	<tr>
@@ -14,50 +15,6 @@
 		<th>妻殴夫</th>
 		<th>媵殴夫</th>
 		<th>妾殴夫</th>
-	</tr>
-	<tr>
-		<th>致伤（用刃）</th>
-		<td>徒二年</td>
-		<td>斩</td>
-		<td>徒一年</td>
-		<td>无罪</td>
-		<td>徒一年</td>
-		<td>流二千里</td>
-		<td>流二千五百里</td>
-		<td>流二千五百里</td>
-	</tr>
-	<tr>
-		<th>用汤火伤人</th>
-		<td>徒一年</td>
-		<td>斩</td>
-		<td>杖九十</td>
-		<td>无罪</td>
-		<td>杖九十</td>
-		<td>徒二年半</td>
-		<td>徒三年</td>
-		<td>徒三年</td>
-	</tr>
-	<tr>
-		<th>用兵刃斫射未着身</th>
-		<td>杖一百</td>
-		<td>斩</td>
-		<td>无罪</td>
-		<td>无罪</td>
-		<td>无罪</td>
-		<td>徒二年</td>
-		<td>徒二年半</td>
-		<td>徒二年半</td>
-	</tr>
-	<tr>
-		<th>折齿\n毁缺耳鼻\n眇一目\n折手足指\n破骨</th>
-		<td>徒一年</td>
-		<td>斩</td>
-		<td>杖九十</td>
-		<td>杖七十</td>
-		<td>杖九十</td>
-		<td>徒二年半</td>
-		<td>徒三年</td>
-		<td>徒三年</td>
 	</tr>
 	<tr>
 		<th>折二齿以上\n折二指以上\n髡发</th>
