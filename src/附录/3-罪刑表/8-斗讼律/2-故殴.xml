@@ -1,3 +1,12 @@
+<h2>总结</h2>
+
+<word value="故殴量刑表之一"/>
+<word value="故殴量刑表之二"/>
+<word value="故殴量刑表之三"/>
+<word value="故殴量刑表之四"/>
+<word value="故殴量刑表之五"/>
+<word value="故殴量刑表之六"/>
+
 <h2>凡人</h2>
 <word value="故殴量刑表"/>
 
@@ -9,7 +18,7 @@
 <word value="殴打量刑表（媵妾殴夫）"/>
 
 <h2>期亲</h2>
-<x-table type="table">
+<x-table>
 客体	法定刑	十恶	法条
 父母	斩		恶逆	329
 祖父母	斩		恶逆	329
