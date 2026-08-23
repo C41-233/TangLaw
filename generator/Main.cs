@@ -1,4 +1,4 @@
-﻿using Generator.Utils;
+using Generator.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -157,12 +157,9 @@ internal partial class Main
                     throw new InvalidOperationException($"输出附录「{entry.Content.Title}」时发生错误", ex);
                 }
             }
-            else
+            foreach (var child in entry.Children)
             {
-                foreach(var child in entry.Children)
-                {
-                    OutputAppendix(child);
-                }
+                OutputAppendix(child);
             }
         }
     }

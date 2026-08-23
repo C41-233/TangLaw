@@ -1,4 +1,4 @@
-﻿namespace Generator;
+namespace Generator;
 
 internal partial class Main
 {
@@ -40,6 +40,16 @@ internal partial class Main
         {
             foreach (var child in Directory.EnumerateFileSystemEntries(path))
             {
+                // -.xml 是该目录自身的内容标记，与正文约定一致
+                if (Path.GetFileNameWithoutExtension(child) == "-" && File.Exists(child))
+                {
+                    entry.Content = new Document(child)
+                    {
+                        Title = title,
+                        Output = $"附录-{title}.html",
+                    };
+                    continue;
+                }
                 entry.Children.Add(CollectAppendixInternal(child));
             }
             entry.Children.Sort((e1, e2) => Comparer<EntryTitle>.Default.Compare(e1.EntryTitle, e2.EntryTitle));
