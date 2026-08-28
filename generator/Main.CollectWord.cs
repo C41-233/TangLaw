@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,18 +12,11 @@ internal partial class Main
     private void CollectWords()
     {
         var root = Path.Combine(SrcDir, "释义");
-        foreach (var sub in Directory.GetDirectories(root))
+        foreach (var file in Directory.GetFiles(root, "*.xml", SearchOption.AllDirectories))
         {
-            foreach (var file in Directory.GetFiles(sub))
-            {
-                if (!file.EndsWith(".xml"))
-                {
-                    continue;
-                }
-                var word = Path.GetFileNameWithoutExtension(file);
-                var content = File.ReadAllText(file);
-                Words.Add(word, content);
-            }
+            var word = Path.GetFileNameWithoutExtension(file);
+            var content = File.ReadAllText(file);
+            Words.Add(word, content);
         }
     }
 
