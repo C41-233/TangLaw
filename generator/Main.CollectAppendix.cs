@@ -1,3 +1,5 @@
+using Generator.Utils;
+
 namespace Generator;
 
 internal partial class Main
@@ -56,5 +58,61 @@ internal partial class Main
         }
 
         return entry;
+    }
+
+    // 为每个一级附录分组生成目录页：一页列全该组完整目录
+    private void OutputAppendixDirectories()
+    {
+        foreach (var appendix in Appendix.Children)
+        {
+            if (appendix.Children.Count == 0)
+            {
+                continue;
+            }
+            try
+            {
+                var writer = new Writer(Path.Combine(DestDir, $"附录-{appendix.EntryTitle.Title}.html"), appendix.EntryTitle.Title);
+                writer.BeginDiv("container");
+                writer.WriteLine("<header>");
+                writer.WriteLine($"<h1>{appendix.EntryTitle.Title}</h1>");
+                writer.WriteLine("</header>");
+                writer.WriteLine("<nav>");
+                writer.WriteLine("<ul>");
+                foreach (var child in appendix.Children)
+                {
+                    OutputAppendixTree(writer, child);
+                }
+                writer.WriteLine("</ul>");
+                writer.WriteLine("</nav>");
+                writer.EndDiv();
+                writer.Flush();
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"输出附录目录「{appendix.EntryTitle.Title}」时发生错误", ex);
+            }
+        }
+    }
+
+    // 目录页递归渲染：有内容页的节点为链接，无内容节点仅作分组标题
+    private void OutputAppendixTree(Writer writer, AppendixEntry entry)
+    {
+        if (entry.Content != null)
+        {
+            writer.WriteLine($"<li>{HTML.Href(entry.EntryTitle.Title, entry.Content.Output)}</li>");
+        }
+        else
+        {
+            writer.WriteLine($"<li>{entry.EntryTitle.Title}</li>");
+        }
+        if (entry.Children.Count > 0)
+        {
+            writer.WriteLine("<ul>");
+            foreach (var child in entry.Children)
+            {
+                OutputAppendixTree(writer, child);
+            }
+            writer.WriteLine("</ul>");
+        }
     }
 }

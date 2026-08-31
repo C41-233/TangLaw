@@ -41,6 +41,7 @@ internal partial class Main
         OutputPreamble();
         OutputLaws();
         OutputAppendixes();
+        OutputAppendixDirectories();
     }
 
     private void CollectDocuments()

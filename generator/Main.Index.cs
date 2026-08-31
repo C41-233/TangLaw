@@ -1,4 +1,4 @@
-﻿using Generator.Utils;
+using Generator.Utils;
 using System.Text;
 using static System.Collections.Specialized.BitVector32;
 
@@ -93,22 +93,18 @@ internal partial class Main
 
     private void OutputIndexAppendix(Writer writer, AppendixEntry appendix)
     {
-        if (appendix.Content != null)
+        // index 只列一级：有子级的组链接到该组的目录页，叶子直接链接到内容页
+        if (appendix.Children.Count > 0)
+        {
+            writer.WriteLine($"<li>{HTML.Href(appendix.EntryTitle.Title, $"附录-{appendix.EntryTitle.Title}.html")}</li>");
+        }
+        else if (appendix.Content != null)
         {
             writer.WriteLine($"<li>{HTML.Href(appendix.EntryTitle.Title, appendix.Content.Output)}</li>");
         }
         else
         {
             writer.WriteLine($"<li>{appendix.EntryTitle.Title}</li>");
-        }
-        if (appendix.Children.Count > 0)
-        {
-            writer.WriteLine("<ul>");
-            foreach (var sub in appendix.Children)
-            {
-                OutputIndexAppendix(writer, sub);
-            }
-            writer.WriteLine("</ul>");
         }
     }
 
