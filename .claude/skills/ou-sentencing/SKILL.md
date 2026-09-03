@@ -155,6 +155,9 @@ description: >
   - 用法：`python scripts/reorder_ou.py [--write] [--only <文件子串>] [--remove-dup] [<目标目录>]`
   - 排序规则见脚本内 `sortkey()`（标记 斗殴→故殴→无标记；大类 凡人→夫妻→特定→通用；同主体多行按原序）。
   - 词形归一见 `RULES`，且**仅同类齐全（presence 判断）才并**——`妾犯妻`/`媵犯妻` 同文件同刑三者同才并 `媵妾犯妻`；single-only 保留原词形。
+- **`scripts/reorder_zhuangzhi.py`** — 转置表（斗殴/故殴之一~之六 + 斗杀/故杀）客体行重排，幂等。默认 dry-run（只打印差异），`--write` 才写回；保留原换行风格（LF/CRLF）、表头行、非数据行；不改任何刑罚值。目标顺序见上文"排序规则"小节。
+  - 用法：`python scripts/reorder_zhuangzhi.py [--write] [--only <文件子串>] [<目标目录>]`
+  - 默认目录 `src/释义/量刑表/殴打`；仅对匹配 `^(斗殴|故殴)量刑表之[一二三四五六]\.xml$` 或 `斗杀/故杀量刑表.xml` 的表生效。
 - **`scripts/verify_ou.py`** — 只读校验：mark 顺序 + 大类顺序，`--dir`/`--only` 可选。
   - 用法：`python scripts/verify_ou.py [--dir <目录>] [--only <文件子串>]`
 - **`scripts/restore_head.py`** — 把误改的同量表文件还原为 HEAD 精确字节（只读 `git show`，不触碰 checkout/reset）。
