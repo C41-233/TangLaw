@@ -35,7 +35,7 @@ def sortkey(bare):
          '大功兄姊': '3|1|0', '大功卑幼': '3|1|9',
          '小功尊属': '3|2|0', '小功兄姊': '3|2|1', '小功卑幼': '3|2|9',
          '缌麻尊属': '3|3|0', '缌麻兄姊': '3|3|1', '缌麻卑幼': '3|3|9',
-         '缌麻尊长': '3|3|0'}
+         '大功尊长': '3|1|0', '小功尊长': '3|2|0', '缌麻尊长': '3|3|0'}
     return t.get(bare, '9|9|9')
 
 
@@ -70,6 +70,54 @@ def norm_line(line, lrules):
     return '\t'.join(['殴打', newbody, sxf, ft])
 
 
+LV_RE = re.compile(r'^（?(大功|小功|缌麻|期亲)(尊长|尊属|兄姊|卑幼)?(.*)$')
+
+
+def merge_zunzhang(block):
+    """逐档尊长合并：级别 尊属 与 兄姊 的**共同后果档**合并为 尊长；独有档保留。
+    仅在 无标记(空mark) 行上做；有 (斗殴)/(故殴) 标记的行不参与(标记组内尊属/兄姊各自独立)。"""
+    # 只处理空mark行（尊长/尊属/兄姊 通常出现在无标记组）
+    def is_plain(l):
+        cols = l.split('\t')
+        return len(cols) >= 2 and not re.match(r'^（(斗殴|故殴)）', cols[1])
+
+    plain_idx = [i for i, l in enumerate(block) if is_plain(l)]
+    # 收集每级别的 尊属/兄姊 共同后果
+    zun = {}; xiong = {}
+    for i in plain_idx:
+        cols = block[i].split('\t')
+        body = cols[1]
+        m = re.match(r'^((大功|小功|缌麻))(尊属|兄姊)(.*)$', body)
+        if m and m.group(3) in ('尊属', '兄姊'):
+            lv = m.group(1); zw = m.group(3); con = m.group(4)
+            if zw == '尊属':
+                zun.setdefault(lv, {}).setdefault(con, i)
+            else:
+                xiong.setdefault(lv, {}).setdefault(con, i)
+    # 找出共同档，需要重排(把共同档的尊属/兄姊 合并为尊长)
+    out = []
+    common_seen = {}
+    for i, l in enumerate(block):
+        cols = l.split('\t')
+        if len(cols) >= 2:
+            m = re.match(r'^((大功|小功|缌麻))(尊属|兄姊)(.*)$', cols[1])
+            if m and m.group(3) in ('尊属', '兄姊') and (i in plain_idx):
+                lv = m.group(1); zw = m.group(3); con = m.group(4)
+                if con in zun.get(lv, {}) and con in xiong.get(lv, {}):
+                    # 共同档：先把首次出现的合并为 尊长，跳过后续
+                    key = '%s|%s' % (lv, con)
+                    if key in common_seen:
+                        continue
+                    common_seen[key] = True
+                    sxf = cols[2] if len(cols) >= 3 else ''
+                    ft = cols[3] if len(cols) >= 4 else ''
+                    newbody = '%s尊长%s' % (lv, con)
+                    out.append('\t'.join(['殴打', newbody, sxf, ft]))
+                    continue
+        out.append(l)
+    return out
+
+
 def process_file(path, remove_dup, write):
     with open(path, 'rb') as f:
         raw = f.read()
@@ -99,6 +147,7 @@ def process_file(path, remove_dup, write):
             block, j = [], i
             while j < n and re.match(r'^殴打\t', lines[j]):
                 block.append(lines[j]); j += 1
+            block = merge_zunzhang(block)  # 逐档尊长合并（仅共同后果档）
             rows = []
             for idx, ln in enumerate(block):
                 cols = ln.split('\t')
