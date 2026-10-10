@@ -164,7 +164,7 @@ index.html是网站入口，从上到下依次包含：
 
 ## 基础规则
 
-- 允许执行无副作用的只读 `git` 命令（如 `git log`、`git diff`、`git status`、`git show` 等），用于查看提交历史与工作区变更；禁止执行任何有副作用的 `git` 命令（如 `checkout`、`reset`、`commit`、`push`、`merge`、`stash` 等）。
+- 每次修改完成后应提交：允许执行 `git add <本次修改的文件>`（逐个列出完整路径，禁止 `git add .`、`git add -A` 等批量暂存）与 `git commit`；只提交本次修改的文件，工作区中本次任务未涉及的变更（用户或其他来源的改动）一律不得纳入提交。其余有副作用的 `git` 命令（如 `checkout`、`reset`、`push`、`merge`、`stash` 等）仍然禁止；只读 `git` 命令（如 `git log`、`git diff`、`git status`、`git show` 等）照常允许。
 - 不允许删除任何文件。
 - 代码修改完毕后，只允许测试编译通过。禁止自行运行测试，必须交由用户代为执行。
 - 未经允许，不得修改正文（`src/正文/` 目录下的内容）。
