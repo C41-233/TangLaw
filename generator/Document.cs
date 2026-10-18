@@ -29,7 +29,8 @@ internal class Document
         }
         catch (Exception ex)
         {
-            throw new InvalidOperationException($"处理文档「{SourcePath}」时发生错误", ex);
+            // 读取、解析阶段的错误都源于文档本身
+            throw new SourceException($"处理文档「{SourcePath}」时发生错误", ex);
         }
     }
 

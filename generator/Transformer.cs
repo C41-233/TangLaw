@@ -130,7 +130,11 @@ internal partial class Transformer
             var content = doc.CreateElement("div");
             content.SetAttribute("class", "word-content");
 
-            content.InnerXml = Main.Instance.Words[name];
+            if (!Main.Instance.Words.TryGetValue(name, out var wordContent))
+            {
+                throw new SourceException($"引用的词条「{name}」未定义（需在 src\\释义 目录下存在「{name}.xml」）");
+            }
+            content.InnerXml = wordContent;
             TransformNormal(content);
 
             word.AppendChild(content);
