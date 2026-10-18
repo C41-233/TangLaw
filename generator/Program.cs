@@ -1,4 +1,4 @@
-using Generator;
+﻿using Generator;
 
 if (args.Length < 2)
 {
