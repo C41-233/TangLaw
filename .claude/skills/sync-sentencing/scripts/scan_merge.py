@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """scan_merge.py — 按 config/情节合并配置.txt 扫描投影中尚可合并的行。
 
