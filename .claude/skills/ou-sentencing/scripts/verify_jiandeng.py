@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """verify_jiandeng.py — 校验派生量刑表 = 源量刑表 逐格减 N 等。
 

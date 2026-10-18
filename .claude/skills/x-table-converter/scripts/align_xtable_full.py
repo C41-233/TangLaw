@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """align_xtable_full.py — 对 x-table 源码做**整表**列宽对齐。
 
