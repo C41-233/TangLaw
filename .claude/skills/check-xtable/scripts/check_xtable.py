@@ -36,6 +36,7 @@ def check_file(path: Path):
     lines = text.split("\n")
     in_block = False
     header_count = None
+    header_tokens = None
     header_line = None
     block_count = 0
     lx = is_liangxing(path)
@@ -47,6 +48,7 @@ def check_file(path: Path):
                 issues.append(f"{path}:{idx}  嵌套的 <x-table（上一块未闭合，表头@{header_line}）")
             in_block = True
             header_count = None
+            header_tokens = None
             header_line = None
             block_count += 1
             continue
@@ -55,6 +57,7 @@ def check_file(path: Path):
                 issues.append(f"{path}:{idx}  多余的 </x-table（无对应开启）")
             in_block = False
             header_count = None
+            header_tokens = None
             continue
 
         if not stripped:
@@ -64,6 +67,7 @@ def check_file(path: Path):
             toks = effective_tokens(raw)
             if header_count is None:
                 header_count = len(toks)
+                header_tokens = toks
                 header_line = idx
                 if not toks:
                     issues.append(f"{path}:{idx}  表头行无有效格")
@@ -71,7 +75,11 @@ def check_file(path: Path):
             if not toks:
                 issues.append(f"{path}:{idx}  数据行无有效格（表头@{header_line} {header_count} 格）")
                 continue
-            if len(toks) != header_count:
+            # 罪行表头合并格：表头首格为「罪行」时，罪行格可横跨首两列（数据行=表头+1 格合法）
+            merged_ok = (
+                header_tokens and header_tokens[0] == "罪行" and len(toks) == header_count + 1
+            )
+            if len(toks) != header_count and not merged_ok:
                 issues.append(
                     f"{path}:{idx}  列数不符 表头{header_count}/行{len(toks)}（表头@{header_line}）  {stripped[:40]}"
                 )
