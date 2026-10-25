@@ -75,11 +75,8 @@ def check_file(path: Path):
             if not toks:
                 issues.append(f"{path}:{idx}  数据行无有效格（表头@{header_line} {header_count} 格）")
                 continue
-            # 罪行表头合并格：表头首格为「罪行」时，罪行格可横跨首两列（数据行=表头+1 格合法）
-            merged_ok = (
-                header_tokens and header_tokens[0] == "罪行" and len(toks) == header_count + 1
-            )
-            if len(toks) != header_count and not merged_ok:
+            # 行格数多于表头 = generator 会静默丢格（physicalCols 由表头决定），必须报畸形
+            if len(toks) != header_count:
                 issues.append(
                     f"{path}:{idx}  列数不符 表头{header_count}/行{len(toks)}（表头@{header_line}）  {stripped[:40]}"
                 )
